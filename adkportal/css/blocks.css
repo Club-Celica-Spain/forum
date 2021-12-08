@@ -1,0 +1,340 @@
+/********************************************************
+* Adk Portal                   
+* Version: 2.0
+* Official support: http://www.smfpersonal.net           
+* Founder & Developer: Lucas-ruroken
+* Project Manager: ^Heracles^ - Enik
+* 2009-2011
+* Smf Personal - Home of adkportal
+/**********************************************************/
+
+.collapse2
+{
+	float: right;
+	padding-top: 7px;
+	padding-top: 0.5em;
+}
+.allpadding
+{
+	padding: 4px 10px;
+}
+.allpadding_simple
+{
+	overflow: auto;
+	padding: 0 0.5em;
+}
+
+.adk_avatar
+{
+	width: 50px;
+	height: 50px;
+}
+#form table td{
+	text-align: left;
+	font-size: 11px;
+}
+#form label{
+	font-weight: 700;
+}
+#form input{
+	border: 1px solid #d0ccc9;
+	background: #fff;
+	color: #5f95ef;
+	font-size: 11px;
+	font-weight: 700;
+}
+#form input.text{
+	font-weight: normal;
+	color: #565656;
+	border: 1px solid #9c9c9c;
+	padding: 2px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+#form input.text.user{
+	width: 100px;
+}
+/******* /FORM *******/
+/******* MENU *******/
+#container3{
+}
+#container3 ul{
+	list-style: none;
+	list-style-position: outside;
+}
+#container3 ul.menu li{
+	
+	margin-bottom: -1px;
+}
+#container3 ul.menu li{
+	font-weight: 700;
+	display: block;
+	background: #fff;
+	border: 1px solid #d0ccc9;
+	border-width: 1px 1px 0 1px;
+	position: relative;
+	color: #5f95ef;
+	cursor: pointer;
+}
+.contente{
+	display: block;
+	border: 1px solid #d0ccc9;
+	text-align: left;
+	font-size: 11px;
+	overflow: auto;
+	max-height: 24em;
+}
+
+.date{
+	font-weight: normal;
+	font-size: 9px;
+	color: #aeaeae;
+}
+#loading{
+	text-align: center;
+}
+
+/*2011*/
+.adk_pointer
+{
+	cursor: pointer;
+}
+.adk_float_r
+{
+	float:right;
+}
+.adk_float_l
+{
+	float: left;
+}
+.adk_100
+{
+	width: 100%;
+}
+.adk_padding_5_r
+{
+	padding-right: 5px;
+}
+.adk_padding_5_l
+{
+	padding-left: 5px;
+}
+.adk_vertical
+{
+	vertical-align: middle;
+}
+.adk_font
+{
+	font-size: 12px;
+}
+.adk_7
+{
+	height:7px;
+}
+.adk_min_height
+{
+	min-height: 1.2em;
+}
+.adk_little_round
+{
+	height: 28px !important;
+}
+.adk_padding_8
+{
+	padding: 8px;
+}
+.adk_padding_7
+{
+	padding: 7px;
+}
+.adk_padding_6
+{
+	padding: 6px;
+}
+.adk_padding_5
+{
+	padding: 5px;
+}
+.adk_style_none
+{
+	display: none;
+}
+.font_italic
+{
+	font-style: italic;
+}
+.font_bold
+{
+	font-weight: bold;
+}
+.font_under
+{
+	text-decoration: underline;
+}
+.font_strike
+{
+	text-decoration: line-through;
+}
+.shout_left
+{
+	text-align: left;
+}
+.shout_center
+{
+	text-align: center;
+}
+.shout_right
+{
+	text-align: right;
+}
+.adk_align_left
+{
+	text-align: left;
+}
+.adk_align_right
+{
+	text-align: right;
+}
+.text_align_center
+{
+	text-align: center;
+}
+.adk_no_avatar
+{
+	width: 50px;
+	height: 50px;
+}
+.adk_advanced_image
+{
+	width: 140px;
+}
+.adk_height_1
+{
+	height: 1px;
+}
+.adk_height_3
+{
+	height: 3px;
+}
+
+/*Carousel start*/
+#wrap {
+    margin: 5px;
+}
+.jcarousel-skin-tango .jcarousel-container {
+    -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+    background: #F0F6F9;
+    border: 1px solid #346F97;
+	min-height: 48px;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    padding: 10px 40px;
+}
+
+.jcarousel-skin-tango .jcarousel-item  img{
+	vertical-align: middle;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../images/next-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(../images/prev-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../images/prev-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(../images/next-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+
+
+/*Modification for other reasons*/
+.jcarousel-skin-tango .jcarousel-item {
+    width: 260px;
+}
+.jcarousel-skin-tango .jcarousel-item  img{
+	max-width: 250px;
+}
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+	top: 0px;
+}
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+	top: 0px;
+}
+/*End modifications*/
+
+.carousel_buttons
+{
+	width: 24px;
+	height: 24px;
+}

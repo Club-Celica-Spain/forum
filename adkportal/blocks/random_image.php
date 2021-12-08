@@ -1,0 +1,1 @@
+<?phpadk_random_image();?>
