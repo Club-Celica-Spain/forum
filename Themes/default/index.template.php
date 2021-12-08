@@ -343,6 +343,8 @@ global $user_info;
 
 function template_body_below()
 {
+	//Adk Portal
+	if(function_exists('loadCBottom'))loadCBottom();
 	global $context, $settings, $options, $scripturl, $txt, $modSettings, $user_info;
 	
 	if (!empty($modSettings['show_footer_message']) && !empty($modSettings['index_message_title']) && !empty($modSettings['index_message_body']) && $context['user']['is_logged'] && isset($modSettings['inactive_users']) && $user_info['posts'] < $modSettings['inactive_users']) {
