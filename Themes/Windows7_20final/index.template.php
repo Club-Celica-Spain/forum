@@ -169,7 +169,11 @@ function template_html_above()
 function template_body_above()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
-/*Crear una arreglo con las imagenes aleatorias con su ubicación*/$imagenes[0]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_1.jpg';$imagenes[1]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_2.jpg';$imagenes[2]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_3.jpg';$imagenes[3]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_4.jpg';$imagenes[4]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_5.jpg';$imagenes[5]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_6.jpg';$imagenes[6]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_7.jpg';$imagenes[7]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_8.jpg';$imagenes[8]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_9.jpg';$imagenes[9]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_10.jpg';$imagenes[10]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_11.jpg';$imagenes[11]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_12.jpg';$imagenes[12]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_13.jpg';$imagenes[13]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_14.jpg';$imagenes[14]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_15.jpg';$imagenes[15]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_16.jpg';$imagenes[16]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_17.jpg';$imagenes[17]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_18.jpg';$imagenes[18]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_19.jpg';$imagenes[19]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_20.jpg';$imagenes[19]='https://www.clubcelica.es/templates/siteground-j15-84/images/beta.jpg';/*Definir numero maximo*/$i=rand(0,19);		                    
+/*Crear una arreglo con las imagenes aleatorias con su ubicación*/
+$imagenes[0]='./Themes/Windows7_20final/images/logo.png';
+/*Definir numero maximo*/
+// Si se añaden más imágenes hay que usar la función rand(): $i=rand(0,0);
+$i=0;
 echo '
 <div class="headerimg" align="center">
 	<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%"><a href="'.$scripturl.'">
@@ -240,7 +244,7 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 	
 	echo'
 	<div class="navigation" style="padding-left: 5px; padding-right: 5px; padding-top: 9px; font-size: 11px; font-family: tahoma; color: white; font-weight: bold;">
-		<div style="float: left;">Club Celica España, foro para los amantes, propietarios y aficionados del Toyota Celica. <a href="https://www.clubcelica.es/condiciones.html">-Condiciones de Uso-</a></div>	</div>
+		<div style="float: left;">Club Celica España, foro para los amantes, propietarios y aficionados del Toyota Celica. <a href="./condiciones.html">-Condiciones de Uso-</a></div>	</div>
 	<br />';
 		
 
