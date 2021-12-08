@@ -174,7 +174,7 @@ function template_body_above()
 echo '
 <div class="headerimg" align="center">
 	<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%"><a href="'.$scripturl.'">
-		<img src="https://www.clubcelica.es/templates/siteground-j15-84/images/beta.jpg" style="width:100%;height:auto" alt="'.$context['forum_name'].'" /></img></table>
+		<img src="/img/header_background.jpg" style="width:100%;height:auto" alt="'.$context['forum_name'].'" /></img></table>
 	</a>
 </div>
 <table cellpadding="0" cellspacing="0" border="0" align="center" class="navigation" width="100%">
@@ -200,7 +200,7 @@ google_ad_type = "text_image";
 	
 
 	<div class="page" style="width:100%; text-align:left">
-	<center><a href="https://foro.clubcelica.es/index.php/topic,18599.0.html" target="_parent"><img src="https://www.clubcelica.es/Banner_Socios_2014_Reducido.jpg"></a></center>
+	<center><a href="./index.php?topic=18599.0.html" target="_parent"><img src="/img/banner_socios.jpg"></a></center>
 
 		<div style="padding:0px 50px 0px 50px" align="left">
 <br />',theme_linktree(),'
