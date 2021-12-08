@@ -4156,7 +4156,7 @@ function setupMenuContext()
 
 			'search' => array(
 				'title' => $txt['search'],
-				'href' => 'http://foro.clubcelica.es/search.php',
+				'href' => './search.php',
 				'show' => $context['allow_search'],
 				'sub_buttons' => array(
 				),

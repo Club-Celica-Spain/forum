@@ -64,14 +64,14 @@ function template_main_above()
 	// Show right to left and the character set for ease of translating.
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml"', $context['right_to_left'] ? ' dir="rtl"' : '', '><head>
-<link rel="shortcut icon" href="https://www.clubcelica.es/foro/favicon.ico"></link> 
+<link rel="shortcut icon" href="./favicon.ico"></link> 
 	<meta http-equiv="Content-Type" content="text/html; charset=', $context['character_set'], '" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7"/>
 	<meta name="description" content="Portal dedicado al mundo del motor, concretamente Toyota Celica y a todos sus aficionados." />', empty($context['robot_no_index']) ? '' : '
    <meta name="robots" content="all" />', '
    <meta name="keywords" content="Toyota, Celica, auto, racing, tuning, coches, motor, Club, españa, clubcelica, toyotacelica, oficial, coche" />
  <link rev="made" href="mailto:info@clubcelica.es" />
- <base href="https://foro.clubcelica.es/">
+ <base href=".">
    <meta name="Revisit" content="2 days" />
    <meta name="REVISIT-AFTER" content="1 days" />
    <meta name="DC.Language" scheme="RFC1766" content="Spanish" />
@@ -189,29 +189,11 @@ function template_main_above()
 
 /*Crear una arreglo con las imagenes aleatorias con su ubicación*/
 
-$imagenes[0]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_1.jpg';
-$imagenes[1]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_2.jpg';
-$imagenes[2]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_3.jpg';
-$imagenes[3]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_4.jpg';
-$imagenes[4]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_5.jpg';
-$imagenes[5]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_6.jpg';
-$imagenes[6]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_7.jpg';
-$imagenes[7]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_8.jpg';
-$imagenes[8]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_9.jpg';
-$imagenes[9]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_10.jpg';
-$imagenes[10]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_11.jpg';
-$imagenes[11]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_12.jpg';
-$imagenes[12]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_13.jpg';
-$imagenes[13]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_14.jpg';
-$imagenes[14]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_15.jpg';
-$imagenes[15]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_16.jpg';
-$imagenes[16]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_17.jpg';
-$imagenes[17]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_18.jpg';
-$imagenes[18]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_19.jpg';
-$imagenes[19]='https://www.clubcelica.es/templates/siteground-j15-84/images/logo_20.jpg';
+$imagenes[0]='./images/logo.png';
+$imagenes[1]='./images/logo_2.jpg';
 
 /*Definir numero maximo*/
-$i=rand(0,19);
+$i=rand(0,1);
 
 
 	echo '<table cellpadding="0" cellspacing="0" width="100%" style="border-bottom: 1px solid #060000;">
@@ -230,7 +212,7 @@ $i=rand(0,19);
 	// Show the [home] button.
 	echo ($current_action=='home' || $context['browser']['is_ie4']) ? '' : '' , '
 				<td valign="top" class="navmenu">
-					<a href="https://www.clubcelica.es">' , $txt[103] , '</a></td>';
+					<a href=".">' , $txt[103] , '</a></td>';
 
 	// Show the [help] button.
 	echo ($current_action == 'help' || $context['browser']['is_ie4']) ? '' : '' , '
@@ -241,7 +223,7 @@ $i=rand(0,19);
 	if ($context['allow_search'])
 		echo ($current_action == 'search' || $context['browser']['is_ie4']) ? '' : '' , '
 				<td valign="top" class="navmenu">
-					<a href="https://clubcelica.es/search.php" target="_blank">' , $txt[182] , '</a></td>';
+					<a href="./search.php" target="_blank">' , $txt[182] , '</a></td>';
 
 	// Is the user allowed to administrate at all? ([admin])
 	if ($context['allow_admin'])
@@ -391,7 +373,7 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 					
 			</tr>
 				<tr><td>
-					Club Celica España, un club hispano para los amantes, propietarios y aficionados del Toyota Celica. <a href="https://www.clubcelica.es/condiciones.html">-Condiciones de Uso-</a>
+					Club Celica España, un club hispano para los amantes, propietarios y aficionados del Toyota Celica. <a href="./condiciones.html">-Condiciones de Uso-</a>
 					</tr></td>
 							
 			<tr>

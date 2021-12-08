@@ -23,7 +23,7 @@
 <head>
 <title>Club Celica España</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link rel="stylesheet" href="Themes/MegaPolis/style.css" type="text/css">
+<link rel="stylesheet" href="./Themes/MegaPolis/style.css" type="text/css">
 </head>
 <form method="post" action="formulario.php"> 
 <font color="white"><p>Nombre:<br>
@@ -45,7 +45,7 @@
     <p style="padding-top: 5px;"> 
 	<p><input type="submit" name="enviar" value="Enviar Comentario" />
     <input type="reset" name="enviar" value="Borrar los datos" /> 
-    <input type = "hidden" name="redirect" value="http://www.clubcelica.es/foro/ok.php">
+    <input type = "hidden" name="redirect" value="./ok.php">
       <br></td>
   </tr>
     </p> 
