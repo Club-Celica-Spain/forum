@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<name>YouTube BBCode</name>
+	<id>karlbenson:youtubebbcode</id>
+	<type>modification</type>
+	<version>2.5.1</version>
+
+	<!--// Install for SMF 1.1.x versions only //-->
+	<install for="1.1 - 1.1.99">
+		<readme type="file" parsebbc="true">readme.txt</readme>
+		<modification>install-1.1.x.xml</modification>
+		<modification>languagestrings.xml</modification>
+		<require-file name="youtube.gif" destination="$imagesdir/bbc" />
+	</install>
+	
+	<!--// Uninstall for SMF 1.1.x versions only //-->
+	<uninstall for="1.1 - 1.1.99">
+		<modification reverse="true">install-1.1.x.xml</modification>
+		<modification reverse="true">languagestrings.xml</modification>
+		<remove-file name="$imagesdir/bbc/youtube.gif" />
+	</uninstall>
+	
+	<!--// Install for SMF 2.0 Beta 2/3/4 and above //-->
+	<install for="2.0 - 2.99.99">
+		<readme type="file" parsebbc="true">readme.txt</readme>
+		<modification>install-2.0.rc1.xml</modification>
+		<modification>languagestrings.xml</modification>
+		<require-file name="youtube.gif" destination="$imagesdir/bbc" />
+	</install>
+	
+	<!--// Uninstall for SMF 2.0 Beta 2/3/4 and above //-->
+	<uninstall for="2.0 - 2.99.99">
+		<modification reverse="true">install-2.0.rc1.xml</modification>
+		<modification reverse="true">languagestrings.xml</modification>
+		<remove-file name="$imagesdir/bbc/youtube.gif" />
+	</uninstall>
+</package-info>

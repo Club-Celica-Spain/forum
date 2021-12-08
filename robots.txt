@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /Themes/
+Disallow: /Sources/
+Disallow: /Smileys/
+Disallow: /header/
+Disallow: /attachments/
+Disallow: /Packages/
+
+User-agent: dotbot
+
+Disallow: /

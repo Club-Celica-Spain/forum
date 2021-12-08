@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<name>YouTube BBCode</name>
+	<id>karlbenson:youtubebbcode</id>
+	<version>2.5.1</version>
+	<homepage>http://www.smfthemes.org</homepage>
+	<file name="$sourcedir/Subs.php">
+		<operation>	
+			<search position="before"><![CDATA[			array(
+				'tag' => 'white',
+				'before' => '<span style="color: white;">',
+				'after' => '</span>',
+			),
+]]></search>
+			<add><![CDATA[
+			array(
+				'tag' => 'youtube',
+				'type' => 'unparsed_content',
+				'validate' => create_function('&$tag, &$data, $disabled', '
+					// Access globals
+					global $txt, $context;
+					// Determine which variable is the link
+					$link = !is_array($data) ? $data : $data[0] ;
+					// Remove linebreaks & trim
+					$link = trim(strtr($link, array(\'<br />\' => \'\')));
+					// Parse the ID of video or playlist safely
+					if  (preg_match(\'~^(?:http://((?:www|au|br|ca|es|fr|de|hk|ie|in|il|it|jp|kr|mx|nl|nz|pl|ru|tw|uk)\.)?youtube\.com/(?:[^"]*?)(?:(?:video_)?id=|(?:v|p)(?:/|=)))?([0-9a-f]{16}|[0-9a-z-_]{11})~i\'.($context[\'utf8\'] ? \'u\' : \'\'), $link, $matches))
+					{
+						// Localised youtube site?  If not use www.
+						$site = !empty($matches[1]) ? strtolower($matches[1]) : \'www.\' ;
+						// Video or Playlist ID?
+						$type = strlen($matches[2]) == 11 ? 1 : 0 ;
+						// Set sizes Or Normalise sizes (If sizes are <100 or > 780)
+						if(!is_array($data) || ($data[1] > 780 || $data[1] < 100 || $data[2] > 780 || $data[2] < 100))
+							$data = array(0, 425, ($type ? 350 : 355));
+						// Set ID in the array
+						$data[0] = $matches[2];
+						// Tidy up
+						unset($matches, $link);
+
+						// Set the Content (With conditions on disabled types of BBCode)
+						if (isset($disabled[\'url\']) && isset($disabled[\'youtube\']))
+							// Youtube & Url bbc disabled? (eg Printer friendly pages)
+							$tag[\'content\'] = "http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0];
+						elseif(isset($disabled[\'youtube\']))
+							// Only Youtube is disabled, So make an active link
+							$tag[\'content\'] = "<a href=\"http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0]."\" target=\"_blank\">http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0]."</a>";
+						else
+						{
+							// Empty content
+							$tag[\'content\'] = \'\';
+							
+							// Build the <object> (Non-Mac IE Only)
+							if($context[\'browser\'][\'is_ie\'] && !$context[\'browser\'][\'is_mac_ie\'])
+								$tag[\'content\'] = \'<object width="\'.$data[1].\'px" height="\'.$data[2].\'px">\'
+									.\'<param name="movie" value="http://www.youtube.com/\'.($type ? "v" : "p").\'/\'.$data[0].\'&amp;rel=1&amp;fs=1" />\'
+									.\'<param name="wmode" value="transparent" /><param name="allowFullScreen" value="true" />\'
+									.\'<param name="allowScriptAccess" value="never" />\';
+							// Build the <embed>
+							$tag[\'content\'] .= \'<embed src="http://www.youtube.com/\'.($type ? "v" : "p").\'/\'.$data[0].\'&amp;rel=1&amp;fs=1" \'
+									.\'type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="never" \'
+									.\'wmode="transparent" width="\'.$data[1].\'px" height="\'.$data[2].\'px">\';
+							// Build the <noembed>
+							$tag[\'content\'] .= "<noembed><a href=\"http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p" ) ."=". $data[0]."\" target=\"_blank\">http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0]."</a></noembed>";
+							// Closing <embed>
+							$tag[\'content\'] .= \'</embed>\';
+							// Close the <object> (Non-Mac IE Only)
+							if($context[\'browser\'][\'is_ie\'] && !$context[\'browser\'][\'is_mac_ie\'])
+								$tag[\'content\'] .= \'</object>\';
+						}
+					}
+					else
+						// Invalid link
+						$tag[\'content\'] = $txt[\'youtube_invalid\'];
+				'),
+				'disabled_content' => '$1',
+            ),
+			array(
+				'tag' => 'youtube',
+				'type' => 'unparsed_commas_content',
+				'test' => '\d+,\d+\]',
+				'validate' => create_function('&$tag, &$data, $disabled', '
+					// Access globals
+					global $txt, $context;
+					// Determine which variable is the link
+					$link = !is_array($data) ? $data : $data[0] ;
+					// Remove linebreaks & trim
+					$link = trim(strtr($link, array(\'<br />\' => \'\')));
+					// Parse the ID of video or playlist safely
+					if  (preg_match(\'~^(?:http://((?:www|au|br|ca|es|fr|de|hk|ie|in|il|it|jp|kr|mx|nl|nz|pl|ru|tw|uk)\.)?youtube\.com/(?:[^"]*?)(?:(?:video_)?id=|(?:v|p)(?:/|=)))?([0-9a-f]{16}|[0-9a-z-_]{11})~i\'.($context[\'utf8\'] ? \'u\' : \'\'), $link, $matches))
+					{
+						// Localised youtube site?  If not use www.
+						$site = !empty($matches[1]) ? strtolower($matches[1]) : \'www.\' ;
+						// Video or Playlist ID?
+						$type = strlen($matches[2]) == 11 ? 1 : 0 ;
+						// Set sizes Or Normalise sizes (If sizes are <100 or > 780)
+						if(!is_array($data) || ($data[1] > 780 || $data[1] < 100 || $data[2] > 780 || $data[2] < 100))
+							$data = array(0, 425, ($type ? 350 : 355));
+						// Set ID in the array
+						$data[0] = $matches[2];
+						// Tidy up
+						unset($matches, $link);
+
+						// Set the Content (With conditions on disabled types of BBCode)
+						if (isset($disabled[\'url\']) && isset($disabled[\'youtube\']))
+							// Youtube & Url bbc disabled? (eg Printer friendly pages)
+							$tag[\'content\'] = "http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0];
+						elseif(isset($disabled[\'youtube\']))
+							// Only Youtube is disabled, So make an active link
+							$tag[\'content\'] = "<a href=\"http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0]."\" target=\"_blank\">http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0]."</a>";
+						else
+						{
+							// Empty content
+							$tag[\'content\'] = \'\';
+							
+							// Build the <object> (Non-Mac IE Only)
+							if($context[\'browser\'][\'is_ie\'] && !$context[\'browser\'][\'is_mac_ie\'])
+								$tag[\'content\'] = \'<object width="\'.$data[1].\'px" height="\'.$data[2].\'px">\'
+									.\'<param name="movie" value="http://www.youtube.com/\'.($type ? "v" : "p").\'/\'.$data[0].\'&amp;rel=1&amp;fs=1" />\'
+									.\'<param name="wmode" value="transparent" /><param name="allowFullScreen" value="true" />\'
+									.\'<param name="allowScriptAccess" value="never" />\';
+							// Build the <embed>
+							$tag[\'content\'] .= \'<embed src="http://www.youtube.com/\'.($type ? "v" : "p").\'/\'.$data[0].\'&amp;rel=1&amp;fs=1" \'
+									.\'type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="never" \'
+									.\'wmode="transparent" width="\'.$data[1].\'px" height="\'.$data[2].\'px">\';
+							// Build the <noembed>
+							$tag[\'content\'] .= "<noembed><a href=\"http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p" ) ."=". $data[0]."\" target=\"_blank\">http://". $site ."youtube.com/". ($type ? "watch?v" : "view_play_list?p") ."=". $data[0]."</a></noembed>";
+							// Closing <embed>
+							$tag[\'content\'] .= \'</embed>\';
+							// Close the <object> (Non-Mac IE Only)
+							if($context[\'browser\'][\'is_ie\'] && !$context[\'browser\'][\'is_mac_ie\'])
+								$tag[\'content\'] .= \'</object>\';
+						}
+					}
+					else
+						// Invalid link
+						$tag[\'content\'] = $txt[\'youtube_invalid\'];
+				'),
+				'disabled_content' => '$1',
+			),
+]]></add>
+		</operation>
+	<operation>
+		<search position="before"><![CDATA[		$disabled['email'] = true;
+		$disabled['flash'] = true;]]></search>
+		<add><![CDATA[
+		// Disable youtube if on 'printer friendly page'
+		$disabled['youtube'] = true;
+]]></add>
+	</operation>
+</file>
+
+<file name="$themedir/Post.template.php">
+	<operation>
+		<search position="after"><![CDATA[			'flash' => array('code' => 'flash',]]></search>
+		<add><![CDATA[
+			'youtube' => array('code' => 'youtube', 'before' => '[youtube]', 'after' => '[/youtube]', 'description' => $txt['youtube']),
+]]></add>
+	</operation>
+</file>
+
+</modification>
