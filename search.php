@@ -1,3 +1,6 @@
+<?php
+header ('Content-type: text/html; charset=iso-8859-1');
+?>
 <html>
 
 <head>
@@ -10,7 +13,7 @@
 
 </head>
 
-<body><?
+<body><?php
 $imagenes[0]='./Themes/MegaPolis/images/logo.png';
 $imagenes[1]='./Themes/MegaPolis/images/logo_2.jpg';
 
