@@ -369,7 +369,7 @@ function aeva_build_object($input)
 
 	// Strip the #options out of the original link
 	$input[2] = preg_replace('~#.*~', '', $input[2]);
-	$input = preg_replace('`(#[^"<]*)`e', 'str_replace("~", "-", "$1")', $input);
+	$input = preg_replace_callback('`(#[^"<]*)`', function () { return 'str_replace("~", "-", "$1")'; }, $input);
 	if ($tentative_title && substr($tentative_title, 0, 7) !== 'http://')
 		$title = $tentative_title;
 
