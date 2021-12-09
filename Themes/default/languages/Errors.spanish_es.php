@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Errors
+// Version: 2.0.16; Errors
 
 global $scripturl, $modSettings;
 
@@ -47,7 +47,7 @@ $txt['cant_merge'] = 'No estás autorizado para combinar temas';
 $txt['no_topic_id'] = 'Especificaste un ID de tema inválido.';
 $txt['split_first_post'] = 'No puedes dividir un tema desde el primer mensaje.';
 $txt['topic_one_post'] = 'Este tema sólo contiene un mensaje y no puede ser dividido';
-$txt['no_posts_selected'] = 'no se seleccionaron mensajes';
+$txt['no_posts_selected'] = 'No se seleccionaron mensajes';
 $txt['selected_all_posts'] = 'Imposible dividir. Has seleccionado todos los mensajes.';
 $txt['cant_find_messages'] = 'No se encontraron los mensajes';
 $txt['cant_find_user_email'] = 'Imposible encontrar la dirección email del usuario.';
@@ -89,7 +89,7 @@ $txt['cannot_mark_any_notify'] = 'No tienes los permisos necesarios para obtener
 $txt['cannot_mark_notify'] = 'Lo sentimos, pero no puedes solicitar notificaciones desde este foro.';
 $txt['cannot_merge_any'] = 'No estás autorizado para combinar temas en este foro.';
 $txt['cannot_moderate_forum'] = 'No estás autorizado para moderar este foro.';
-$txt['cannot_moderate_board'] = 'You are not allowed to moderate this board.';
+$txt['cannot_moderate_board'] = 'No está autorizado para moderar este foro';
 $txt['cannot_modify_any'] = 'No estás autorizado para modificar mensajes.';
 $txt['cannot_modify_own'] = 'Lo sentimos, pero no estás autorizado para editar tus propios mensajes.';
 $txt['cannot_modify_replies'] = 'A pesar que este mensaje es en respuesta a tu tema, no lo puedes editar.';
@@ -129,7 +129,7 @@ $txt['cannot_delete_any'] = 'No está permitido borrar mensajes en este foro.';
 $txt['cannot_report_any'] = 'No estás autorizado para reportar mensajes en este foro.';
 $txt['cannot_search_posts'] = 'No estás autorizado a buscar mensajes en este foro.';
 $txt['cannot_send_mail'] = 'No tienes el privilegio de enviar mails.';
-$txt['cannot_issue_warning'] = 'Lo siento, no tienes permiso para advertir a usuarios.';
+$txt['cannot_issue_warning'] = 'Lo sentimos, no tienes permiso para enviar advertencias a los usuarios.';
 $txt['cannot_send_topic'] = 'Lo sentimos, pero el administrador ha desactivado la opción de enviar temas en este foro.';
 $txt['cannot_split_any'] = 'No está permitido dividir temas en este foro.';
 $txt['cannot_view_attachments'] = 'Parece que no estás autorizado para descargar o ver archivos adjuntos en este foro.';
@@ -138,11 +138,11 @@ $txt['cannot_view_stats'] = 'No estás autorizado para ver las estadísticas del f
 $txt['cannot_who_view'] = 'Lo sentimos - no tienes los permisos necesarios para ver la lista de usuarios en línea.';
 
 $txt['no_theme'] = 'Ese tema no existe.';
-$txt['theme_dir_wrong'] = 'El directorio de defecto de los temas es incorrecto, debe corregirlo haciendo <i>clic</i> en este texto.';
+$txt['theme_dir_wrong'] = 'El directorio de defecto de los temas es incorrecto, debe corregirlo haciendo clic en este texto.';
 $txt['registration_disabled'] = 'Lo sentimos, el registro de usuarios está actualmente deshabilitado.';
 $txt['registration_no_secret_question'] = 'Lo sentimos, no se ha especificado pregunta secreta para este usuario.';
 $txt['poll_range_error'] = 'Lo sentimos, la encuesta debe durar más de 0 días.';
-$txt['delFirstPost'] = 'No estás autorizado para borrar el primer post de este tema.<p>Si deseas borrar este tema, haz clic en \'Eliminar Tema\', o pídele a un Administrador/Moderador para que lo borre por tí.</p>';
+$txt['delFirstPost'] = 'No estás autorizado a borrar el primer mensaje de este tema.<p>Si deseas eliminarlo, haz clic en \'Eliminar Tema\', o pídele a un Administrador/Moderador que lo borre por ti.</p>';
 $txt['parent_error'] = '¡No se pudo crear el foro!';
 $txt['login_cookie_error'] = 'No pudiste ingresar.  Por favor revisa la configuración de tus cookies.';
 $txt['incorrect_answer'] = 'Lo sentimos, pero no contestaste correctamente tu pregunta secreta.  Haz clic en el botón Atrás para intentar nuevamente, o haz clic en el botón Atrás 2 veces para usar el método por defecto para obtener tu contraseña.';
@@ -150,7 +150,7 @@ $txt['no_mods'] = '¡No se encontraron moderadores!';
 $txt['parent_not_found'] = 'Estructura corrupta del foro: no se pudo encontrar el foro padre';
 $txt['modify_post_time_passed'] = 'No puedes modificar este mensaje ya que el tiempo límite permitido para editar mensajes ha transcurrido.';
 
-$txt['calendar_off'] = 'El calendario está deshabilitado, no puedes accesarlo en este momento.';
+$txt['calendar_off'] = 'El calendario está deshabilitado, no puedes acceder a él en este momento.';
 $txt['invalid_month'] = 'Mes inválido.';
 $txt['invalid_year'] = 'Año inválido.';
 $txt['invalid_day'] = 'Día no válido.';
@@ -175,10 +175,10 @@ $txt['moveto_noboards'] = '¡No hay foros a donde mover este tema!';
 $txt['already_activated'] = 'Tu cuenta ya ha sido previamente activada.';
 $txt['still_awaiting_approval'] = 'Tu cuenta está todavía en espera de la aprobación de un administrador.';
 
-$txt['invalid_email'] = 'Email inválido / rango del email.<br />Ejemplo de una dirección de email válida: webmaster@HablaJapones.org.<br />Ejemplo de un rango de dirección email válido: *@*.HablaJapones.org';
+$txt['invalid_email'] = 'Email / rango del email inválido.<br />Ejemplo de una dirección de email válida: webmaster@HablaJapones.org.<br />Ejemplo de un rango de dirección email válido: *@*.HablaJapones.org';
 $txt['invalid_expiration_date'] = 'La fecha de expiración no es válida';
-$txt['invalid_hostname'] = 'Nombre del dominio inválido/ rango del dominio.<br />Ejemplo de un nombre de dominio válido: proxy4.HablaJapones.org<br />Ejemplo de un rango de dominio válido: *.HablaJapones.org';
-$txt['invalid_ip'] = 'IP inválido / rango de IPs.<br />Ejemplo de una dirección IP válida: 127.0.0.1<br />Ejemplo de un rango válido de direcciones IP: 127.0.0-20.*';
+$txt['invalid_hostname'] = 'Nombre del dominio / rango del dominio inválido.<br />Ejemplo de un nombre de dominio válido: proxy4.HablaJapones.org<br />Ejemplo de un rango de dominio válido: *.HablaJapones.org';
+$txt['invalid_ip'] = 'IP / rango de IPs inválido.<br />Ejemplo de una dirección IP válida: 127.0.0.1<br />Ejemplo de un rango válido de direcciones IP: 127.0.0-20.*';
 $txt['invalid_tracking_ip'] = 'IP / Rango de IP inválido.<br />Ejemplo de IP válida: 127.0.0.1<br />Ejemplo de rango de IP válido: 127.0.0.*';
 $txt['invalid_username'] = 'Nombre del usuario no encontrado';
 $txt['no_ban_admin'] = '¡No puedes prohibirle el acceso a un administrador - Debes degradarlo primero!';
@@ -187,7 +187,7 @@ $txt['ban_not_found'] = 'No se encontró esta restricción de acceso';
 $txt['ban_unknown_restriction_type'] = 'Tipo de restricción desconocida';
 $txt['ban_name_empty'] = 'El nombre para banear está en blanco';
 $txt['ban_name_exists'] = 'Ya existe ese nombre para banear. Por favor, elige un nombre diferente.';
-$txt['ban_trigger_already_exists'] = 'This ban trigger (%1$s) already exists in %2$s.';
+$txt['ban_trigger_already_exists'] = 'Este desencadenante de restricción de acceso (baneo) (%1$s) ya existe en %2$s.';
 
 $txt['recycle_no_valid_board'] = 'No se ha seleccionado un foro válido para reciclar temas';
 
@@ -200,13 +200,13 @@ $txt['merge_create_topic_failed'] = 'Error al intentar crear un nuevo tema.';
 $txt['merge_need_more_topics'] = 'El combinar temas necesita de al menos 2 temas para combinar.';
 
 $txt['postWaitTime_broken'] = 'La última publicación desde tu IP fue hace menos de %d segundos. Por favor, inténtalo de nuevo más tarde.';
-$txt['registerWaitTime_broken'] = '¡Te has registrado hace apenas %d segundos!';
-$txt['loginWaitTime_broken'] = 'Tendrás que esperar aproximadamente %d segundos para ingresar nuevamente.';
-$txt['pmWaitTime_broken'] = 'El último mensaje privado desde tu IP fue hace menos de %d segundos. Por favor, inténtalo de nuevo más tarde.';
-$txt['reporttmWaitTime_broken'] = 'El último informe desde tu IP fue hace menos de %d segundos. Por favor, inténtalo de nuevo más tarde.';
-$txt['sendtopcWaitTime_broken'] = 'El último tema enviado desde tu IP fue hace menos de %d segundos. Por favor, inténtalo de nuevo más tarde.';
-$txt['sendmailWaitTime_broken'] = 'El último email enviado desde tu IP fue hace menos de %d segundos. Por favor, inténtalo de nuevo más tarde.';
-$txt['searchWaitTime_broken'] = 'You last search was less than %d seconds ago. Please try again later.';
+$txt['registerWaitTime_broken'] = '¡Te has registrado hace apenas %1$d segundos!';
+$txt['loginWaitTime_broken'] = 'Tendrás que esperar aproximadamente %1$d segundos para ingresar nuevamente.';
+$txt['pmWaitTime_broken'] = 'El último mensaje privado desde tu IP fue hace menos de %1$d segundos. Por favor, inténtalo de nuevo más tarde.';
+$txt['reporttmWaitTime_broken'] = 'El último informe desde tu IP fue hace menos de %1$d segundos. Por favor, inténtalo de nuevo más tarde.';
+$txt['sendtopcWaitTime_broken'] = 'El último tema enviado desde tu IP fue hace menos de %1$d segundos. Por favor, inténtalo de nuevo más tarde.';
+$txt['sendmailWaitTime_broken'] = 'El último email enviado desde tu IP fue hace menos de %1$d segundos. Por favor, inténtalo de nuevo más tarde.';
+$txt['searchWaitTime_broken'] = 'La última búsqueda realizada desde tu IP fue hace menos de %1$d segundos. Por favor, inténtalo de nuevo más tarde.';
 
 $txt['email_missing_data'] = 'Debes introducir algo tanto en el título como en el texto del mensaje.';
 
@@ -214,14 +214,14 @@ $txt['topic_gone'] = 'El tema o foro que estás buscando parece que no existe, o 
 $txt['theme_edit_missing'] = '¡El archivo que intentas editar... no puede encontrarse!';
 
 $txt['attachments_no_write'] = 'No puede escribirse en el directorio para subir archivos adjuntos.  Tu archivo adjunto o avatar no se pudo guardar.';
-$txt['attachments_limit_per_post'] = 'No puedes subir más de %d archivos adjuntos por mensaje';
+$txt['attachments_limit_per_post'] = 'No puedes subir más de %1$d archivos adjuntos por mensaje';
 
 $txt['no_dump_database'] = 'iexcl;Solamente los administradores pueden hacer respaldos de la base de datos!';
 $txt['pm_not_yours'] = 'El mensaje personal que estás tratando de citar no es tuyo o no existe, por favor regresa e intenta nuevamente.';
 $txt['mangled_post'] = 'Datos de la forma destrozados - por favor regresa e intenta nuevamente.';
 $txt['quoted_post_deleted'] = 'El mensaje que estás intentando no existe, fue eliminado, o ya no lo puedes ver.';
-$txt['pm_too_many_per_hour'] = 'Has superado el límite de %d mensaje(s) privado(s) por hora.';
-$txt['labels_too_many'] = '¡Lo siento, %s mensajes ya tienen el máximo número de etiquetas permitidas!';
+$txt['pm_too_many_per_hour'] = 'Has superado el límite de %1$d mensaje(s) privado(s) por hora.';
+$txt['labels_too_many'] = '¡Lo sentimos, %1$s mensajes ya tienen el máximo número de etiquetas permitidas!';
 
 $txt['register_only_once'] = 'Lo sentimos, pero no tienes permitido el registrar múltiples cuentas al mismo tiempo desde la misma computadora.';
 $txt['admin_setting_coppa_require_contact'] = 'Debes introducir una dirección postal o fax de contacto si se necesita aprobación de padres/tutores.';
@@ -241,7 +241,7 @@ $txt['error_session_timeout'] = 'Tu sesión ha expirado. Por favor, reenvía tu me
 $txt['error_no_to'] = 'No se especificaron destinatarios.';
 $txt['error_bad_to'] = 'No se encontraron uno o mas destinatarios-\'para\'.';
 $txt['error_bad_bcc'] = 'No se encontraron uno o mas destinatarios-\'bcc\'.';
-$txt['error_form_already_submitted'] = '¡Ya haz enviado previamente este mensaje!  Probablemente hiciste doble-clic, o intentaste refrescar el navegador.';
+$txt['error_form_already_submitted'] = '¡Ya has enviado este mensaje! Probablemente hiciste doble clic, o intentaste refrescar el navegador.';
 $txt['error_poll_few'] = '¡Debes tener al menos dos opciones!';
 $txt['error_need_qr_verification'] = 'Por favor completa la sección de verificación para enviar tu mensaje.';
 $txt['error_wrong_verification_code'] = 'Lo que has tecleado no se corresponde con lo mostrado en la imagen.';
@@ -268,10 +268,10 @@ $txt['search_invalid_weights'] = 'Buscar pesos que no estén configurados adecuad
 $txt['unable_to_create_temporary'] = 'La función de búsqueda no pudo crear tablas temporales.  Por favor, inténtalo nuevamente.';
 
 $txt['package_no_file'] = '¡No se pudo encontrar el archivo!';
-$txt['packageget_unable'] = 'No fue posible conectarse al servidor.  Por favor, inténtalo usando <a href="%s" target="_blank">esta URL</a>.';
+$txt['packageget_unable'] = 'No fue posible conectarse al servidor.  Por favor, inténtalo usando <a href="%1$s" target="_blank" class="new_win">esta URL</a>.';
 $txt['not_on_simplemachines'] = 'Lo sentimos, los paquetes solo pueden ser descargados de esta manera del servidor de simplemachines.org.';
 $txt['package_cant_uninstall'] = 'Este paquete o nunca fue instalado, o ya ha sido desinstalado previamente - no puedes desinstalarlo ahora.';
-$txt['package_cant_download'] = '¡No puedes descargar o instalar nuevos paquetes ya que no se puede escribir en el directorio &quot;Packages&quot;!';
+$txt['package_cant_download'] = '¡No puedes descargar o instalar nuevos paquetes ya que directorio Packages o alguno de los archivos que hay dentro de él no es escribible!';
 $txt['package_upload_error_nofile'] = 'No has seleccionado un paquete para subir.';
 $txt['package_upload_error_failed'] = 'No se ha podido subir el paquete, ¡por favor comprueba los permisos del directorio!';
 $txt['package_upload_error_exists'] = 'El archivo que estás subiendo ya existe en el servidor. Por favor, bórralo e inténtalo nuevamente.';
@@ -326,7 +326,7 @@ $txt['icon_not_found'] = 'El icono no se pudo encontrar en el tema por defecto -
 $txt['icon_after_itself'] = '¡El icono no puede colocarse después de sí mismo!';
 $txt['icon_name_too_long'] = 'El nombre del inono no puede tener mas de 16 caracteres de largo';
 
-$txt['name_censored'] = 'Lo sentimos, el nombre que intentaste usar, %s, contiene palabras que han sido censuradas.  Por favor intenta con otro nombre.';
+$txt['name_censored'] = 'Lo sentimos, el nombre que intentaste usar, %1$s, contiene palabras que han sido censuradas. Por favor intenta con otro nombre.';
 
 $txt['poll_already_exists'] = '¡Un tema solamente puede contener una encuesta asociada!';
 $txt['poll_not_found'] = '¡No hay ninguna encuesta asociada a este tema!';
@@ -339,7 +339,7 @@ $txt['loadavg_generic_disabled'] = 'Lo sentimos, debido a la sobrecarga del serv
 $txt['loadavg_allunread_disabled'] = 'Los recursos del servidor están sobrecargados como para encontrar todos los temas que no has leído.';
 $txt['loadavg_unreadreplies_disabled'] = 'El servidor está sobrecargado. Por favor, inténtalo de nuevo más tarde.';
 $txt['loadavg_show_posts_disabled'] = 'Por favor, inténtalo de nuevo más tarde.  Los mesajes de este usuario no están disponibles debido a la sobrecarga del servidor.';
-$txt['loadavg_unread_disabled'] = 'The server\'s resources are temporarily under too high a demand to list out the topics you have not read.';
+$txt['loadavg_unread_disabled'] = 'Los recursos del servidor se encuentran temporalmente bajo una demanda excesivamente alta, y no se pueden listar tus temas sin leer en estos momentos.';
 
 $txt['cannot_edit_permissions_inherited'] = 'No puedes editar permisos inherentes directamente, debes editar el grupo padre o bien la correspondencia del grupo.';
 
@@ -356,8 +356,8 @@ $txt['ignoreboards_disallowed'] = 'La opción para ignorar foros no ha sido habil
 $txt['mboards_delete_error'] = '¡Ninguna categoría seleccionada!';
 $txt['mboards_delete_board_error'] = '¡Ningún foro seleccionado!';
 
-$txt['mboards_parent_own_child_error'] = 'Unable to make a parent its own child!';
-$txt['mboards_board_own_child_error'] = 'Unable to make a board its own child!';
+$txt['mboards_parent_own_child_error'] = '¡Es imposible convertir un foro en subforo de sí mismo!';
+$txt['mboards_board_own_child_error'] = '¡Es imposible convertir un foro en subforo de sí mismo!';
 
 $txt['smileys_upload_error_notwritable'] = 'Los siguientes directorios de emoticonos son tienen permisos de escritura: %1$s';
 $txt['smileys_upload_error_types'] = 'La imagen sólo puede tener una de las siguientes extensiones: %1$s.';
@@ -373,7 +373,7 @@ $txt['warning_notify_blank'] = 'Has seleccionado notificar al usuario pero no re
 
 $txt['cannot_connect_doc_site'] = 'No se ha podido conectar al Manual Online de Simple Machines. Por favor, comprueba que la configuración de tu servidor permite conexiones externas e inténtalo de nuevo más tarde.';
 
-$txt['movetopic_no_reason'] = 'You must enter a reason for moving the topic, or uncheck the option to \'post a redirection topic\'.';
+$txt['movetopic_no_reason'] = 'Debes introducir una razon para mover el tema, o bien desactivar la opción \'publicar un tema de redirección\'.';
 
 // OpenID error strings
 $txt['openid_server_bad_response'] = 'El identificador solicitado no devolvió una información apropiada.';
@@ -399,10 +399,17 @@ $txt['search_api_not_compatible'] = 'La API de búsqueda seleccionada que está us
 $txt['cannot_restore_first_post'] = 'No puedes restaurar el primer mensaje de un tema.';
 $txt['parent_topic_missing'] = 'El tema padre del mensaje que estás intentando restaurar ha sido eliminado.';
 $txt['restored_disabled'] = 'Se ha deshabilitado la restauración de temas.';
-$txt['restore_not_found'] = 'The following messages could not be restored; the original topic may have been removed:<ul style="margin-top: 0px;">%1$s</ul>You will need to move these manually.';
+$txt['restore_not_found'] = 'Los siguientes mensajes no pudieron ser restaurados; el tema original puede haber sido eliminado:<ul style="margin-top: 0px;">%1$s</ul>Tendrás que moverlos manualmente.';
 
 $txt['error_invalid_dir'] = 'El directorio introducido no es válido.';
 
-$txt['error_sqlite_optimizing'] = 'Sqlite is optimizing the database, the forum can not be accessed until it has finished.  Please try refreshing this page momentarily.';
+$txt['error_sqlite_optimizing'] = 'Sqlite está optimizando la base de datos. El foro no podrá ser accedido hasta que haya terminado. Por favor, intente refrescar esta página en unos momentos.';
+
+// Registration Agreement
+$txt['error_no_agreement'] = 'En este momento no hay ningún acuerdo de registro que poder mostrar.';
+$txt['error_no_privacy_policy'] = 'En este momento no se ha generado ningún acuerdo de privacidad para este foro.';
+
+// Unsubscribe
+$txt['unsubscribe_invalid'] = 'El enlace para cancelar tu suscripción que has usado parece que no es válido.';
 
 ?>

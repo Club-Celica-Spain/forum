@@ -1,9 +1,8 @@
 <?php
-// Version: 2.0; EmailTemplates
+// Version: 2.0.16; EmailTemplates
 
 global $context, $birthdayEmails;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 // Since all of these strings are being used in emails, numeric entities should be used.
 // Do not translate anything that is between {}, they are used as replacement variables and MUST remain exactly how they are.
 //   Additionally do not translate the @additioinal_parmas: line or the variable names in the lines that follow it.  You may
@@ -19,21 +18,20 @@ $txt['emails'] = array(
 		/* 
 			@additional_params: resend_activate_message
 				REALNAME: The display name for the member receiving the email.
-				USERNAME:  The user name for the member receiving the email.
-				ACTIVATIONLINK:  The url link to activate the member's account.
-				ACTIVATIONCODE:  The code needed to activate the member's account.
+				USERNAME: The user name for the member receiving the email.
+				ACTIVATIONLINK: The url link to activate the member's account.
+				ACTIVATIONCODE: The code needed to activate the member's account.
 			@description: 
 		*/
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
-		'body' => '¡Estás registrado/a en {FORUMNAME}, {REALNAME}!
+		'body' => 'Ahora estás registrado/a con una cuenta en {FORUMNAME}, {REALNAME}
 
-Tu nombre de usuario es "{USERNAME}".
+Usuario: {USERNAME}
 
-Antes de que puedas conectarte, primero necesitas activar tu cuenta. Para hacerlo, por favor, pincha en el siguiente enlace:
-
+Sin embargo, para que la cuenta sea plenamente funcional primero debes activarla. Para ello, sigue pincha en el siguiente enlace:
 {ACTIVATIONLINK}
 
-Si tienes problemas con la activación, por favor, utiliza el código "{ACTIVATIONCODE}".
+Si tienes algún problema con la activación, por favor, utiliza el código "{ACTIVATIONCODE}".
 
 {REGARDS}',
 	),
@@ -42,15 +40,15 @@ Si tienes problemas con la activación, por favor, utiliza el código "{ACTIVATION
 		/* 
 			@additional_params: resend_pending_message
 				REALNAME: The display name for the member receiving the email.
-				USERNAME:  The user name for the member receiving the email.
+				USERNAME: The user name for the member receiving the email.
 			@description: 
 		*/
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
 		'body' => 'Tu solicitud de registro en {FORUMNAME} ha sido recibida, {REALNAME}.
 
-El usuario que registraste fue {USERNAME}.
+El usuario que registraste es {USERNAME}.
 
-Antes de que puedas conectarte y comenzar a utilizar el foro, tu solicitud debe ser revisada y aprobada. Cuando esto suceda, recibirás otro email desde esta dirección.
+Antes de que puedas iniciar sesión y comenzar a utilizar el foro, tu solicitud debe ser revisada y aprobada. Cuando esto suceda, recibirás otro email desde esta dirección.
 
 {REGARDS}',
 	),
@@ -95,7 +93,7 @@ Lamentamos notificarte que tu solicitud para unirte al grupo "{GROUPNAME}" de {F
 
 Lamentamos notificarte que tu solicitud para unirte al grupo "{GROUPNAME}" de {FORUMNAME} ha sido rechazada.
 
-Es debido a la siguiente razón: {REASON}
+El motivo del rechazo es el siguiente: {REASON}
 
 {REGARDS}',
 	),
@@ -110,9 +108,9 @@ Es debido a la siguiente razón: {REASON}
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
 		'body' => 'Bienvenido/a, {USERNAME}!
 
-Tu cuenta ha sido activada manualmente por el administrador y ahora puedes conectarte y publicar mensajes. Tu nombre de usuario es: {USERNAME}
+Tu cuenta ha sido activada manualmente por el administrador y ahora puedes iniciar sesión y publicar mensajes. Tu nombre de usuario es: {USERNAME}
 
-Puedes cambiarlo después de conectarte, yendo a la página del perfil, o visitando esta página después de conectar:
+Puedes cambiarlo desde tu perfil, una vez iniciada sesión, o visitando esta página:
 {PROFILELINK}
 
 {REGARDS}',
@@ -121,13 +119,13 @@ Puedes cambiarlo después de conectarte, yendo a la página del perfil, o visitand
 		/*
 			@additional_params: admin_approve_activation
 				USERNAME: The user name for the member receiving the email.
-				ACTIVATIONLINK:  The url link to activate the member's account.
+				ACTIVATIONLINK: The url link to activate the member's account.
 			@description:
 		*/
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
 		'body' => 'Bienvenido/a, {USERNAME}!
 
-Tu cuenta de {FORUMNAME} ha sido aprobada por el administrador del foro, y debe ser activada ahora antes de que puedas comenzar a publicar mensajes.  Por favor, utiliza el enlace de abajo para activar tu cuenta:
+Tu cuenta en {FORUMNAME} ha sido aprobada por el administrador del foro, pero debe ser activada antes de que puedas comenzar a publicar mensajes. Por favor, utiliza el enlace de abajo para activar tu cuenta:
 {ACTIVATIONLINK}
 
 {REGARDS}',
@@ -141,7 +139,7 @@ Tu cuenta de {FORUMNAME} ha sido aprobada por el administrador del foro, y debe 
 		'subject' => 'Registro Rechazado',
 		'body' => '{USERNAME},
 
-Lamentablemente, su solicitud de ingreso en {FORUMNAME} ha sido rechazada.
+Lamentablemente, tu solicitud de ingreso en {FORUMNAME} ha sido rechazada.
 
 {REGARDS}',
 	),
@@ -154,7 +152,7 @@ Lamentablemente, su solicitud de ingreso en {FORUMNAME} ha sido rechazada.
 		'subject' => 'Cuenta Eliminada',
 		'body' => '{USERNAME},
 
-Tu cuenta en {FORUMNAME} ha sido eliminada. Puede ser debido a que nunca activaras tu cuenta, en ese caso podrías volver a registrarte de nuevo.
+Tu cuenta en {FORUMNAME} ha sido eliminada. Puede ser debido a que nunca activaras tu cuenta, en ese caso podrías volver a registrarte.
 
 {REGARDS}',
 	),
@@ -162,7 +160,7 @@ Tu cuenta en {FORUMNAME} ha sido eliminada. Puede ser debido a que nunca activar
 		/*
 			@additional_params: admin_approve_remind
 				USERNAME: The user name for the member receiving the email.
-				ACTIVATIONLINK:  The url link to activate the member's account.
+				ACTIVATIONLINK: The url link to activate the member's account.
 			@description:
 		*/
 		'subject' => 'Recordatorio de Registro',
@@ -180,7 +178,7 @@ Si tuvieras algún problema con la activación, por favor visita {ACTIVATIONLINKWI
 		/*
 			@additional_params:
 				USERNAME: El nombre de usuario para el miembro que recibirá el email.
-				ACTIVATIONLINK:  La url del enlace para activar la cuenta del usuario.
+				ACTIVATIONLINK: La url del enlace para activar la cuenta del usuario.
 				ACTIVATIONLINKWITHOUTCODE: La url de la página en la que puede introducirse el código de activación.
 				ACTIVATIONCODE: El código de activación.
 			@description:
@@ -188,7 +186,7 @@ Si tuvieras algún problema con la activación, por favor visita {ACTIVATIONLINKWI
 		'subject' => 'Bienvenido a {FORUMNAME}',
 		'body' => 'Gracias por registrarte en {FORUMNAME}. Tu nombre de usuario es {USERNAME} y tu clave {PASSWORD}.
 
-Antes de que puedas acceder, primero debes activar tu cuenta haciendo clic en el soguiente enlace:
+Antes de que puedas acceder, primero debes activar tu cuenta haciendo clic en el siguiente enlace:
 
 {ACTIVATIONLINK}
 
@@ -231,7 +229,7 @@ Puedes ver el mensaje completo en el siguiente enlace:
 			@description:
 		*/
 		'subject' => 'Nuevo Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás observando.
+		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás siguiendo.
 
 Puedes verlo en
 {TOPICLINK}
@@ -255,7 +253,7 @@ Para darte de baja de nuevos temas de este foro, utiliza este enlace:
 			@description:
 		*/
 		'subject' => 'Nuevo Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás observando.
+		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás siguiendo.
 
 Puedes verlo en
 {TOPICLINK}
@@ -277,7 +275,7 @@ Para darte de baja de nuevos temas de este foro, utiliza este enlace:
 			@description:
 		*/
 		'subject' => 'Nuevo Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás observando.
+		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás siguiendo.
 
 Puedes verlo en
 {TOPICLINK}
@@ -299,7 +297,7 @@ Para darte de baja de nuevos temas de este foro, utiliza este enlace:
 			@description:
 		*/
 		'subject' => 'Nuevo Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás observando.
+		'body' => 'Se ha creado un nuevo tema, \'{TOPICSUBJECT}\', en un foro que estás siguiendo.
 
 Puedes verlo en
 {TOPICLINK}
@@ -322,7 +320,7 @@ Para darte de baja de nuevos temas de este foro, utiliza este enlace:
 		'subject' => 'Nueva Solicitud de Ingreso en Grupo',
 		'body' => '{RECPNAME},
 		
-{APPYNAME} ha solicitado una solicitud de ingreso en el grupo "{GROUPNAME}". El usuario ha dado la siguiente razón:
+{APPYNAME} ha solicitado el ingreso en el grupo "{GROUPNAME}". El usuario ha dado la siguiente razón:
 
 {REASON}
 
@@ -341,15 +339,15 @@ Puedes aprobar o rechazar esta solicitud pulsando en el enlace de abajo:
 				END_DATE: Date it expires.
 			@description:
 		*/
-		'subject' => 'Subscription about to expire at {FORUMNAME}',
+		'subject' => 'Tu suscripción a {FORUMNAME} caduca en breve',
 		'body' => '{REALNAME},
 
-Una de tus suscripciones de {FORUMNAME} está a punto de expirar. Si en el momento de darla de alta seleccionó la opción de renovar automáticamente, no es necesario que haga nada - en caso contrario, debe considerar si desea suscribirse de nuevo. A continuación tiene los detalles:
+Una de tus suscripciones de {FORUMNAME} está a punto de expirar. Si en el momento de darla de alta seleccionaste la opción de renovar automáticamente, no es necesario que hagas nada - en caso contrario, debes considerar si deseas suscribirte de nuevo. A continuación tienes los detalles:
 
 Nombre de la suscripción: {SUBSCRIPTION}
 Fecha en la que expira: {END_DATE}
 
-Para editar sus suscripciones visite la siguiente URL:
+Para editar tus suscripciones visita la siguiente URL:
 {PROFILE_LINK}
 
 {REGARDS}',
@@ -357,12 +355,12 @@ Para editar sus suscripciones visite la siguiente URL:
 	'activate_reactivate' => array(
 		/*
 			@additional_params: activate_reactivate
-				ACTIVATIONLINK:  The url link to reactivate the member's account.
-				ACTIVATIONCODE:  The code needed to reactivate the member's account.
+				ACTIVATIONLINK: The url link to reactivate the member's account.
+				ACTIVATIONCODE: The code needed to reactivate the member's account.
 			@description: 
 		*/
 		'subject' => 'Bienvenido de nuevo a {FORUMNAME}',
-		'body' => 'Para revalidar tu dirección email, tu cuenta ha sido desactivada. Pulsa en el enlace siguiente para volverla a activar:
+		'body' => 'Para revalidar tu dirección de email, tu cuenta ha sido desactivada. Pulsa en el enlace siguiente para volverla a activar:
 {ACTIVATIONLINK}
 
 Si tienes problemas con la activación, por favor, utiliza el código "{ACTIVATIONCODE}".
@@ -380,7 +378,7 @@ Si tienes problemas con la activación, por favor, utiliza el código "{ACTIVATION
 		*/
 		'subject' => 'Nueva contraseña para {FORUMNAME}',
 		'body' => 'Estimado/a {REALNAME},
-Se ha enviado este correo porque se ha aplicado la función \'contraseña olvidada\' en tu cuenta. Para establecer una contraseña nueva, pulsa en el siguiente enlace:
+Se ha enviado este correo porque se ha utilizado la función \'contraseña olvidada\' en tu cuenta. Para establecer una contraseña nueva, pulsa en el siguiente enlace:
 {REMINDLINK}
 
 IP: {IP}
@@ -398,7 +396,7 @@ Usuario: {MEMBERNAME}
 		*/
 		'subject' => 'Recordatorio de OpenID para {FORUMNAME}',
 		'body' => 'Estimado/a {REALNAME},
-Este correo fue enviado porque se activó la función \'olvidé mi OpenID\' para su cuenta. A continuación tiene la OpenID a la que está asociada su cuenta de usuario:
+Este correo fue enviado porque se activó la función \'olvidé mi OpenID\' para tu cuenta. A continuación tienes la OpenID a la que está asociada tu cuenta de usuario:
 {OPENID}
 
 IP: {IP}
@@ -436,7 +434,7 @@ Por favor, conéctate al foro para revisar estos elementos.
 		*/
 		'subject' => 'Tema: {TOPICSUBJECT} (De: {SENDERNAME})',
 		'body' => 'Estimado/a {RECPNAME},
-Me gustaría que comprobaras "{TOPICSUBJECT}" de {FORUMNAME}.  Para verlo, por favor, pulsa en este enlace:
+Me gustaría que le echaras un vistazo a "{TOPICSUBJECT}" publicado en {FORUMNAME}. Para verlo, por favor, pulsa en este enlace:
 
 {TOPICLINK}
 
@@ -456,7 +454,7 @@ Gracias,
 		*/
 		'subject' => 'Tema: {TOPICSUBJECT} (De: {SENDERNAME})',
 		'body' => 'Estimado/a {RECPNAME},
-Me gustaría que comprobaras "{TOPICSUBJECT}" de {FORUMNAME}.  Para verlo, por favor, pulsa en este enlace:
+Me gustaría que le echaras un vistazo a "{TOPICSUBJECT}" publicado en {FORUMNAME}. Para verlo, por favor, pulsa en este enlace:
 
 {TOPICLINK}
 
@@ -526,14 +524,14 @@ Puedes cambiarlos después de conectar yendo a tu página de perfil, o visitando e
 				REALNAME: The display name for the member receiving the email.
 				USERNAME: The user name for the member receiving the email.
 				PASSWORD: The password for the member.
-				ACTIVATIONLINK:  The url link to reactivate the member's account.
-				ACTIVATIONCODE:  The code needed to reactivate the member's account.
+				ACTIVATIONLINK: The url link to reactivate the member's account.
+				ACTIVATIONCODE: The code needed to reactivate the member's account.
 			@description:
 		*/
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
 		'body' => '¡Estás registrado en {FORUMNAME}, {REALNAME}!
 
-Tu nombre de usuario de la cuenta es {USERNAME} y su contraseña es {PASSWORD} (que puede cambiarse posteriormente.)
+Tu nombre de usuario de la cuenta es {USERNAME} y tu contraseña es {PASSWORD} (que puede cambiarse posteriormente.)
 
 Antes de que puedas conectarte, primero necesitas activar tu cuenta. Para hacerlo, por favor, entra en este enlace:
 
@@ -549,21 +547,21 @@ Si tienes problemas con la activación, por favor, utiliza el código "{ACTIVATION
 				REALNAME: The display name for the member receiving the email.
 				USERNAME: The user name for the member receiving the email.
 				OPENID: The openID identity for the member.
-				ACTIVATIONLINK:  The url link to reactivate the member's account.
-				ACTIVATIONCODE:  The code needed to reactivate the member's account.
+				ACTIVATIONLINK: The url link to reactivate the member's account.
+				ACTIVATIONCODE: The code needed to reactivate the member's account.
 			@description:
 		*/
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
-		'body' => 'Acaba de registrar una cuenta en {FORUMNAME}, {REALNAME}!
+		'body' => 'Registro en {FORUMNAME}, {REALNAME}!
 
-Su nombre de usuario para su cuenta es {USERNAME}. Ha elegido autenticarse usando la siguiente identidad OpenID:
+Tu nombre de usuario de la cuenta es {USERNAME}. Has elegido autenticarse usando la siguiente identidad OpenID:
 {OPENID}
 
-Antes de que pueda acceder, primero debe activar su cuenta. Para hacerlo, por favor, siga este enlace:
+Antes de que puedas acceder, primero debes activar tu cuenta. Para hacerlo, por favor, sigue este enlace:
 
 {ACTIVATIONLINK}
 
-Si tuviera algún problema con la activación, por favor utilice el código "{ACTIVATIONCODE}".
+Si tuvieras algún problema con la activación, por favor utiliza el código "{ACTIVATIONCODE}".
 
 {REGARDS}',
 	),
@@ -573,15 +571,15 @@ Si tuviera algún problema con la activación, por favor utilice el código "{ACTIV
 				REALNAME: The display name for the member receiving the email.
 				USERNAME: The user name for the member receiving the email.
 				PASSWORD: The password for the member.
-				COPPALINK:  The url link to the coppa form.
+				COPPALINK: The url link to the coppa form.
 			@description:
 		*/
-		'subject' => 'Bienvenido {FORUMNAME}',
-		'body' => 'You are now registered with an account at {FORUMNAME}, {REALNAME}!
+		'subject' => 'Bienvenido/a a {FORUMNAME}',
+		'body' => '¡Estás registrado en {FORUMNAME}, {REALNAME}!
 
-Su nombre de usuario para su cuenta es {USERNAME} y su contraseña es {PASSWORD} (puede cambiarla más tarde)
+Tu nombre de usuario de la cuenta es {USERNAME} y tu contraseña es {PASSWORD} (que puede cambiarse posteriormente.)
 
-Antes de poder iniciar sesión, el administrador requiere el consentimiento de su padre / tutor para que se una a la comunidad. Puede obtener más información en el siguiente enlace:
+Antes de poder iniciar sesión, el administrador requiere el consentimiento de tu padre/madre/tutor para que te unas a la comunidad. Puedes obtener más información en el siguiente enlace:
 
 {COPPALINK}
 
@@ -593,18 +591,18 @@ Antes de poder iniciar sesión, el administrador requiere el consentimiento de su
 				REALNAME: The display name for the member receiving the email.
 				USERNAME: The user name for the member receiving the email.
 				OPENID: The openID identity for the member.
-				COPPALINK:  The url link to the coppa form.
+				COPPALINK: The url link to the coppa form.
 			@description:
 		*/
-		'subject' => 'Welcome to {FORUMNAME}',
-		'body' => 'You are now registered with an account at {FORUMNAME}, {REALNAME}!
+		'subject' => 'Bienvenido/a a {FORUMNAME}',
+		'body' => '¡Estás registrado en {FORUMNAME}, {REALNAME}!
 
-Your account\'s username is {USERNAME}.
+Tu nombre de usuario de la cuenta es {USERNAME}.
 
-You have chosen to authenticate using the following OpenID identity:
+Has elegido autenticarse usando la siguiente identidad OpenID:
 {OPENID}
 
-Before you can login, the admin requires consent from your parent/guardian for you to join the community. You can obtain more information at the link below:
+Antes de poder iniciar sesión, el administrador requiere el consentimiento de tu padre/madre/tutor para que te unas a la comunidad. Puedes obtener más información en el siguiente enlace:
 
 {COPPALINK}
 
@@ -621,9 +619,9 @@ Before you can login, the admin requires consent from your parent/guardian for y
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
 		'body' => '¡Estás registrado en {FORUMNAME}, {REALNAME}!
 
-Tu nombre de usuario de la cuenta es {USERNAME} y su contraseña es {PASSWORD}.
+Tu nombre de usuario de la cuenta es {USERNAME} y tu contraseña es {PASSWORD}.
 
-Puedes cambiar tu contraseña después de conectar yendo a tu perfil, o visitando esta página después de conectar:
+Puedes cambiar tu contraseña tras ingresar e ir a tu perfil, o visitando esta página:
 
 {SCRIPTURL}?action=profile
 
@@ -637,15 +635,15 @@ Puedes cambiar tu contraseña después de conectar yendo a tu perfil, o visitando 
 				OPENID: The openID identity for the member.
 			@description:
 		*/
-		'subject' => 'Welcome to {FORUMNAME}',
-		'body' => 'You are now registered with an account at {FORUMNAME}, {REALNAME}!
+		'subject' => 'Bienvenido/a a {FORUMNAME}',
+		'body' => '¡Estás registrado en {FORUMNAME}, {REALNAME}!
 
-Your account\'s username is {USERNAME}.
+Tu nombre de usuario de la cuenta es {USERNAME}.
 
-You have chosen to authenticate using the following OpenID identity:
+Has elegido autenticarte usando la siguiente identidad OpenID:
 {OPENID}
 
-You may update your profile by visiting this page after you login:
+Puedes actualizar tu perfil visitando esta página:
 
 {SCRIPTURL}?action=profile
 
@@ -662,7 +660,7 @@ You may update your profile by visiting this page after you login:
 		'subject' => 'Bienvenido/a a {FORUMNAME}',
 		'body' => 'Se ha recibido tu solicitud de registro en {FORUMNAME}, {REALNAME}.
 
-El usuario que registraste fue {USERNAME} y su contraseña fue {PASSWORD}.
+El usuario que registraste fue {USERNAME} con la contraseña {PASSWORD}.
 
 Antes de que puedas conectarte y empezar a utilizar el foro, tu solicitud debe ser revisada y aprobada. Cuando esto suceda, recibirás otro email desde esta dirección.
 
@@ -676,15 +674,15 @@ Antes de que puedas conectarte y empezar a utilizar el foro, tu solicitud debe s
 				OPENID: The openID identity for the member.
 			@description:
 		*/
-		'subject' => 'Welcome to {FORUMNAME}',
-		'body' => 'Your registration request at {FORUMNAME} has been received, {REALNAME}.
+		'subject' => 'Bienvenido/a a {FORUMNAME}',
+		'body' => 'Se ha recibido tu solicitud de registro en {FORUMNAME}, {REALNAME}.
 
-The username you registered with was {USERNAME}.
+El usuario que registraste fue {USERNAME}.
 
-You have chosen to authenticate using the following OpenID identity:
+Has elegido autenticarte usando la siguiente identidad OpenID:
 {OPENID}
 
-Before you can login and start using the forum, your request will be reviewed and approved.  When this happens, you will receive another email from this address.
+Antes de que puedas conectarte y empezar a utilizar el foro, tu solicitud debe ser revisada y aprobada. Cuando esto suceda, recibirás otro email desde esta dirección.
 
 {REGARDS}',
 	),
@@ -698,7 +696,7 @@ Before you can login and start using the forum, your request will be reviewed an
 			@description:
 		*/
 		'subject' => 'Respuesta a Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás observando.
+		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás siguiendo.
 
 Puedes ver la respuesta en: {TOPICLINK}
 
@@ -717,7 +715,7 @@ Para darte de baja de este tema utiliza este enlace: {UNSUBSCRIBELINK}
 			@description:
 		*/
 		'subject' => 'Respuesta a Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás observando.
+		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás siguiendo.
 
 Puedes ver la respuesta en: {TOPICLINK}
 
@@ -738,7 +736,7 @@ La respuesta se muestra abajo:
 			@description:
 		*/
 		'subject' => 'Respuesta a Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás observando.
+		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás siguiendo.
 
 Puedes ver la respuesta en: {TOPICLINK}
 
@@ -759,7 +757,7 @@ Pueden haberse publicado más respuestas, pero no recibirás más notificaciones ha
 			@description:
 		*/
 		'subject' => 'Respuesta a Tema: {TOPICSUBJECT}',
-		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás observando.
+		'body' => 'Se ha publicado una respuesta a un tema de {POSTERNAME} que estás siguiendo.
 
 Puedes ver la respuesta en: {TOPICLINK}
 
@@ -778,7 +776,7 @@ Pueden haberse publicado más respuestas, pero no recibirás más notificaciones ha
 			@description:
 		*/
 		'subject' => 'Tema fijado: {TOPICSUBJECT}',
-		'body' => 'Un tema que estás observando ha sido fijado con chincheta por {POSTERNAME}.
+		'body' => 'Un tema que estás siguiendo ha sido fijado con chincheta por {POSTERNAME}.
 
 Puedes ver el tema en: {TOPICLINK}
 
@@ -792,7 +790,7 @@ Para darte de baja de este tema utiliza este enlace: {UNSUBSCRIBELINK}
 			@description:
 		*/
 		'subject' => 'Tema Bloqueado: {TOPICSUBJECT}',
-		'body' => 'Un tema que estás observando ha sido bloqueado por {POSTERNAME}.
+		'body' => 'Un tema que estás siguiendo ha sido bloqueado por {POSTERNAME}.
 
 Puedes ver el tema en: {TOPICLINK}
 
@@ -806,7 +804,7 @@ Para darte de baja de este tema utiliza este enlace: {UNSUBSCRIBELINK}
 			@description:
 		*/
 		'subject' => 'Tema desbloqueado: {TOPICSUBJECT}',
-		'body' => 'Un tema que estás observando ha sido desbloqueado por {POSTERNAME}.
+		'body' => 'Un tema que estás siguiendo ha sido desbloqueado por {POSTERNAME}.
 
 Puedes ver el tema en: {TOPICLINK}
 
@@ -820,7 +818,7 @@ Para darte de baja de este tema utiliza este enlace: {UNSUBSCRIBELINK}
 			@description:
 		*/
 		'subject' => 'Tema eliminado: {TOPICSUBJECT}',
-		'body' => 'Un tema que estás observando ha sido eliminado por {POSTERNAME}.
+		'body' => 'Un tema que estás siguiendo ha sido eliminado por {POSTERNAME}.
 
 {REGARDS}',
 	),
@@ -830,7 +828,7 @@ Para darte de baja de este tema utiliza este enlace: {UNSUBSCRIBELINK}
 			@description:
 		*/
 		'subject' => 'Topic movido: {TOPICSUBJECT}',
-		'body' => 'Un tema que estás observando ha sido movido a otro foro por {POSTERNAME}.
+		'body' => 'Un tema que estás siguiendo ha sido movido a otro foro por {POSTERNAME}.
 
 Puedes ver el tema en: {TOPICLINK}
 
@@ -844,7 +842,7 @@ Para darte de baja de este tema utiliza este enlace: {UNSUBSCRIBELINK}
 			@description:
 		*/
 		'subject' => 'Tema combinado: {TOPICSUBJECT}',
-		'body' => 'Un tema que estás observando ha sido combinado con otro tema por {POSTERNAME}.
+		'body' => 'Un tema que estás siguiendo ha sido combinado con otro tema por {POSTERNAME}.
 
 Puedes ver el nuevo tema combinado en: {TOPICLINK}
 
@@ -858,7 +856,7 @@ Para darte de baja de este tema utiliza este enlace: {UNSUBSCRIBELINK}
 			@description:
 		*/
 		'subject' => 'Tema dividido: {TOPICSUBJECT}',
-		'body' => 'Un tema que estás observando ha sido dividido en dos o más temas por {POSTERNAME}.
+		'body' => 'Un tema que estás siguiendo ha sido dividido en dos o más temas por {POSTERNAME}.
 
 Puedes ver lo que queda de este tema en: {TOPICLINK}
 
@@ -902,12 +900,12 @@ Antes de que este usuario pueda comenzar a publicar mensajes, debe aprobarse su 
 				REALNAME:
 			@description:
 		*/
-		'subject' => 'Urgent! Attachments folder almost full',
+		'subject' => '¡Urgente! Carpeta de Adjuntos casi llena',
 		'body' => '{REALNAME},
 
-The attachments folder at {FORUMNAME} is almost full. Please visit the forum to resolve this problem.
+La carpeta de archivos adjuntos en {FORUMNAME} está casi llena. Por favor visita el foro para resolver este problema.
 
-Once the attachments folder reaches it\'s maximum permitted size users will not be able to continue to post attachments or upload custom avatars (If enabled).
+Una vez que la carpeta de archivos adjuntos llegue a su tamaño máximo permitido, los usuarios no serán capaces de enviar archivos adjuntos o cargar avatares personalizados (en caso de que estas funciones estén activadas).
 
 {REGARDS}',
 	),
@@ -922,16 +920,16 @@ Once the attachments folder reaches it\'s maximum permitted size users will not 
 				PROFILELINK: Link to members profile.
 			@description:
 		*/
-		'subject' => 'Refunded Paid Subscription',
+		'subject' => 'Reembolso en suscripción de pago',
 		'body' => '{REALNAME},
 
-A member has received a refund on a paid subscription. Below are the details of this subscription:
+Un usuario ha recibido un reembolso por una suscripción de pago. A continuación se presentan los detalles de esta suscripción:
 
-	Subscription: {NAME}
-	User Name: {REFUNDNAME} ({REFUNDUSER})
-	Date: {DATE}
+	Suscripción: {NAME}
+	Nombre de Usuario: {REFUNDNAME} ({REFUNDUSER})
+	Fecha: {DATE}
 
-You can view this members profile by clicking the link below:
+Puedes ver el perfil del usuario haciendo clic en el enlace:
 {PROFILELINK}
 
 {REGARDS}',
@@ -948,18 +946,18 @@ You can view this members profile by clicking the link below:
 				PROFILELINK: Link to members profile.
 			@description:
 		*/
-		'subject' => 'New Paid Subscription',
+		'subject' => 'Nueva suscripción de pago',
 		'body' => '{REALNAME},
 
-A member has taken out a new paid subscription. Below are the details of this subscription:
+Un usuario ha sacado una nueva suscripción de pago. A continuación se presentan los detalles de esta suscripción:
 
-	Subscription: {NAME}
-	User Name: {SUBNAME} ({SUBUSER})
-	User Email: {SUBEMAIL}
-	Price: {PRICE}
-	Date: {DATE}
+	Suscripción: {NAME}
+	Nombre de Usuario: {SUBNAME} ({SUBUSER})
+	Email: {SUBEMAIL}
+	Precio: {PRICE}
+	Fecha: {DATE}
 
-You can view this members profile by clicking the link below:
+Puedes ver el perfil del usuario haciendo clic en el enlace:
 {PROFILELINK}
 
 {REGARDS}',
@@ -974,7 +972,7 @@ You can view this members profile by clicking the link below:
 		'subject' => 'Paid Subscription Error Occured',
 		'body' => '{REALNAME},
 
-The following error occured when processing a paid subscription
+Ocurrió el siguiente error al procesar una suscripción de pago:
 ---------------------------------------------------------------
 {ERROR}
 
@@ -989,73 +987,74 @@ The following error occured when processing a paid subscription
 */
 $birthdayEmails = array(
 	'happy_birthday' => array(
-		'subject' => 'Feliz cumpleaños {FORUMNAME}.',
-		'body' => 'Hola {REALNAME},
+		'subject' => 'Feliz cumpleaños de parte de {FORUMNAME}.',
+		'body' => 'Estimado {REALNAME},
 
-En {FORUMNAME} nos hemos enterado de que es tu cumpleaños.  Queremos felicitarte y desearte que pases un día genial.
+Desde {FORUMNAME} queremos desearte un feliz cumpleaños. Que este día, y el año que le sigue, te llenen de felicidad.
 
 {REGARDS}',
 		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=2676">Thantos</a>',
 	),
 	'karlbenson1' => array(
-		'subject' => 'On your Birthday...',
-		'body' => 'We could have sent you a birthday card.  We could have sent you some flowers or a cake.
+		'subject' => 'En tu cumpleaños...',
+		'body' => 'Podríamos haberte enviado una tarjeta de felicitación. Podríamos haberte enviado flores, o una tarta.
 
-But we didn\'t.
+Pero no lo hicimos.
 
-We could have even sent you one of those automatically generated messages to wish you happy birthday where we don\'t even have to replace INSERT NAME.
+Podríamos haberte enviado uno de esos mensajes generados automáticamente para desearte un feliz cumpleaños en los que ni siquiera tenemos que sustituir la variable INSERTE NOMBRE. 
 
-But we didn\'t
+Pero no lo hicimos.
 
-We wrote this birthday greeting just for you.
+Hemos escrito esta felicitación de cumpleaños solo para ti.
 
-We would like to wish you a very special birthday.
+Queremos desearte un cumpleaños muy especial.
 
 {REGARDS}
 
-//:: This message was automatically generated :://',
+//:: Este mensaje ha sido generado de forma automática :://',
 		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=63186">karlbenson</a>',
 	),
 	'nite0859' => array(
-		'subject' => 'Happy Birthday!',
-		'body' => 'Your friends at {FORUMNAME} would like to take a moment of your time to wish you a happy birthday, {REALNAME}. If you have not done so recently, please visit our community in order for others to have the opportunity to pass along their warm regards.
+		'subject' => '¡Feliz Cumpleaños!',
+		'body' => 'Tus amigos de {FORUMNAME} quieren dedicarte unos minutos para desearte un feliz cumpleaños, {REALNAME}. Si hace tiempo que no nos has visitado, por favor, date una vuelta por el foro para que los demás tengan la oportunidad de enviarte un afectuoso saludo.
 
-Even though today is your birthday, {REALNAME}, we would like to remind you that your membership in our community has been the best gift to us thus far.
+A pesar de que hoy es tu cumpleaños, {REALNAME}, nos gustaría aprovechar la oportunidad para recordarte que el verdadero regalo es el que nos haces a nosotros por pertenecer a nuestra comunidad.
 
-Best Wishes,
-The Staff of {FORUMNAME}',
+Con nuestros mejores deseos,
+El equipo de {FORUMNAME}',
 		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=46625">nite0859</a>',
 	),
 	'zwaldowski' => array(
-		'subject' => 'Birthday Wishes to {REALNAME}',
-		'body' => 'Dear {REALNAME},
+		'subject' => 'Felicitación de cumpleaños para {REALNAME}',
+		'body' => 'Estimado {REALNAME},
 
-Another year in your life has passed.  We at {FORUMNAME} hope it has been filled with happiness, and wish you luck in the coming one.
+Ya ha pasado otro año más. Desde {FORUMNAME} deseamos que este año pasado te haya colmado con felicidad y te deseamos lo mejor para este próximo año que inicias hoy. 
 
 {REGARDS}',
 		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=72038">zwaldowski</a>',
 	),
 	'geezmo' => array(
-		'subject' => 'Happy birthday, {REALNAME}!',
-		'body' => 'Do you know who\'s having a birthday today, {REALNAME}?
+		'subject' => 'Feliz cumpleaños, {REALNAME}!',
+		'body' => '¿A que no sabes quién cumple años hoy, {REALNAME}?
 
-We know... YOU!
+¡TÚ! ¡No se nos ha escapado!
 
-Happy birthday!
+¡Feliz cumpleaños!
 
-You\'re now a year older but we hope you\'re a lot happier than last year.
+Ahora que tienes un año más en tu haber esperamos que seas también más feliz. 
 
-Enjoy your day today, {REALNAME}!
+¡Disfruta de tu día {REALNAME}!
 
-- From your {FORUMNAME} family',
+- Tu familia de {FORUMNAME}',
 		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=48671">geezmo</a>',
 	),
 	'karlbenson2' => array(
-		'subject' => 'Your Birthday Greeting',
-		'body' => 'We hope your birthday is the best ever cloudly, sunny or whatever the weather.
-Have lots of birthday cake and fun, and tell us what you have done.
+		'subject' => 'Tu felicitación de Cumpleaños',
+		'body' => 'Te deseamos el mejor cumpleaños del mundo haga sol, esté nublado o haya el tiempo que haya.
+Disfruta de tu tarta y cuéntanos cómo te ha ido.
 
-We hope this message brought you cheer, and make it last, until same time same place, next year.
+Esperamos que este mensaje te alegre el día y que esa felicidad dure todo lo posible. Nos vemos en el mismo sitio al año que viene.
+.
 
 {REGARDS}',
 		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=63186">karlbenson</a>',

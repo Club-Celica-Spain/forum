@@ -3,39 +3,39 @@
 
 // Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['repair_zero_ids'] = 'Temas y/o mensajes encontrados con ID igual a 0.';
-$txt['repair_missing_topics'] = 'El mensaje #%d está en el tema inexistente  #%d.';
-$txt['repair_missing_messages'] = 'El tema #%d no contiene mensajes (reales).';
-$txt['repair_stats_topics_1'] = 'En el tema #%d el primer mensaje tiene la ID %d, que es incorrecta.';
-$txt['repair_stats_topics_2'] = 'En el tema #%d el último mensaje tiene la ID %d, que es incorrecta.';
-$txt['repair_stats_topics_3'] = 'El tema #%d tiene un número incorrecto de respuestas, %d.';
-$txt['repair_stats_topics_4'] = 'El tema #%d tiene un número incorrecto de mensajes no aprobados, %d.';
-$txt['repair_stats_topics_5'] = 'El tema #%d tiene activada la bandera de aprobación erróneamente.';
-$txt['repair_missing_boards'] = 'El tema #%d está en el foro #%d, que no existe.';
-$txt['repair_missing_categories'] = 'El foro #%d está en la categoría #%d, que no existe.';
-$txt['repair_missing_posters'] = 'El mensaje #%d fue escrito por el usuario #%d, que no existe.';
-$txt['repair_missing_parents'] = 'El foro #%d es un hijo del foro #%d, que no existe.';
-$txt['repair_missing_polls'] = 'El tema #%d está asociado a una encuesta que no existe, la #%d.';
-$txt['repair_polls_missing_topics'] = 'Poll #%1$d is tied to non-existent topic #%2$d.';
-$txt['repair_missing_calendar_topics'] = 'El evento #%d está asociado al tema #%d, que no existe.';
-$txt['repair_missing_log_topics'] = 'El tema #%d está marcado como leído para uno o más usuarios, pero no existe.';
-$txt['repair_missing_log_topics_members'] = 'El usuario #%d tiene marcado uno o más temas como leídos, pero este usuario no existe.';
-$txt['repair_missing_log_boards'] = 'El foro #%d está marcado como leído para uno o más usuarios, pero no existe.';
-$txt['repair_missing_log_boards_members'] = 'El usuario #%d tiene marcado uno o más foros como leídos, pero este usuario no existe.';
-$txt['repair_missing_log_mark_read'] = 'El foro #%d está marcado como leído por una o más personas, pero no existe.';
-$txt['repair_missing_log_mark_read_members'] = 'El usuario #%d tiene marcado uno o más foros como leídos, pero este usuario no existe.';
-$txt['repair_missing_pms'] = 'El mensaje privado #%d ha sido enviado a una o más personas, pero no existe.';
-$txt['repair_missing_recipients'] = 'El usuario #%d ha recibido uno o más mensajes privados, pero no existe.';
-$txt['repair_missing_senders'] = 'El mensaje privado #%d fue enviado por el miembro #%d, que no existe.';
-$txt['repair_missing_notify_members'] = 'Se han requerido notificaciones por el usuario #%d, que no existe.';
-$txt['repair_missing_cached_subject'] = 'El asunto del tema #%d no está guardado actualmente en la caché de asuntos.';
-$txt['repair_missing_topic_for_cache'] = 'La palabra cacheada \'%s\' está asociada a un tema no existente.';
+$txt['repair_missing_topics'] = 'El mensaje #%1$d está en el tema inexistente  #%2$d.';
+$txt['repair_missing_messages'] = 'El tema #%1$d no contiene mensajes (reales).';
+$txt['repair_stats_topics_1'] = 'En el tema #%1$d el primer mensaje tiene la ID %2$d, que es incorrecta.';
+$txt['repair_stats_topics_2'] = 'En el tema #%1$d el último mensaje tiene la ID %2$d, que es incorrecta.';
+$txt['repair_stats_topics_3'] = 'El tema #%1$d tiene un número incorrecto de respuestas, %2$d.';
+$txt['repair_stats_topics_4'] = 'El tema #%1$d tiene un número incorrecto de mensajes no aprobados, %2$d.';
+$txt['repair_stats_topics_5'] = 'El tema #%1$d tiene activada la bandera de aprobación erróneamente.';
+$txt['repair_missing_boards'] = 'El tema #%1$d está en el foro #%2$d, que no existe.';
+$txt['repair_missing_categories'] = 'El foro #%1$d está en la categoría #%2$d, que no existe.';
+$txt['repair_missing_posters'] = 'El mensaje #%1$d fue escrito por el usuario #%2$d, que no existe.';
+$txt['repair_missing_parents'] = 'El foro #%1$d es un hijo del foro #%2$d, que no existe.';
+$txt['repair_missing_polls'] = 'El tema #%1$d está asociado a una encuesta que no existe, la #%2$d.';
+$txt['repair_polls_missing_topics'] = 'La encuesta #%1$d está asociada al tema inexistente #%2$d. ';
+$txt['repair_missing_calendar_topics'] = 'El evento #%1$d está asociado al tema #%2$d, que no existe.';
+$txt['repair_missing_log_topics'] = 'El tema #%1$d está marcado como leído para uno o más usuarios, pero no existe.';
+$txt['repair_missing_log_topics_members'] = 'El usuario #%1$d tiene marcado uno o más temas como leídos, pero este usuario no existe.';
+$txt['repair_missing_log_boards'] = 'El foro #%1$d está marcado como leído para uno o más usuarios, pero no existe.';
+$txt['repair_missing_log_boards_members'] = 'El usuario #%1$d tiene marcado uno o más foros como leídos, pero este usuario no existe.';
+$txt['repair_missing_log_mark_read'] = 'El foro #%1$d está marcado como leído por una o más personas, pero no existe.';
+$txt['repair_missing_log_mark_read_members'] = 'El usuario #%1$d tiene marcado uno o más foros como leídos, pero este usuario no existe.';
+$txt['repair_missing_pms'] = 'El mensaje privado #%1$d ha sido enviado a una o más personas, pero no existe.';
+$txt['repair_missing_recipients'] = 'El usuario #%1$d ha recibido uno o más mensajes privados, pero no existe.';
+$txt['repair_missing_senders'] = 'El mensaje privado #%1$d fue enviado por el miembro #%2$d, que no existe.';
+$txt['repair_missing_notify_members'] = 'Se han requerido notificaciones por el usuario #%1$d, que no existe.';
+$txt['repair_missing_cached_subject'] = 'El asunto del tema #%1$d no está guardado actualmente en la caché de asuntos.';
+$txt['repair_missing_topic_for_cache'] = 'La palabra cacheada \'%1$s\' está asociada a un tema que no existe.';
 $txt['repair_missing_log_poll_member'] = 'La encuesta #%1$d ha recibido votos del usuario #%2$d , que no existe en estos momentos.';
 $txt['repair_missing_log_poll_vote'] = 'Un voto fue emitido por el usuario #%1$d en una encuesta inexistente #%2$d.';
-$txt['repair_missing_thumbnail_parent'] = 'Existe una miniatura llamada %s, pero no tiene padre.';
-$txt['repair_report_missing_comments'] = 'El informe #%d del tema: &quot;%s&quot; no tiene comentarios.';
-$txt['repair_comments_missing_report'] = 'El comentario del informe #%d enviado por %s no tiene un informe relacionado.';
-$txt['repair_group_request_missing_member'] = 'Aún exste una petición de membresía para el usuario #%d, que ha sido borrado.';
-$txt['repair_group_request_missing_group'] = 'Aún exste una petición de membresía para el grupo #%d, que ha sido borrado.';
+$txt['repair_missing_thumbnail_parent'] = 'Existe una miniatura llamada %1$s, pero no tiene padre.';
+$txt['repair_report_missing_comments'] = 'El informe #%1$d del tema: &quot;%2$s&quot; no tiene comentarios.';
+$txt['repair_comments_missing_report'] = 'El comentario del informe #%1$d enviado por %2$s no tiene un informe relacionado.';
+$txt['repair_group_request_missing_member'] = 'Aún existe una petición de membresía para el usuario #%1$d, que ha sido borrado.';
+$txt['repair_group_request_missing_group'] = 'Aún existe una petición de membresía para el grupo #%1$d, que ha sido borrado.';
 
 $txt['repair_currently_checking'] = 'Comprobando: &quot;%1$s&quot;';
 $txt['repair_currently_fixing'] = 'Arreglando: &quot;%1$s&quot;';
@@ -76,11 +76,11 @@ $txt['salvaged_category_error'] = '¡No se pudo crear la categoría Área de Salvam
 $txt['salvaged_board_name'] = 'Temas salvados';
 $txt['salvaged_board_description'] = 'Temas creados para mensajes a los que les faltaba el tema';
 $txt['salvaged_board_error'] = '¡No se pudo crear el foro de temas salvados!';
-$txt['salvaged_poll_topic_name'] = 'Salvaged Poll';
-$txt['salvaged_poll_message_body'] = 'This poll was found without a topic.';
+$txt['salvaged_poll_topic_name'] = 'Encuesta rescatada';
+$txt['salvaged_poll_message_body'] = 'Se descubrió esta encuesta sin ningún tema asociado.';
 
 $txt['database_optimize'] = 'Optimizar base de datos';
-$txt['database_numb_tables'] = 'Su base de datos contiene  %d tablas.';
+$txt['database_numb_tables'] = 'Tu base de datos contiene %1$d tablas.';
 $txt['database_optimize_attempt'] = 'Tratando de optimizar su BD...';
 $txt['database_optimizing'] = 'Optimizando %1$s... %2$01.2f kb optimizados.';
 $txt['database_already_optimized'] = 'Todas las tablas han sido ya optimizadas.';
@@ -129,16 +129,16 @@ $txt['maintain_errors_info'] = 'Si, por ejemplo, faltan posts o mensajes tras un
 $txt['maintain_logs'] = 'Vaciar logs poco importantes';
 $txt['maintain_logs_info'] = 'Esta función vaciará todos los registros poco importantes. No debería ser usada a menos que sea necesario, aunque no dañará nada.';
 $txt['maintain_cache'] = 'Vaciar la caché de ficheros';
-$txt['maintain_cache_info'] = 'Si, por cualquier razón, el archivo de caché necesita ser limpiado, este es el enlace que necesitas.';
+$txt['maintain_cache_info'] = 'Esta función vaciará el archivo de caché en caso de que necesite ser limpiado.';
 $txt['maintain_optimize'] = 'Optimizar todas las tablas';
 $txt['maintain_optimize_info'] = 'Esta tarea te permite optimizar todas las tablas. Esto se librará de todos los desbordamientos, haciendo las tablas más pequeñas y por tanto tu foro más rápido.';
 $txt['maintain_version'] = 'Comprobar todos los ficheros contra las versiones actuales';
-$txt['maintain_version_info'] = 'Esta tares de mantenimoento te permite realizar una comprobación de versión detallada de todos los archivos de tu foro contra la lista oficial de las últimas versiones.';
+$txt['maintain_version_info'] = 'Esta tarea de mantenimiento te permite realizar una comprobación de versión detallada de todos los archivos de tu foro contra la lista oficial de las últimas versiones.';
 $txt['maintain_run_now'] = 'Ejecutar tarea ahora';
 $txt['maintain_return'] = 'Volver al mantenimiento del foro';
 
 $txt['maintain_backup'] = 'Hacer copia de seguridad de la BD';
-$txt['maintain_backup_info'] = 'Download a backup copy of your forums database in case of emergency.';
+$txt['maintain_backup_info'] = 'Descarga una copia de seguridad de la base de datos de tus foros en caso de emergencia.';
 $txt['maintain_backup_struct'] = 'Guardar la estructura de tablas.';
 $txt['maintain_backup_data'] = 'Guardar los datos de las tablas (lo que de verdad importa).';
 $txt['maintain_backup_gz'] = 'Comprimir el archivo con gzip.';
@@ -151,8 +151,8 @@ $txt['maintain_old_nothing_else'] = 'Cualquier tipo de tema.';
 $txt['maintain_old_are_moved'] = 'Avisos de temas movidos.';
 $txt['maintain_old_are_locked'] = 'Cerrados.';
 $txt['maintain_old_are_not_stickied'] = 'Pero no contar los temas fijados.';
-$txt['maintain_old_all'] = 'Todos los foros';
-$txt['maintain_old_choose'] = 'Elegir foros específicos';
+$txt['maintain_old_all'] = 'Todos los foros (haz clic para seleccionar foros específicos)';
+$txt['maintain_old_choose'] = 'Elegir foros específicos (clic para seleccionarlos todos)';
 $txt['maintain_old_remove'] = 'Eliminar ahora';
 $txt['maintain_old_confirm'] = '¿Está seguro de que quiere borrar los posts antiguos ahora?\\n\\n¡Esto no puede ser deshecho!';
 
@@ -169,13 +169,8 @@ $txt['maintain_members_confirm'] = '¿Está seguro de que quiere borrar esas cuent
 
 $txt['utf8_title'] = 'Convertir la BD y los datos a UTF-8';
 $txt['utf8_introduction'] = 'UTF-8 es un juego de caracteres internacional que cubre práacticamente todos los idiomas del mundo. Convertir su BD y sus datos a UTF-8 puede hacer más fácil el soporte de múltiples idiomas en el mismo foro. También puede mejorar las capacidades de búsqueda y clasificación para idiomas con caracteres no latinos.';
-$txt['utf8_warning'] = 'Si quiere convertir sus datos y BD a UTF-8, tenga en cuenta lo siguiente:
-<ul class="normallist">
-	<li>¡Convertir juegos de caracteres puede ser <em>dañino</em> para sus datos! Asegúrese de que ha hecho una copia de seguridad de su BD <i>antes</i> de la conversión.</li>
-	<li>Debido a que UTF-8 es un juego de caracteres más rico que la mayoría de los demás, no hay retorno, a menos que restaure la BD que guardó antes de la conversión (todos los cambios posteriores se perderían).</li>
-	<li>Después de convertir sus datos y BD a, necesitará archivos de idioma compatibles con UTF-8.</li>
-</ul>';
-$txt['utf8_charset_not_supported'] = 'La conversín desde %s a UTF-8 no está soportada.';
+$txt['utf8_warning'] = 'Si quieres convertir tus datos y BD a UTF-8, ten en cuenta lo siguiente: <ul class="normallist"> <li>¡Convertir juegos de caracteres puede ser <em>dañino</em> para tus datos! Asegúrate de que has hecho una copia de seguridad de tu BD <em>antes</em> de la conversión.</li> <li>Debido a que UTF-8 es un juego de caracteres más rico que la mayoría de los demás, no hay forma de deshacer los cambios una vez aplicados, salvo restaurar la BD que guardaste antes de la conversión (todos los cambios posteriores se perderían).</li>	<li>Después de convertir tus datos y BD a UTF-8, necesitarás archivos de idioma compatibles con UTF-8.</li> </ul>';
+$txt['utf8_charset_not_supported'] = 'La conversión desde %1$s a UTF-8 no está soportada.';
 $txt['utf8_detected_charset'] = 'Basándonos en su archivo de idioma por defecto (\'%1$s\'), el juego de caracteres más adecuado para sus datos sería \'%2$s\'.';
 $txt['utf8_already_utf8'] = 'Su BD y sus datos paracen estar ya configurados como datos UTF-8. No es necesaria la conversión.';
 $txt['utf8_source_charset'] = 'Juego de caracteres de los datos';
@@ -184,7 +179,7 @@ $txt['utf8_database_charset'] = 'Juego de caracteres de la base de datos';
 $txt['utf8_target_charset'] = 'Convertir datos y BD a';
 $txt['utf8_utf8'] = 'UTF-8';
 $txt['utf8_db_version_too_low'] = 'La versión de MySQL que su servidor de base de datos usa no es lo suficientemente alta para soportar UTF-8 adecuadamente. Como mínimo se requiere una versión 4.1.2.';
-$txt['utf8_cannot_convert_fulltext'] = 'Your messages table is using a fulltext index for use when searching.  You cannot proceed in converting to UTF-8 until that index is removed. You can re-create it after the conversion has been completed.';
+$txt['utf8_cannot_convert_fulltext'] = 'Tu tabla de mensajes está usando un índice fulltext para las búsquedas. No puedes convertirla a UTF-8 hasta que ese índice sea eliminado. Puedes recrearlo más adelante, una vez que la conversión se haya completado.';
 
 $txt['entity_convert_title'] = 'Convertir entidades-HTML a caracteres UTF-8';
 $txt['entity_convert_only_utf8'] = 'La base de datos debe estar codificada en formato UTF-8 antes de que las entidades-HTML puedan ser convertidas a UTF-8';

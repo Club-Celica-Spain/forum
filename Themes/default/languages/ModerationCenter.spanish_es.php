@@ -28,8 +28,8 @@ $txt['mc_recent_reports_none'] = 'No hay informes a destacar';
 $txt['mc_watched_users_none'] = 'Actualmente no está teniendo lugar ninguna vigilancia.';
 $txt['mc_group_requests_none'] = 'No hay solicitudes abiertas de pertenencia a grupos.';
 
-$txt['mc_seen'] = 'Última vez visto';
-$txt['mc_seen_never'] = '%1$s never seen';
+$txt['mc_seen'] = '%1$s última vez visto %2$s ';
+$txt['mc_seen_never'] = '%1$s nunca visto';
 $txt['mc_groupr_by'] = 'por';
 
 $txt['mc_reported_posts_desc'] = 'Aquí puedes revisar todos los informes de mensajes enviados por los usuarios de la comunidad.';
@@ -49,12 +49,12 @@ $txt['mc_reportedp_unignore'] = 'No Ignorar';
 $txt['mc_reportedp_ignore_confirm'] = '¿Estás seguro de que quieres ignorar posteriores informes sobre este mensaje?\\n\\nEsto desactivará futuros informes a todos los moderadores del foro.';
 $txt['mc_reportedp_close_selected'] = 'Cerrar los Seleccionados';
 
-$txt['mc_groupr_group'] = 'Grupo';
+$txt['mc_groupr_group'] = 'Grupos';
 $txt['mc_groupr_member'] = 'Usuario';
 $txt['mc_groupr_reason'] = 'Razón';
 $txt['mc_groupr_none_found'] = 'Actualmente no hay ninguna solicitud de grupo a destacar';
 $txt['mc_groupr_submit'] = 'Enviar';
-$txt['mc_groupr_reason_desc'] = 'Razon para rechazar la solicitud de %s para ingresar en &quot;%s&quot;';
+$txt['mc_groupr_reason_desc'] = 'Motivo para rechazar la solicitud de %1$s para ingresar en &quot;%2$s&quot;';
 $txt['mc_groups_reason_title'] = 'Razones de Denegación';
 $txt['with_selected'] = 'Con lo seleccionado';
 $txt['mc_groupr_approve'] = 'Aprobar Solicitud';

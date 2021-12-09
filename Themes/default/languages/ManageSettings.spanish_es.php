@@ -1,10 +1,9 @@
 <?php
-// Version: 2.0; ManageSettings
+// Version: 2.0.16; ManageSettings
 
 global $scripturl;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
-$txt['modSettings_desc'] = 'Esta página te permite cambiar la configuración de caracteristicas, mods y opciones básicas de tu foro. Por favor, entra en <a href="' . $scripturl . '?action=theme;sa=settings;th=%s;sesc=%s">Configuración del tema</a> para más opciones. Pulsa en los iconos de ayuda para obtener más información acerca de una opción.';
+$txt['modSettings_desc'] = 'Esta página te permite cambiar la configuración de características, mods y opciones básicas de tu foro. Por favor, entra en <a href="' . $scripturl . '?action=admin;area=theme;sa=settings;th=%1$s;%3$s=%2$s">Configuración del tema</a> para más opciones. Pulsa en los iconos de ayuda para obtener más información acerca de una opción.';
 $txt['security_settings_desc'] = 'Esta página te permite establecer opciones específicamente relacionadas con la seguridad y la moderación de tu foro, incluyendo opciones anti-spam.';
 $txt['modification_settings_desc'] = 'Esta página contiene configuraciones añadidas por las modificaciones que tengas instaladas en tu foro';
 
@@ -16,11 +15,11 @@ $txt['enable_polls'] = 'Activar encuestas';
 $txt['polls_as_topics'] = 'Mostrar las encuestas existentes como temas';
 $txt['allow_guestAccess'] = 'Permitir ver el foro a los invitados';
 $txt['userLanguage'] = 'Activar soporte de idioma seleccionable por el usuario';
-$txt['allow_editDisplayName'] = '¿Permitir a los usuarios editar el nombre mostrado?';
-$txt['allow_hideOnline'] = '¿Permitir a los no-administradores ocultar su estado de conexión?';
+$txt['allow_editDisplayName'] = 'Permitir a los usuarios editar el nombre mostrado';
+$txt['allow_hideOnline'] = 'Permitir a los no-administradores ocultar su estado de conexión';
 $txt['guest_hideContacts'] = 'No mostrar detalles de contacto de miembros a los invitados';
 $txt['titlesEnable'] = 'Activar títulos personalizados';
-$txt['enable_buddylist'] = 'Activar listas de amigos';
+$txt['enable_buddylist'] = 'Activar listas de amigos/ignorados';
 $txt['default_personal_text'] = 'Texto personal por defecto';
 $txt['number_format'] = 'Formato de números por defecto';
 $txt['time_format'] = 'Formato de Tiempo por defecto';
@@ -31,13 +30,13 @@ $txt['lastActive'] = 'Umbral de tiempo conectado';
 $txt['trackStats'] = 'Estadísticas diarias';
 $txt['hitStats'] = 'Visualizaciones de página diaria de Estadísticas (las estadísticas deben estar activadas)';
 $txt['enableCompressedOutput'] = 'Activar salida comprimida';
-$txt['disableTemplateEval'] = 'Disable evaluation of templates';
+$txt['disableTemplateEval'] = 'Desactivar evaluación de plantillas';
 $txt['databaseSession_enable'] = 'Utilizar sesiones controladas por base de datos';
 $txt['databaseSession_loose'] = 'Permitir a los navegadores ir atrás hacia páginas en caché';
 $txt['databaseSession_lifetime'] = 'Segundos transcurridos antes de que expire una sesión inactiva';
 $txt['enableErrorLogging'] = 'Activar log de errores';
 $txt['enableErrorQueryLogging'] = 'Incluir consultas a la base de datos en el registro (log) de errores';
-$txt['pruningOptions'] = 'Activar la purga de entradas del registro.';
+$txt['pruningOptions'] = 'Activar la purga de entradas del registro';
 $txt['pruneErrorLog'] = 'Eliminar entradas del registro de errores con más de:<div class="smalltext">(0 para deshabilitar)</div>';
 $txt['pruneModLog'] = 'Eliminar entradas del registro de moderación con más de:<div class="smalltext">(0 para deshabilitar)</div>';
 $txt['pruneBanLog'] = 'Eliminar entradas del registro de baneos con más de:<div class="smalltext">(0 para deshabilitar)</div>';
@@ -48,22 +47,24 @@ $txt['cookieTime'] = 'Duración de cookies de conexión por defecto (en minutos)';
 $txt['localCookies'] = 'Activar el almacenamiento local de cookies<div class="smalltext">(SSI no funciona bien activando esta opción.)</div>';
 $txt['globalCookies'] = 'Utilizar cookies independientes por subdominios<div class="smalltext">(¡debes desactivar las cookies locales primero!)</div>';
 $txt['secureCookies'] = 'Forzar a que las cookies sean seguras<div class="smalltext">(Esto sólo se aplica si estás usando HTTPS - ¡no lo uses en otro caso!)</div>';
+$txt['cookie_no_auth_secret'] = 'Usar autenticación básica de cookies';
 $txt['securityDisable'] = 'Desactivar la seguridad de la administración';
 $txt['send_validation_onChange'] = 'Requerir reactivación después de un cambio de dirección email';
 $txt['approveAccountDeletion'] = 'Requerir aprobación del administrador cuando el usuario borra su cuenta';
 $txt['autoOptMaxOnline'] = 'Número máximo de usuarios conectados en la optimización<div class="smalltext">(0 para ilimitado.)</div>';
 $txt['autoFixDatabase'] = 'Arreglar automáticamente tablas corruptas';
 $txt['allow_disableAnnounce'] = 'Permitir a los usuarios desactivar notificaciones';
-$txt['disallow_sendBody'] = '¿No permitir enviar el texto del mensaje en las notificaciones?';
-$txt['queryless_urls'] = 'Mostrar URLs de búsqueda de modo amigable<div class="smalltext"><b>¡Sólo Apache!</b></div>';
+$txt['notify_tokens'] = 'Usar enlaces de desuscripción basados en tokens en los correos electrónicos de notificación. <div class="smalltext">Esta opción permite que los usuarios cancelen sus suscripciones si necesidad de iniciar sesión.</div> ';
+$txt['disallow_sendBody'] = 'No permitir enviar el texto del mensaje en las notificaciones';
+$txt['queryless_urls'] = 'Mostrar URLs de búsqueda de modo amigable<div class="smalltext"><strong>¡Sólo Apache/Lighttpd!</strong></div>';
 $txt['max_image_width'] = 'Ancho máximo de las imágenes en los mensajes (0 = desactivar)';
 $txt['max_image_height'] = 'Alto máximo de las imágenes en los mensajes (0 = desactivar)';
 $txt['enableReportPM'] = 'Activar el aviso de mensajes privados';
 $txt['max_pm_recipients'] = 'Número máximo de destinatarios permitidos en un mensaje privado.<div class="smalltext">(0 para ilimitado, exceptuando administradores)</div>';
 $txt['pm_posts_verification'] = 'Número de mensajes mínimo para no tener que introducir un código al enviar mensajes privados.<div class="smalltext">(0 para ilimitado, exceptuando administradores)</div>';
-$txt['pm_posts_per_hour'] = 'Numero de mensajes privados que puede enviar un usuario en una hora.<div class="smalltext">(0 para ilimitados, exceptuando moderadores)</div>';
+$txt['pm_posts_per_hour'] = 'Número de mensajes privados que puede enviar un usuario en una hora <div class="smalltext">(0 para ilimitados, exceptuando moderadores)</div>';
 $txt['compactTopicPagesEnable'] = 'Límitar el número de vínculos mostrados';
-$txt['contiguous_page_display'] = 'Páginas contiguas a mostrar:';
+$txt['contiguous_page_display'] = 'Páginas contiguas a mostrar';
 $txt['to_display'] = 'mostrar';
 $txt['todayMod'] = 'Activar la funcionalidad &quot;Hoy&quot;';
 $txt['today_disabled'] = 'Desactivada';
@@ -74,10 +75,17 @@ $txt['onlineEnable'] = 'Mostrar conectado/desconectados en mensajes normales y p
 $txt['enableVBStyleLogin'] = 'Mostrar cuadro de conexión rapida en cada página';
 $txt['defaultMaxMembers'] = 'Usuarios por página de la lista de usuarios';
 $txt['timeLoadPageEnable'] = 'Mostrar el tiempo transcurrido para crear cada página';
-$txt['disableHostnameLookup'] = '¿Desactivar búsquedas al servidor?';
+$txt['disableHostnameLookup'] = '¿Desactivar búsquedas de nombre de servidor?';
 $txt['who_enabled'] = 'Activar la lista de Usuarios conectados';
-$txt['make_email_viewable'] = 'Permitir ver direcciones email.';
-$txt['meta_keywords'] = 'Palabras clave meta (meta keywords) asociadas con el foro.<div class="smalltext">Para motores de búsqueda, dejar en blanco para usar las establecidas por defecto.</div>';
+$txt['make_email_viewable'] = 'Permitir direcciones de email visibles.';
+$txt['meta_keywords'] = 'Palabras clave meta (meta keywords) asociadas con el foro.<div class="smalltext">Para motores de búsqueda. Dejar en blanco para usar las establecidas por defecto.</div>';
+$txt['image_proxy_enabled'] = 'Activar el Proxy de imágenes';
+$txt['image_proxy_enabled_desc'] = 'Esta opción habilitará un proxy a las imágenes publicadas entre las etiquetas <b>[img]</b>';
+$txt['image_proxy_secret'] = 'Código Secreto del Proxy';
+$txt['image_proxy_secret_desc'] = 'Este código debería ser único para tu sitio. Asegúrate de mantenerlo en secreto.';
+$txt['image_proxy_maxsize'] = 'Tamaño máximos de las imágenes para el caché';
+$txt['image_proxy_maxsize_postinput'] = 'KB';
+$txt['image_proxy_maxsize_desc'] = 'Las imágenes que sobrepasen este límite se seguirán mostrando';
 
 $txt['karmaMode'] = 'Modo Karma';
 $txt['karma_options'] = 'Desactivar karma|Activar karma total|Activar karma positivo/negativo';
@@ -88,36 +96,15 @@ $txt['karmaLabel'] = 'Etiqueta de Karma';
 $txt['karmaApplaudLabel'] = 'Etiqueta de aplaudir';
 $txt['karmaSmiteLabel'] = 'Etiqueta de castigar';
 
-$txt['caching_information'] = '<div align="center"><b><u>¡Importante! Lee esto antes de activar estas características.</b></u></div><br />
-	SMF soporta el caché utilizado con aceleradores. Los aceleradores actualmente soportados son:<br />
-	<ul class="normallist">
-		<li>APC</li>
-		<li>eAccelerator</li>
-		<li>Turck MMCache</li>
-		<li>Memcached</li>
-		<li>Zend Platform/Performance Suite (No Zend Optimizer)</li>
-		<li>XCache</li>
-	</ul>
-	El caché sólo funcionará en tu servidor si tienes PHP compilado con uno de los optimizadores de arriba, o si tienes el caché de memoria disponible. 
-	Si no tienes ningún optimizador instalado en SMF, se utilizará un caché basado en archivos.<br /><br />
-	SMF guarda en caché a varios niveles. Cuanto mayor es el nivel de caché activado más tiempo de CPU se utilizará para obtener la información en caché.
-	Si está disponible el caché en tu máquina es recomendable que intentes guardar en caché al nivel 1 primero. 
-	<br /><br />
-	Ten en cuenta que si utilizas el caché de memoria necesitas proporcionar detalles del servidor en las opciones de abajo. Deberías introducirlo como lista separada por comas 
-	como se muestra en el ejemplo de abajo:<br />
-	&quot;servidor1,servidor2,servidor3:puerto,servidor4&quot;<br /><br />
-	Ten en cuenta que si no se especifica el puerto, SMF utilizará el puerto 11211. SMF intentará realizar un balanceo aleatorio entre los servidores.
-	<br /><br />
-	%s
-	<hr />';
+$txt['caching_information'] = '<div class="aligncenter underline"><strong>¡Importante! Lee esto antes de activar estas características.</strong></div><br />SMF soporta el caché utilizado con aceleradores. Los aceleradores actualmente soportados son:<br /> <ul class="normallist"> <li>APC</li> <li>eAccelerator</li> 	<li>Turck MMCache</li> <li>Memcached</li> <li>Zend Platform/Performance Suite (No Zend Optimizer)</li> <li>XCache</li>	</ul> El caché sólo funcionará en tu servidor si tienes PHP compilado con uno de los optimizadores de arriba, o si tienes el caché de memoria disponible.  Si no tienes ningún optimizador instalado en SMF, se utilizará un caché basado en archivos.<br /><br /> SMF guarda en caché a varios niveles. Cuanto mayor es el nivel de caché activado más tiempo de CPU se utilizará para obtener la información en caché. Si está disponible el caché en tu máquina es recomendable que intentes guardar en caché al nivel 1 primero.  <br /><br /> Ten en cuenta que si utilizas el caché de memoria necesitas proporcionar detalles del servidor en las opciones de abajo. Deberías introducirlo como lista separada por comas como se muestra en el ejemplo de abajo:<br /> &quot;servidor1,servidor2,servidor3:puerto,servidor4&quot;<br /><br /> Ten en cuenta que si no se especifica el puerto, SMF utilizará el puerto 11211. SMF intentará realizar un balanceo aleatorio entre los servidores. <br /><br />	%1$s';
 
-$txt['detected_no_caching'] = '<b class="alert">SMF no ha podido detectar un acelerador compatible en tu servidor.</b>';
-$txt['detected_APC'] = '<b style="color: green">SMF ha detectado que tu servidor tiene instalado APC.';
-$txt['detected_eAccelerator'] = '<b style="color: green">SMF ha detectado que tu servidor tiene instalado eAccelerator.';
-$txt['detected_MMCache'] = '<b style="color: green">SMF ha detectado que tu servidor tiene instalado MMCache.';
-$txt['detected_Zend'] = '<b style="color: green">SMF ha detectado que tu servidor tiene instalado Zend.';
-$txt['detected_Memcached'] = '<b style="color: green">SMF ha detectado que tu servidor tiene instalado Memcached.</b>';
-$txt['detected_XCache'] = '<b style="color: green">SMF ha detectado que tu servidor tiene instalado XCache.</b>';
+$txt['detected_no_caching'] = '<strong class="alert">SMF no ha podido detectar un acelerador compatible en tu servidor.</strong>';
+$txt['detected_APC'] = '<strong style="color: green">SMF ha detectado que tu servidor tiene instalado APC.</strong>';
+$txt['detected_eAccelerator'] = '<strong style="color: green">SMF ha detectado que tu servidor tiene instalado eAccelerator.</strong>';
+$txt['detected_MMCache'] = '<strong style="color: green">SMF ha detectado que tu servidor tiene instalado MMCache.</strong>';
+$txt['detected_Zend'] = '<strong style="color: green">SMF ha detectado que tu servidor tiene instalado Zend.</strong>';
+$txt['detected_Memcached'] = '<strong style="color: green">SMF ha detectado que tu servidor tiene instalado Memcached.</strong>';
+$txt['detected_XCache'] = '<strong style="color: green">SMF ha detectado que tu servidor tiene instalado XCache.</strong>';
 
 $txt['cache_enable'] = 'Nivel de Caché';
 $txt['cache_off'] = 'Sin caché';
@@ -126,16 +113,16 @@ $txt['cache_level2'] = 'Caché de Nivel 2';
 $txt['cache_level3'] = 'Caché de Nivel 3 (No Recomendado)';
 $txt['cache_memcached'] = 'Opciones de Memoria caché';
 
-$txt['loadavg_warning'] = '<span class="error">Please note: the settings below are to be edited with care. Setting any of them too low may render your forum <strong>unusable</strong>! The current load average is <strong>%01.2f</strong></span>';
-$txt['loadavg_enable'] = 'Enable load balancing by load averages';
-$txt['loadavg_auto_opt'] = 'Threshold to disabling automatic database optimization';
-$txt['loadavg_search'] = 'Threshold to disabling search';
-$txt['loadavg_allunread'] = 'Threshold to disabling all unread topics';
-$txt['loadavg_unreadreplies'] = 'Threshold to disabling unread replies';
-$txt['loadavg_show_posts'] = 'Threshold to disabling showing user posts';
-$txt['loadavg_forum'] = 'Threshold to disabling the forum <strong>completely</strong>';
-$txt['loadavg_disabled_windows'] = '<span class="error">Load balancing support is not available on Windows.</span>';
-$txt['loadavg_disabled_conf'] = '<span class="error">Load balancing support is disabled by your host configuration.</span>';
+$txt['loadavg_warning'] = '<span class="error">Importante: las opciones de configuración que hay a continuación deben ser editadas con cuidado. Establecer alguna de ellas en un valor demasiado bajo puede dejar tu foro <strong>inutilizable</strong>. Actualmente el valor medio de carga es <strong>%01.2f</strong></span> ';
+$txt['loadavg_enable'] = 'Activar balanceo de carga según valores medios de carga';
+$txt['loadavg_auto_opt'] = 'Umbral para desactivar la optimización automática de base de datos';
+$txt['loadavg_search'] = 'Umbral para desactivar la búsqueda';
+$txt['loadavg_allunread'] = 'Umbral para desactivar todos los mensajes no leídos';
+$txt['loadavg_unreadreplies'] = 'Umbral para desactivar respuestas no leídas';
+$txt['loadavg_show_posts'] = 'Umbral para desactivar mostrar mensajes de usuario';
+$txt['loadavg_forum'] = 'Umbral para desactivar el foro <strong>completamente</strong> ';
+$txt['loadavg_disabled_windows'] = '<span class="error">El soporte para balanceo de carga no está disponible en Windows.</span> ';
+$txt['loadavg_disabled_conf'] = '<span class="error">El soporte para balanceo de carga está desactivado por la configuración de tu host.</span> ';
 
 $txt['setting_password_strength'] = 'Fuerza requerida para las claves de usuario';
 $txt['setting_password_strength_low'] = 'Baja - 4 caracteres mínimo';
@@ -144,28 +131,28 @@ $txt['setting_password_strength_high'] = 'Alta - mezcla de diferentes caracteres
 
 $txt['antispam_Settings'] = 'Verificación Anti-Spam';
 $txt['antispam_Settings_desc'] = 'Esta sección te permite configurar las comprobaciones de verificación para asegurar que el usuario es un humanon (y no un bot), y determinar cómo y dónde se aplican.';
-$txt['setting_reg_verification'] = 'Requierir verificación en la página de registro';
+$txt['setting_reg_verification'] = 'Requerir verificación en la página de registro';
 $txt['posts_require_captcha'] = 'Número de posts por debajo del cual los usuarios deben pasar la verificación para escribir un post';
 $txt['posts_require_captcha_desc'] = '(0 para ilimitado, los moderadores están exentos de esta limitación)';
 $txt['search_enable_captcha'] = 'Requerir verificación en todas las búsquedas de invitados';
 $txt['setting_guests_require_captcha'] = 'Los invitados deben pasar la verificación cuando escriban nuevos posts';
 $txt['setting_guests_require_captcha_desc'] = '(Activado automáticamente si especificas un número mínimo de posts a continuación)';
-$txt['guests_report_require_captcha'] = 'Guests must pass verification when reporting a post';
+$txt['guests_report_require_captcha'] = 'Los invitados deben pasar una verificación al reportar un mensaje';
 
 $txt['configure_verification_means'] = 'Configurar métodos de verificación';
 $txt['setting_qa_verification_number'] = 'Número de preguntas de verificación que el usuario debe contestar';
-$txt['setting_qa_verification_number_desc'] = '(0 para desactivas; las preguntas se establecen más abajo)';
+$txt['setting_qa_verification_number_desc'] = '(0 para desactivar; las preguntas se establecen más abajo)';
 $txt['configure_verification_means_desc'] = '<span class="smalltext">A continuación puedes establecer qué características anti-spam quieres tener activas cuando un usuario necesite verificar que es humano. Ten en cuenta que el usuario tendrá que pasar <em>todas</em> las verificaciones, así que si activas tanto la verificación de imagen como el test de pregunta/respuesta tendrá que completar ambas para proceder.</span>';
 $txt['setting_visual_verification_type'] = 'Imagen para mostrar en la verificación visual';
 $txt['setting_visual_verification_type_desc'] = 'Mientras más compleja sea la imagen más difícil será superarla para los bots';
 $txt['setting_image_verification_off'] = 'Ninguna';
 $txt['setting_image_verification_vsimple'] = 'Muy Simple - Texto plano en una imagen';
 $txt['setting_image_verification_simple'] = 'Simple - Letras de colores solapadas, sin ruido';
-$txt['setting_image_verification_medium'] = 'Media - Letras de colores solapadas, con ruido';
-$txt['setting_image_verification_high'] = 'Alta - Letras anguladas, ruido considerable';
-$txt['setting_image_verification_extreme'] = 'Extreme - Angled letters, noise, lines and blocks';
+$txt['setting_image_verification_medium'] = 'Media - Letras de colores solapadas, con ruido/líneas';
+$txt['setting_image_verification_high'] = 'Alta - Letras torcidas, ruido/líneas considerables';
+$txt['setting_image_verification_extreme'] = 'Extremo - Letras torcidas, ruido, líneas y bloques';
 $txt['setting_image_verification_sample'] = 'Muestra';
-$txt['setting_image_verification_nogd'] = '<b>Aviso:</b> dado que este servidor no tiene la librería GD instalada las configuraciones de distinta complejidad no tendrán ningún efecto.';
+$txt['setting_image_verification_nogd'] = '<strong>Aviso:</strong> dado que este servidor no tiene la librería GD instalada las configuraciones de distinta complejidad no tendrán ningún efecto.';
 $txt['setup_verification_questions'] = 'Preguntas de verificación';
 $txt['setup_verification_questions_desc'] = '<span class="smalltext">Si quieres que los usuarios respondan a una pregunta de verificación para detener a los bots de spam deberías establecer algunas preguntas en la tabla de debajo. Deberías elegir preguntas relativamente simples; las respuestas no son sensibles a las mayúsculas (case sensitive). Puedes usar BBC en las preguntas para darles formato. Para eliminar una pregunta simplemente borra el contenido de esa línea.</span>';
 $txt['setup_verification_question'] = 'Pregunta';
@@ -186,12 +173,12 @@ $txt['setting_warning_show_all'] = 'Todos los usuarios';
 
 $txt['signature_settings'] = 'Opciones de Firma';
 $txt['signature_settings_desc'] = 'Utiliza las opciones de esta página para decidir cómo deberían ser tratadas las firmas de usuarios en SMF.';
-$txt['signature_settings_warning'] = 'Las opciones no se aplicarán por defecto a las firmas ya existentes. Entra <a href="' . $scripturl . '?action=admin;area=featuresettings;sa=sig;apply;sesc=%1$s">aquí</a> para aplicar reglas a todas las firmas existentes.';
+$txt['signature_settings_warning'] = 'Las opciones no se aplicarán por defecto a las firmas ya existentes. Entra <a href="' . $scripturl . '?action=admin;area=featuresettings;sa=sig;apply;%2$s=%1$s">aquí</a> para aplicar reglas a todas las firmas existentes.';
 $txt['signature_enable'] = 'Activar firmas';
 $txt['signature_max_length'] = 'Número máximo de caracteres permitidos<div class="smalltext">(0 para ilimitado)</div>';
 $txt['signature_max_lines'] = 'Número máximo de líneas<div class="smalltext">(0 para ilimitado)</div>';
 $txt['signature_max_images'] = 'Número máximo de imágenes<div class="smalltext">(0 para ilimitados - emoticonos excluidos)</div>';
-$txt['signature_allow_smileys'] = 'Allow smileys in signatures';
+$txt['signature_allow_smileys'] = 'Permitir smileys en las firmas';
 $txt['signature_max_smileys'] = 'Número máximo de emoticonos<div class="smalltext">(0 para ilimitado)</div>';
 $txt['signature_max_image_width'] = 'Ancho máximo para imágenes en la firma (pixels)<div class="smalltext">(0 para ilimitado)</div>';
 $txt['signature_max_image_height'] = 'Largo máximo para imágenes en la firma (pixels)<div class="smalltext">(0 para ilimitado)</div>';
@@ -205,7 +192,7 @@ $txt['custom_profile_fieldname'] = 'Nombre del Campo';
 $txt['custom_profile_fieldtype'] = 'Tipo de Campo';
 $txt['custom_profile_make_new'] = 'Nuevo Campo';
 $txt['custom_profile_none'] = '¡Aún no has creado ningún campo personalizado!';
-$txt['custom_profile_icon'] = 'Icon';
+$txt['custom_profile_icon'] = 'Icono';
 
 $txt['custom_profile_type_text'] = 'Texto';
 $txt['custom_profile_type_textarea'] = 'Texto largo';
@@ -235,7 +222,7 @@ $txt['custom_edit_max_length_desc'] = '(0 para ilimitada)';
 $txt['custom_edit_dimension'] = 'Dimensiones';
 $txt['custom_edit_dimension_row'] = 'Filas';
 $txt['custom_edit_dimension_col'] = 'Columnas';
-$txt['custom_edit_bbc'] = '¿Permitir BBC?';
+$txt['custom_edit_bbc'] = 'Permitir BBC';
 $txt['custom_edit_options'] = 'Opciones';
 $txt['custom_edit_options_desc'] = 'Dejar el cuadro de opción vacío para eliminarlo. El botón de selección marca la opción por defecto.';
 $txt['custom_edit_options_more'] = 'Más';
@@ -254,19 +241,19 @@ $txt['custom_edit_mask'] = 'Máscara de Introducción';
 $txt['custom_edit_mask_desc'] = 'Para los campos de texto se puede seleccionar una máscara de introducción para validar los datos.';
 $txt['custom_edit_mask_email'] = 'Dirección Email válida';
 $txt['custom_edit_mask_number'] = 'Numérico';
-$txt['custom_edit_mask_nohtml'] = 'No HTML';
+$txt['custom_edit_mask_nohtml'] = 'Sin HTML';
 $txt['custom_edit_mask_regex'] = 'Expresión Regular (Avanzado)';
-$txt['custom_edit_enclose'] = 'Show Enclosed Within Text (Optional)';
-$txt['custom_edit_enclose_desc'] = 'We <strong>strongly</strong> recommend to use an input mask to validate the input supplied by the user.';
+$txt['custom_edit_enclose'] = 'Mostrar incrustado en el texto (opcional)';
+$txt['custom_edit_enclose_desc'] = 'Te recomendamos <strong>fervientemente</strong> que uses una máscara de entrada para validar los datos de entrada proporcionados por el usuario.';
 
-$txt['custom_edit_placement'] = 'Choose Placement';
-$txt['custom_edit_placement_standard'] = 'Standard (with title)';
-$txt['custom_edit_placement_withicons'] = 'With Icons';
-$txt['custom_edit_placement_abovesignature'] = 'Above Signature';
-$txt['custom_profile_placement'] = 'Placement';
-$txt['custom_profile_placement_standard'] = 'Standard';
-$txt['custom_profile_placement_withicons'] = 'With Icons';
-$txt['custom_profile_placement_abovesignature'] = 'Above Signature';
+$txt['custom_edit_placement'] = 'Elegir colocación';
+$txt['custom_edit_placement_standard'] = 'Estándar (con título)';
+$txt['custom_edit_placement_withicons'] = 'Con iconos';
+$txt['custom_edit_placement_abovesignature'] = 'Sobre la firma';
+$txt['custom_profile_placement'] = 'Colocación';
+$txt['custom_profile_placement_standard'] = 'Estándar';
+$txt['custom_profile_placement_withicons'] = 'Con iconos';
+$txt['custom_profile_placement_abovesignature'] = 'Sobre la firma';
 
 // Use numeric entities in the string below!
 $txt['custom_edit_delete_sure'] = '¿Estás seguro de que quieres eliminar este campo? - ¡toda la información de usuarios relacionada se perderá!';
@@ -294,6 +281,9 @@ $txt['core_settings_item_sp'] = 'Seguimiento del motor de búsqueda';
 $txt['core_settings_item_sp_desc'] = 'Activar esta opción permitirá a los administradores seguir los motores de búsqueda a medida que indexan tu foro.';
 $txt['core_settings_item_w'] = 'Sistema de Advertencia';
 $txt['core_settings_item_w_desc'] = 'Esta funcionalidad permite a los administradores y moderadores enviar advertencias a usuarios; también incluye una funcionalidad avanzada para quitar derechos de usuarios si se incrementa su nivel de advertencia. Ten en cuenta que para obtener una funcionalidad completa de esta función se debe activar la &quot;Moderación de Mensajes&quot;.';
+$txt['core_settings_item_gdpr'] = 'Cumplimiento del RGPD';
+$txt['core_settings_item_gdpr_desc'] = 'Activar esta función configurará una serie de ajustes en tu foro para asegurar el cumplimiento del <a href="https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en" class="bbc_link"> Reglamento general de protección de datos (RGPD)</a> de la Unión Europea.';
+$txt['core_settings_privacy_policy_warning'] = 'El GDPR requiere que tengas una política de privacidad para tu foro. Después de activar esta opción, serás llevado a una página en la cual puedes crear una.';
 $txt['core_settings_switch_on'] = 'Pulsar para Activar';
 $txt['core_settings_switch_off'] = 'Pulsar para Desactivar';
 $txt['core_settings_enabled'] = 'Activado';
@@ -306,8 +296,8 @@ $txt['languages_character_set'] = 'Juego de caracteres';
 $txt['languages_users'] = 'Usuarios';
 $txt['language_settings_writable'] = 'Aviso: el archivo Settings.php no es escribible, así que la configuración del idioma por defecto no puede ser guardada.';
 $txt['edit_languages'] = 'Editar idiomas';
-$txt['lang_file_not_writable'] = '<b>Aviso:</b> The primary language file (%1$s) is not writable. You must make this writable before you can make any changes.';
-$txt['lang_entries_not_writable'] = '<b>Aviso:</b> El archivo de idioma que quieres editar (%1$s) no es escribible. Debes hacerlo escribible antes de que puedas hacerle algún cambio.';
+$txt['lang_file_not_writable'] = '<strong>Aviso:</strong> El archivo de idioma primario (%1$s) no es escribible. Debes hacerlo escribible antes de poder aplicar ningún cambio.';
+$txt['lang_entries_not_writable'] = '<strong>Aviso:</strong> El archivo de idioma que quieres editar (%1$s) no es escribible. Debes hacerlo escribible antes de que puedas hacerle algún cambio.';
 $txt['languages_ltr'] = 'De derecha a izquierda';
 
 $txt['add_language'] = 'Añadir idioma';
@@ -342,7 +332,7 @@ $txt['languages_download_info'] = '<strong>Nota:</strong>
 	</ul>';
 
 $txt['languages_download_main_files'] = 'Archivos primarios';
-$txt['languages_download_theme_files'] = 'Theme-related Files';
+$txt['languages_download_theme_files'] = 'Archivos relacionados con plantillas';
 $txt['languages_download_filename'] = 'Nombre del archivo';
 $txt['languages_download_dest'] = 'Destino';
 $txt['languages_download_writable'] = 'Escribible';
@@ -356,8 +346,6 @@ $txt['languages_download_not_chmod'] = 'No puedes proceder con la instalación ha
 $txt['languages_download_illegal_paths'] = 'El paquete contiene rutas ilegales - por favor contacte con Simple Machines';
 $txt['languages_download_complete'] = 'Installación completada';
 $txt['languages_download_complete_desc'] = 'El paquete de idioma se instaló correctamente. Por favor haga clic <a href="%1$s">aquí</a> para volver a la página de idiomas';
-$txt['languages_delete_confirm'] = 'Are you sure you want to delete this language?';
+$txt['languages_delete_confirm'] = '¿Estás seguro de que quieres eliminar este idioma?';
 
-$txt['youtube_default_width'] = 'El ancho predeterminado utilizado para YouTube BBCode cuando no se especifica <div class="smalltext">Use <strong>0</strong> para utilizar la pantalla de v&iacute;deo responsive</div>';
-$txt['youtube_default_height'] = 'El alto predeterminado utilizado para YouTube BBCode cuando no se especifica<div class="smalltext">Use <strong>0</strong>para utilizar la pantalla de v&iacute;deo responsive</div>';
 ?>

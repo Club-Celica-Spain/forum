@@ -9,7 +9,7 @@ $txt['permissions_denied'] = 'Denegado';
 $txt['permission_cannot_edit'] = '<strong>Aviso:</strong> No puedes editar este perfil de permisos, ya que es un perfil predefinido que se incluye en el propio software del foro por defecto. Si quieres cambiar los permisos de este perfil, antes tendrás que crear un dumplicado del mismo. Puedes llevar a cabo esta tarea haciendo clic <a href="%1$s">aquí</a>.';
 
 $txt['permissions_for_profile'] = 'Permisos para el perfil';
-$txt['permissions_boards_desc'] = 'La lista a continuación muestra qué conjunto de permisos ha sido asignado a cada foro. Puedes editar el perfil de permisos asignado bien haciendo clic en el nombre del foro o bien seleciconando &quot;editar todo&quot; en la parte inferior de la página. Para editar el propio perfil simplemente haz clic en el nombre del perfil.';
+$txt['permissions_boards_desc'] = 'La lista a continuación muestra qué conjunto de permisos ha sido asignado a cada foro. Puedes editar el perfil de permisos asignado bien haciendo clic en el nombre del foro o bien seleccionando &quot;editar todo&quot; en la parte inferior de la página. Para editar el propio perfil simplemente haz clic en el nombre del perfil.';
 $txt['permissions_board_all'] = 'Editar Todo';
 $txt['permission_profile'] = 'Perfil de permisos';
 $txt['permission_profile_desc'] = 'Qué <a href="%1$s">conjunto de permisos</a> debería usar el foro.';
@@ -17,7 +17,7 @@ $txt['permission_profile_inherit'] = 'Heredar del foro padre';
 
 $txt['permissions_profile'] = 'Perfil';
 $txt['permissions_profiles_desc'] = 'Los perfiles de permisos son asignados a foros individuales para permitirle gestionar fácilmente su configuración de seguridad. Desde este área usted puede crear, editar y borrar perfiles de permisos.';
-$txt['permissions_profiles_change_for_board'] = 'Editar Permisos por Perfil de: &quot;%s&quot;';
+$txt['permissions_profiles_change_for_board'] = 'Editar Permisos por Perfil de: &quot;%1$s&quot;';
 $txt['permissions_profile_default'] = 'Por defecto';
 $txt['permissions_profile_no_polls'] = 'Sin Encuestas';
 $txt['permissions_profile_reply_only'] = 'Sólo Respuestas';
@@ -30,7 +30,7 @@ $txt['permissions_profile_new_create'] = 'Crear';
 $txt['permissions_profile_name'] = 'Nombre del Perfil';
 $txt['permissions_profile_used_by'] = 'Usado por';
 $txt['permissions_profile_used_by_one'] = 'Un foro';
-$txt['permissions_profile_used_by_many'] = '%d foros';
+$txt['permissions_profile_used_by_many'] = '%1$d foros';
 $txt['permissions_profile_used_by_none'] = 'Ningún foro';
 $txt['permissions_profile_do_edit'] = 'Editar';
 $txt['permissions_profile_do_delete'] = 'Eliminar';
@@ -70,7 +70,7 @@ $txt['permissions_local_for'] = 'Permisos Locales por grupo';
 $txt['permissions_option_on'] = 'P';
 $txt['permissions_option_off'] = 'X';
 $txt['permissions_option_deny'] = 'N';
-$txt['permissions_option_desc'] = 'Para cada permiso puedes escoger \'Permitir\' (P), \'Rechazar\' (X), o <span style="color: red;">\'Negar\' (N)</span>.<br /><br />Recuerda que si niegas un permiso, cualquier usuario - sea moderador o cualquier otra cosa - que se encuentre en ese grupo será negado también.<br />Por esta razón, debes usar negar con cautela, solamente cuando sea <b>necesario</b>. Rechazar, por el contrario, niega el acceso a menos que haya sido permitido.';
+$txt['permissions_option_desc'] = 'Para cada permiso puedes escoger \'Permitir\' (P), \'Rechazar\' (X), o <span style="color: red;">\'Negar\' (N)</span>.<br /><br />Recuerda que si niegas un permiso, cualquier usuario - sea moderador o cualquier otra cosa - que se encuentre en ese grupo será negado también.<br />Por esta razón, debes usar negar con cautela, solamente cuando sea <strong>necesario</strong>. Rechazar, por el contrario, niega el acceso a menos que haya sido permitido.';
 $txt['permissions_change_view'] = 'Cambiar vista';
 $txt['permissions_view_simple'] = 'Simple';
 $txt['permissions_view_classic'] = 'Clásica';
@@ -78,8 +78,8 @@ $txt['permissions_view_classic'] = 'Clásica';
 $txt['permissiongroup_general'] = 'General';
 $txt['permissionname_view_stats'] = 'Ver las estadísticas del foro';
 $txt['permissionhelp_view_stats'] = 'Las estadísticas del foro es una página resumiendo todas las estadísticas del foro, tales como el número de usuarios, número diario de mensajes, y varias estadísticas de los 10 mejores. Activar este permiso agrega un enlace en la parte inferior del índice del foro (\'[Más estadísticas]\').';
-$txt['permissionname_view_mlist'] = 'Ver la lista de usuarios';
-$txt['permissionhelp_view_mlist'] = 'La lista de usuarios muestra a todos los usuarios que se han registrado en tu foro. La lista puede ser ordenada, así como buscar en ella. La lista de usuarios de enlaza desde el índice del foro y la página de estadísticas, al hacer clic en el número de usuarios.';
+$txt['permissionname_view_mlist'] = 'Ver la lista de usuarios y grupos';
+$txt['permissionhelp_view_mlist'] = 'La lista de usuarios muestra a todos los usuarios que se han registrado en tu foro. Puedes ordenar la lista, así como buscar en ella. La lista de usuarios se enlaza tanto desde el índice del foro como desde la página de estadísticas, al hacer clic en el número de usuarios. También se usa en la página de grupos, que es una mini lista de usuarios de los miembros que pertenecen a ese grupo.';
 $txt['permissionname_who_view'] = 'Ver Quién está en línea';
 $txt['permissionhelp_who_view'] = 'Quién está en línea muestra a todos los usuarios que están conectados, así como lo que están haciendo. Este permiso funcionará solamente si tienes activado también en \'Config. y Opciones\'. Puedes accesar la pantalla de \'Quién está en línea\' haciendo clic en el enlace de la sección de \'Usuarios en línea\' en el índice del foro.';
 $txt['permissionname_search_posts'] = 'Buscar por mensajes y temas';
@@ -99,7 +99,7 @@ $txt['permissionhelp_calendar_view'] = 'El calendario muestra para cada mes, los
 $txt['permissionname_calendar_post'] = 'Crear eventos en el calendario';
 $txt['permissionhelp_calendar_post'] = 'Un evento es un tema enlazado a cierta fecha, o rango de fechas. Se puede hacer la creación de eventos desde el calendario. Un evento puede crearse solamente si el usuario que crea el evento puede crear nuevos temas.';
 $txt['permissionname_calendar_edit'] = 'Editar eventos en el calendario';
-$txt['permissionhelp_calendar_edit'] = 'Un evento es un tema enlazado a cierta fecha, o rango de fechas. Los eventos pueden ser editados al hacer clic en el asterisco rojo (*) al lado del evento, en la vista del calendario. Para poder modificar un evento, el usuario debe tener los permisos necesarios para editar el primer mensaje del tema que está enlazado al evento.';
+$txt['permissionhelp_calendar_edit'] = 'Un evento es un tema enlazado a cierta fecha, o rango de fechas. Los eventos pueden ser editados al hacer clic en el asterisco rojo (*) que hay junto a ellos, en la vista del calendario. Para poder modificar un evento, el usuario debe tener los permisos necesarios para editar el primer mensaje del tema que está enlazado a dicho evento.';
 $txt['permissionname_calendar_edit_own'] = 'Eventos propios';
 $txt['permissionname_calendar_edit_any'] = 'Cualquier evento';
 
@@ -237,13 +237,13 @@ $txt['permissiongroup_approval'] = 'Moderación de Mensajes';
 $txt['permissionname_approve_posts'] = 'Aprobar elementos esperando moderación';
 $txt['permissionhelp_approve_posts'] = 'Este permiso permite al usuario aprobar todos los elementos aún no aprobados del foro.';
 $txt['permissionname_post_unapproved_replies'] = 'Responder a mensajes no aprobados';
-$txt['permissionhelp_post_unapproved_replies'] = 'Este permiso permite al usuario responder a temas que no serán mostrados hasta que sean aprobados por un moderador.';
+$txt['permissionhelp_post_unapproved_replies'] = 'Este permiso permite a un usuario publicar respuestas a un tema. Las respuestas no serán mostrados hasta que sean aprobados por un moderador.';
 $txt['permissionname_post_unapproved_replies_own'] = 'Temas Propios';
 $txt['permissionname_post_unapproved_replies_any'] = 'Cualquier tema';
 $txt['permissionname_post_unapproved_topics'] = 'Publicar temas no aprobados';
 $txt['permissionhelp_post_unapproved_topics'] = 'Este permiso permite al usuario publicar un nuevo tema que requerirá aprobación antes de ser mostrado.';
 $txt['permissionname_post_unapproved_attachments'] = 'Publicar adjuntos no aprobados';
-$txt['permissionhelp_post_unapproved_attachments'] = 'Este permiso permite al usuario adjuntar archivos a sus mensajes, los cuales requerirán aprobación antes de que sean mostrados a otros usuarios.';
+$txt['permissionhelp_post_unapproved_attachments'] = 'Este permiso permite al usuario adjuntar archivos a sus mensajes. Dichos archivos requerirán aprobación antes de que sean mostrados a otros usuarios.';
 
 $txt['permissiongroup_notification'] = 'Notificaciones';
 $txt['permissionname_mark_any_notify'] = 'Solicitar notificación en respuestas';
@@ -253,8 +253,8 @@ $txt['permissionhelp_mark_notify'] = 'Este permise le permite a un usuario el re
 
 $txt['permissiongroup_attachment'] = 'Archivos adjuntos';
 $txt['permissionname_view_attachments'] = 'Ver archivos adjuntos';
-$txt['permissionhelp_view_attachments'] = 'Los archivos adjuntos son archivos que están adjuntos a mensajes publicados. Esta opción puede ser activada y configurada en \'Config. y Opciones\'. Debido a que los archivos adjuntos no se accesan directamente, puedes evitar que éstos sean descargados por usuarios que no tengan este permiso.';
-$txt['permissionname_post_attachment'] = 'Publicar aechivos adjuntos';
+$txt['permissionhelp_view_attachments'] = 'Los archivos adjuntos son archivos que están unidos a mensajes publicados. Esta opción puede ser activada y configurada en \'Adjuntos y avatares\'. Debido a que los archivos adjuntos no son accedidos directamente, puedes evitar que sean descargados por usuarios que no tengan este permiso.';
+$txt['permissionname_post_attachment'] = 'Publicar archivos adjuntos';
 $txt['permissionhelp_post_attachment'] = 'Los archivos adjuntos son archivos que están adjuntos a mensajes publicados. Un mensaje puede tener varios archivos adjuntos.';
 
 $txt['permissiongroup_simple_view_basic_info'] = 'Usar funcionalidad básica del foro';
@@ -307,7 +307,7 @@ $txt['permissionname_simple_poll_add_any'] = 'Añadir una encuesta a cualquier te
 $txt['permissionname_simple_poll_edit_own'] = 'Editar una encuesta creada por ellos';
 $txt['permissionname_simple_poll_edit_any'] = 'Editar cualquier encuesta';
 $txt['permissionname_simple_poll_lock_own'] = 'Bloquear sus propias encuestas';
-$txt['permissionname_simple_poll_lock_any'] = 'Bloquear cualquier encuasta';
+$txt['permissionname_simple_poll_lock_any'] = 'Bloquear cualquier encuesta';
 $txt['permissionname_simple_poll_remove_own'] = 'Eliminar una encuesta creada por ellos';
 $txt['permissionname_simple_poll_remove_any'] = 'Eliminar cualquier encuesta';
 

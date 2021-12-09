@@ -81,9 +81,9 @@ $txt['rich_edit_function_disabled'] = 'Tu navegador no soporta esta función';
 // Use numeric entities in the below five strings.
 $txt['notifyUnsubscribe'] = 'Desinscribirse a este tema haciendo clic aquí';
 
-$txt['lock_after_post'] = 'Bloquear después de publicar el mensaje';
+$txt['lock_after_post'] = 'Cerrar tema después de publicar el mensaje';
 $txt['notify_replies'] = 'Notificarme al haber nuevas respuestas.';
-$txt['lock_topic'] = 'Bloquear este tema.';
+$txt['lock_topic'] = 'Cerrar este tema.';
 $txt['shortcuts'] = 'teclas método abreviado (sólo IE y Mozilla): presiona alt+s para enviar formulario/publicar o alt+p para previsualizar';
 $txt['shortcuts_firefox'] = 'Atajos de teclado: Presiona shift+alt+s para enviar/publicar o shift+alt+p para previsualizarlo
 ';
@@ -92,16 +92,16 @@ $txt['reset_votes'] = 'Reinicializar conteo de votos';
 $txt['reset_votes_check'] = 'Selecciona esto si deseas reinicializar todos los conteos de votos a 0.';
 $txt['votes'] = 'votos';
 $txt['attach'] = 'Adjuntar';
-$txt['clean_attach'] = 'Clear Attachment';
+$txt['clean_attach'] = 'Limpiar adjunto';
 $txt['attached'] = 'Adjunto';
 $txt['allowed_types'] = 'Tipos de archivos permitidos';
 $txt['cant_upload_type'] = 'No puedes subir ese tipo de archivo. Las únicas extensiones permitidas son';
 $txt['uncheck_unwatchd_attach'] = 'Deselecciona los archivos adjuntos que desees eliminar';
 $txt['restricted_filename'] = 'Ese es un nombre de archivo restringido. Por favor intenta un nombre de archivo diferente.';
-$txt['topic_locked_no_reply'] = '¡Advertencia: el tema está bloqueado!<br />Solamente admins y moderadores pueden responder.';
+$txt['topic_locked_no_reply'] = '¡Advertencia: el tema está cerrado!<br />Solamente admins y moderadores pueden responder.';
 $txt['awaiting_approval'] = 'Esperando aprobación';
 $txt['attachment_requires_approval'] = 'Cualquier archivo adjunto no se mostrará hasta que sea aprobado por un moderador.';
-$txt['error_temp_attachments'] = 'There are attachments found, which you have attached before but not posted. These attachments are now attached to this post. If you do not want to include them in this post, you can remove them <a href="#postAttachment">here</a>.';
+$txt['error_temp_attachments'] = 'Se han encontrado archivos que adjuntaste anteriormente, pero que no fueron publicados. Estos archivos han sido adjuntados ahora a este mensaje. Si no quieres incluirlos en él, puedes eliminarlos <a href="#postAttachment">aquí</a>. ';
 // Use numeric entities in the below string.
 $txt['js_post_will_require_approval'] = 'Recuerda: Este mensaje no aparecerá hasta que sea aprobado por un moderador.';
 
@@ -121,7 +121,7 @@ $txt['attach_restrict_attachmentSizeLimit'] = 'tamaño individual máximo %1$dKB';
 $txt['attach_restrict_attachmentNumPerPostLimit'] = '%1$d por post';
 $txt['attach_restrictions'] = 'Restricciones:';
 
-$txt['post_additionalopt'] = 'Opciones Adicionales...';
+$txt['post_additionalopt'] = 'Adjuntos y otras opciones';
 $txt['sticky_after'] = 'Fijar este tema.';
 $txt['move_after2'] = 'Mover este tema.';
 $txt['back_to_topic'] = 'Regresar a este tema.';
@@ -135,15 +135,15 @@ $txt['post_visual_verification_desc'] = 'Por favor, introduce el código en la im
 $txt['poll_options'] = 'Opciones de la encuesta';
 $txt['poll_run'] = 'Correr la encuesta por';
 $txt['poll_run_limit'] = '(Dejar en blanco para definir sin limites.)';
-$txt['poll_results_visibility'] = 'Result visibility';
+$txt['poll_results_visibility'] = 'Visibilidad de los resultados';
 $txt['poll_results_anyone'] = 'Mostrar los resultados de la encuesta a cualquiera.';
 $txt['poll_results_voted'] = 'Solamente muestra los resultados después de haber votado.';
-$txt['poll_results_after'] = 'Only show the results after the poll has expired.';
+$txt['poll_results_after'] = 'Mostrar los resultados únicamente cuando el plazo de la encuesta haya expirado.';
 $txt['poll_max_votes'] = 'Máximo de votos por usuario.';
-$txt['poll_do_change_vote'] = 'Permitir al usuario cambiar su voto.';
-$txt['poll_too_many_votes'] = 'Seleccionaste demasiadas opciones - el máximo permitido es %s';
+$txt['poll_do_change_vote'] = 'Permitir a los usuarios cambiar su voto';
+$txt['poll_too_many_votes'] = 'Seleccionaste demasiadas opciones. Para esta encuesta, sólo puedes seleccionar %1$s opciones.';
 $txt['poll_add_option'] = 'Agregar Opción';
-$txt['poll_guest_vote'] = 'Permitir a los invitados votar.';
+$txt['poll_guest_vote'] = 'Permitir a los invitados votar';
 
 $txt['spellcheck_done'] = 'Revisión de ortografía completada.';
 $txt['spellcheck_change_to'] = 'Cambiar a:';
@@ -163,9 +163,9 @@ $txt['more_smileys_pick'] = 'Selecciona un smiley';
 $txt['more_smileys_close_window'] = 'Cerrar ventana';
 
 $txt['error_new_reply'] = 'Advertencia - mientras estabas escribiendo, una nueva respuesta fue publicada. Probablemente desees revisar tu mensaje.';
-$txt['error_new_replies'] = 'Advertencia - mientras estabas escribiendo, fueron publicadas %d respuestas. Probablemente desees revisar tu mensaje.';
+$txt['error_new_replies'] = 'Advertencia - mientras estabas escribiendo, fueron publicadas %1$d respuestas. Probablemente desees revisar tu mensaje.';
 $txt['error_new_reply_reading'] = 'Advertencia - mientras estabas leyendo, una nueva respuesta fue publicada. Probablemente desees revisar tu mensaje.';
-$txt['error_new_replies_reading'] = 'Advertencia - mientras estabas leyendo, fueron publicadas %d respuestas. Probablemente desees revisar tu mensaje.';
+$txt['error_new_replies_reading'] = 'Advertencia - mientras estabas leyendo, fueron publicadas %1$d respuestas. Probablemente desees revisar tu mensaje.';
 
 $txt['announce_this_topic'] = 'Enviar un anuncio sobre este tema a los usuarios:';
 $txt['announce_title'] = 'Enviar un anuncio';
@@ -178,20 +178,20 @@ $txt['announce_regular_members'] = 'Usuarios Habituales';
 
 $txt['digest_subject_daily'] = 'Resumen Diario';
 $txt['digest_subject_weekly'] = 'Resumen Semanal';
-$txt['digest_intro_daily'] = 'Arriba tienes un resumen de todas las actividades en tus foros y temas suscritos hoy en %s. Para eliminar tu suscripción, por favor visita el vínculo de arriba.';
-$txt['digest_intro_weekly'] = 'Arriba tienes un resumen de todas las actividades en tus foros y temas suscritos esta semana en %s. Para eliminar tu suscripción, por favor visita el vínculo de arriba.';
+$txt['digest_intro_daily'] = 'A continuación tienes un resumen de todas las actividades en tus foros y temas suscritos hoy en %1$s. Para eliminar tu suscripción, por favor visita el enlace de abajo.';
+$txt['digest_intro_weekly'] = 'A continuación tienes un resumen de todas las actividades en tus foros y temas suscritos esta semana en %1$s. Para eliminar tu suscripción, por favor visita el enlace de abajo.';
 $txt['digest_new_topics'] = 'Se han comenzado los siguientes temas';
-$txt['digest_new_topics_line'] = '"%s" en "%s"';
+$txt['digest_new_topics_line'] = '"%1$s" en "%2$s"';
 $txt['digest_new_replies'] = 'Se ha respondido a los siguientes temas';
-$txt['digest_new_replies_one'] = '1 respuesta en "%s"';
-$txt['digest_new_replies_many'] = '%d respuestas en "%s"';
+$txt['digest_new_replies_one'] = '1 respuesta en "%1$s"';
+$txt['digest_new_replies_many'] = '%1$d respuestas en "%2$s"';
 $txt['digest_mod_actions'] = 'Se han realizado las siguientes acciones de moderación';
-$txt['digest_mod_act_sticky'] = '"%s" fue fijado';
-$txt['digest_mod_act_lock'] = '"%s" fue bloqueado';
-$txt['digest_mod_act_unlock'] = '"%s" fue desbloqueado';
-$txt['digest_mod_act_remove'] = '"%s" fue eliminado';
-$txt['digest_mod_act_move'] = '"%s" fue movido';
-$txt['digest_mod_act_merge'] = '"%s" fue combinado';
-$txt['digest_mod_act_split'] = '"%s" fue dividido';
+$txt['digest_mod_act_sticky'] = '"%1$s" fue fijado';
+$txt['digest_mod_act_lock'] = '"%1$s" fue cerrado';
+$txt['digest_mod_act_unlock'] = '"%1$s" fue abierto';
+$txt['digest_mod_act_remove'] = '"%1$s" fue eliminado';
+$txt['digest_mod_act_move'] = '"%1$s" fue movido';
+$txt['digest_mod_act_merge'] = '"%1$s" fue combinado';
+$txt['digest_mod_act_split'] = '"%1$s" fue dividido';
 
 ?>

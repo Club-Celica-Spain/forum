@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Modlog
+// Version: 2.0.16; Modlog
 
 global $scripturl;
 
@@ -13,7 +13,7 @@ $txt['modlog_total_entries'] = 'Nº total de entradas';
 $txt['modlog_ac_approve_topic'] = 'Tema &quot;{topic}&quot; aprobado por &quot;{member}&quot;';
 $txt['modlog_ac_approve'] = 'Mensaje &quot;{subject}&quot; en &quot;{topic}&quot; aprobado por &quot;{member}&quot;';
 $txt['modlog_ac_lock'] = 'Cerrado &quot;{topic}&quot;';
-$txt['modlog_ac_warning'] = 'Warned {member} for &quot;{message}&quot;';
+$txt['modlog_ac_warning'] = '{member} advertido por &quot;{message}&quot; ';
 $txt['modlog_ac_unlock'] = 'Reabierto &quot;{topic}&quot;';
 $txt['modlog_ac_sticky'] = 'Fijado &quot;{topic}&quot;';
 $txt['modlog_ac_unsticky'] = 'Despegado &quot;{topic}&quot;';
@@ -29,8 +29,8 @@ $txt['modlog_ac_pruned'] = 'Purgados algunos posts de hace más de {days} días';
 $txt['modlog_ac_news'] = 'Editadas las noticias';
 $txt['modlog_enter_comment'] = 'Introducir comentario de moderación';
 $txt['modlog_moderation_log'] = 'Log de moderación';
-$txt['modlog_moderation_log_desc'] = 'A continuación hay una lista con todas las acciones de moderación llevadas a cabo por moderadores del foro.<br /><b>Importante:</b> Las entradas no pueden ser eliminadas de este log hasta que tengan una antigüedad de al menos 24 horas.';
-$txt['modlog_no_entries_found'] = 'No se encontraron entradas';
+$txt['modlog_moderation_log_desc'] = 'A continuación hay una lista con todas las acciones de moderación llevadas a cabo por moderadores del foro.<br /><strong>Importante:</strong> Las entradas no pueden ser eliminadas de este log hasta que tengan una antigüedad de al menos 24 horas.';
+$txt['modlog_no_entries_found'] = 'Actualmente no hay registros en el log de moderación.';
 $txt['modlog_remove'] = 'Eliminar';
 $txt['modlog_removeall'] = 'Eliminar todo';
 $txt['modlog_go'] = 'Ir';
@@ -49,9 +49,10 @@ $txt['modlog_ac_ban_trigger_email'] = ' <em>Email:</em> {email}';
 $txt['modlog_ac_ban_trigger_ip_range'] = ' <em>IP:</em> {ip_range}';
 $txt['modlog_ac_ban_trigger_hostname'] = ' <em>Nombre del host:</em> {hostname}';
 
-$txt['modlog_admin_log'] = 'Log de admin';
-$txt['modlog_admin_log_desc'] = 'A continuación hay una lista de las acciones administrativas que han sido registradas en su foro.<br /><b>Importante:</b> Las entradas no pueden ser eliminadas de este log hasta que tengan una antigüedad de al menos 24 horas.';
+$txt['modlog_admin_log'] = 'Log de administración';
+$txt['modlog_admin_log_desc'] = 'A continuación hay una lista de las acciones administrativas que han sido registradas en su foro.<br /><strong>Importante:</strong> Las entradas no pueden ser eliminadas de este log hasta que tengan una antigüedad de al menos 24 horas.';
 $txt['modlog_admin_log_no_entries_found'] = 'Actualmente no existen registros de administración.';
+$txt['modlog_admin_log_gdpr_no_delete'] = '<strong>A tener en cuenta:</strong> Las entradas a las actualizaciones en el acuerdo de registro y la política de privacidad no pueden eliminarse de este registro mientras tengas activados los ajustes de cumplimiento del RGPD.';
 
 // Admin type strings.
 $txt['modlog_ac_upgrade'] = 'Actualizado el foro a la versión {version}';
@@ -70,13 +71,16 @@ $txt['modlog_ac_added_to_group'] = 'Añadido el usuario &quot;{member}&quot; al g
 $txt['modlog_ac_removed_from_group'] = 'Eliminado el usuario &quot;{member}&quot; del grupo &quot;{group}&quot;';
 $txt['modlog_ac_removed_all_groups'] = 'Eliminado el usuario &quot;{member}&quot; de todos los grupos';
 
+$txt['modlog_ac_agreement_updated'] = 'Actualizado el acuerdo de registro de {language}';
+$txt['modlog_ac_policy_updated'] = 'Actualizada la política de privacidad de {language}';
+
 $txt['modlog_ac_remind_member'] = 'Enviado un recordatorio a &quot;{member}&quot; para activar su cuenta';
 $txt['modlog_ac_approve_member'] = 'Aprobada/Activada la cuenta del usuario &quot;{member}&quot;';
 $txt['modlog_ac_newsletter'] = 'Boletín enviado';
 
-$txt['modlog_ac_install_package'] = 'Nuevo paquete instalado: &quot;{package}&quot;, version {version} ';
-$txt['modlog_ac_upgrade_package'] = 'Paquete actualizado: &quot;{package}&quot; to version {version} ';
-$txt['modlog_ac_uninstall_package'] = 'Paquete desinstalado: &quot;{package}&quot;, version {version} ';
+$txt['modlog_ac_install_package'] = 'Nuevo paquete instalado: &quot;{package}&quot;, versión {version} ';
+$txt['modlog_ac_upgrade_package'] = 'Paquete actualizado: &quot;{package}&quot; a la versión {version} ';
+$txt['modlog_ac_uninstall_package'] = 'Paquete desinstalado: &quot;{package}&quot;, versión {version} ';
 
 // Restore topic.
 $txt['modlog_ac_restore_topic'] = 'Restaurado el tema &quot;{topic}&quot; desde &quot;{board}&quot; hasta &quot;{board_to}&quot;';

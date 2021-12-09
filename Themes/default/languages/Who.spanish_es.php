@@ -1,9 +1,9 @@
 <?php
-// Version: 2.0; Who
+// Version: 2.0.16; Who
 
 global $scripturl, $context;
 
-$txt['who_hidden'] = '<em>Nadie, o nadie que tu puedas ver...</em>';
+$txt['who_hidden'] = '<em>Nada, o nada que puedas ver...</em>';
 $txt['who_unknown'] = '<em>Acción Desconocida</em>';
 $txt['who_user'] = 'Usuario';
 $txt['who_time'] = 'Hora';
@@ -22,9 +22,9 @@ $txt['whospider_register'] = 'Viendo la página de registro..';
 $txt['whospider_reminder'] = 'Viendo la página de recordatorio.';
 
 $txt['whoall_activate'] = 'Activando su cuenta.';
-$txt['whoall_buddy'] = 'Modifying their buddy list.';
-$txt['whoall_coppa'] = 'Filling out parent/guardian consent form.';
-$txt['whoall_credits'] = 'Viewing credits page.';
+$txt['whoall_buddy'] = 'Modificando su lista de amigos.';
+$txt['whoall_coppa'] = 'Llenando el formulario de consentimiento padre/tutor.';
+$txt['whoall_credits'] = 'Viendo la página de créditos.';
 $txt['whoall_emailuser'] = 'Enviando un email a otro miembro.';
 $txt['whoall_groups'] = 'Viendo la página de grupos.';
 $txt['whoall_help'] = 'Viendo la <a href="' . $scripturl . '?action=help">página de ayuda</a>.';
@@ -34,13 +34,13 @@ $txt['whoall_login'] = 'Ingresando al foro.';
 $txt['whoall_login2'] = 'Ingresando al foro.';
 $txt['whoall_logout'] = 'Saliendo del foro.';
 $txt['whoall_markasread'] = 'Marcando temas como leídos.';
-$txt['whoall_modifykarma_applaud'] = 'Applauding a member.';
-$txt['whoall_modifykarma_smite'] = 'Smiting a member.';
+$txt['whoall_modifykarma_applaud'] = 'Aplaudiendo a un usuario.';
+$txt['whoall_modifykarma_smite'] = 'Abucheando a un usuario.';
 $txt['whoall_news'] = 'Viendo las noticias.';
 $txt['whoall_notify'] = 'Cambiando sus opciones de notificación.';
 $txt['whoall_notifyboard'] = 'Cambiando sus opciones de notificación.';
-$txt['whoall_openidreturn'] = 'Logging in using OpenID.';
-$txt['whoall_quickmod'] = 'Moderating a board.';
+$txt['whoall_openidreturn'] = 'Ingresando usando OpenID.';
+$txt['whoall_quickmod'] = 'Moderando un foro.';
 $txt['whoall_recent'] = 'Viendo la <a href="' . $scripturl . '?action=recent">lista de temas recientes</a>.';
 $txt['whoall_register'] = 'Registrando una cuenta en el foro.';
 $txt['whoall_register2'] = 'Registrando una cuenta en el foro.';
@@ -57,27 +57,27 @@ $txt['whoall_pm_removeall'] = 'Eliminando todos sus mensajes.';
 $txt['whoall_pm_send'] = 'Enviando un mensaje.';
 $txt['whoall_pm_send2'] = 'Enviando un mensaje.';
 
-$txt['whotopic_announce'] = 'Announcing the topic &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot;.';
-$txt['whotopic_attachapprove'] = 'Approving an attachment.';
+$txt['whotopic_announce'] = 'Anunciando el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
+$txt['whotopic_attachapprove'] = 'Aprobando un archivo adjunto. ';
 $txt['whotopic_dlattach'] = 'Viendo un adjunto.';
-$txt['whotopic_deletemsg'] = 'Deleting a message.';
+$txt['whotopic_deletemsg'] = 'Borrando un mensaje.';
 $txt['whotopic_editpoll'] = 'Editando la encuesta en "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
-$txt['whotopic_editpoll2'] = 'Editing the poll in &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot;.';
-$txt['whotopic_jsmodify'] = 'Modifying a post in &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot;.';
-$txt['whotopic_lock'] = 'Locking the topic &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot;.';
-$txt['whotopic_lockvoting'] = 'Locking the poll in &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot;.';
-$txt['whotopic_mergetopics'] = 'Combinando el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>" con otro tema.';
+$txt['whotopic_editpoll2'] = 'Editando la encuesta en "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
+$txt['whotopic_jsmodify'] = 'Modificando un mensaje en "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
+$txt['whotopic_lock'] = 'Cerrando el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
+$txt['whotopic_lockvoting'] = 'Cerrando la encuesta en "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
+$txt['whotopic_mergetopics'] = 'Mezclando el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>" con otro tema.';
 $txt['whotopic_movetopic'] = 'Moviendo el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>" a otro foro.';
-$txt['whotopic_movetopic2'] = 'Moving the topic &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot; to another board.';
+$txt['whotopic_movetopic2'] = 'Moviendo el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>" a otro foro.';
 $txt['whotopic_post'] = 'Publicando un mensaje en <a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>.';
 $txt['whotopic_post2'] = 'Publicando un mensaje en <a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>.';
 $txt['whotopic_printpage'] = 'Imprimiendo el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
-$txt['whotopic_quickmod2'] = 'Moderating the topic <a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>.';
-$txt['whotopic_removepoll'] = 'Removing the poll in &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot;.';
-$txt['whotopic_removetopic2'] = 'Removing the topic <a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>.';
+$txt['whotopic_quickmod2'] = 'Moderando el tema <a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>.';
+$txt['whotopic_removepoll'] = 'Eliminando la encuesta en "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
+$txt['whotopic_removetopic2'] = 'Eliminando el tema <a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>.';
 $txt['whotopic_sendtopic'] = 'Enviando el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>" a un amigo.';
 $txt['whotopic_splittopics'] = 'Dividiendo el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>" en dos temas.';
-$txt['whotopic_sticky'] = 'Setting the topic &quot;<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>&quot; as sticky.';
+$txt['whotopic_sticky'] = 'Fijando el tema "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
 $txt['whotopic_vote'] = 'Votando en <a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>.';
 
 $txt['whopost_quotefast'] = 'Citando un mensaje de "<a href="' . $scripturl . '?topic=%1$d.0">%2$s</a>".';
@@ -102,7 +102,7 @@ $txt['whoallow_editnews'] = 'Editando las noticias.';
 $txt['whoallow_mailing'] = 'Enviando un email desde el foro.';
 $txt['whoallow_maintain'] = 'Realizando mantenimiendo de rutina en el foro.';
 $txt['whoallow_manageattachments'] = 'Gestionando los archivos adjuntos.';
-$txt['whoallow_moderate'] = 'Viewing the <a href="' . $scripturl . '?action=moderate">Moderation Center</a>.';
+$txt['whoallow_moderate'] = 'Viendo el <a href="' . $scripturl . '?action=moderate">Centro de Moderación</a>.';
 $txt['whoallow_mlist'] = 'Viendo la <a href="' . $scripturl . '?action=mlist">lista de usuarios</a>.';
 $txt['whoallow_optimizetables'] = 'Optimizando las tablas de la base de datos.';
 $txt['whoallow_repairboards'] = 'Reparando las tablas de la base de datos.';
@@ -139,19 +139,20 @@ $txt['credits_groups_customize'] = 'Personalizadores';
 $txt['credits_groups_docs'] = 'Escritores de documentación';
 $txt['credits_groups_marketing'] = 'Marketing';
 $txt['credits_groups_internationalizers'] = 'Internacionalizadores ';
-$txt['credits_groups_servers'] = 'Servers Administrators';
-$txt['credits_groups_site'] = 'Site Administrators';
+$txt['credits_groups_servers'] = 'Administradores de los servidores';
+$txt['credits_groups_site'] = 'Administradores del sitio';
 // Replace "English" with the name of this language pack in the string below.
-$txt['credits_groups_translation'] = 'Traducción al Inglés';
+$txt['credits_groups_translation'] = 'Traducción al Español (es-ES)';
 $txt['credits_groups_translators'] = 'Traductores';
 $txt['credits_translators_message'] = 'Gracias por vuestros esfuerzos que hacen posible que la gente de todo el mundo use SMF.';
-$txt['credits_groups_consultants'] = 'Consulting Developers';
+$txt['credits_groups_consultants'] = 'Desarrolladores consultores';
 $txt['credits_groups_beta'] = 'Beta Testers';
 $txt['credits_beta_message'] = 'Esos valiosísimos pocos que incansablemente encuentran bugs, proveen retroalimentación, y vuelven mas locos a los desarrolladores.';
 $txt['credits_groups_founder'] = 'Padre fundador de SMF';
 $txt['credits_groups_orignal_pm'] = 'Project Managers Originales';
+$txt['credits_in_memoriam'] = 'En memoria de';
 
 // List of people who have made more than a token contribution to this translation. (blank for English)
-$txt['translation_credits'] = array();
+$txt['translation_credits'] = array('Isidro Baquero (<a href="http://www.simplemachines.org/community/index.php?action=profile;u=38077">hefesto</a>)');
 
 ?>

@@ -35,18 +35,18 @@ $txt['reply_to_all'] = 'Responder a todos';
 $txt['delete_conversation'] = 'Eliminar conversación ';
 
 $txt['pm_capacity'] = 'Capacidad';
-$txt['pm_currently_using'] = '%s mensajes, %s%% lleno.';
-$txt['pm_sent'] = 'Tu mensaje se ha enviado correctamente.';
+$txt['pm_currently_using'] = '%1$s mensajes, %2$s%% lleno.';
+$txt['pm_sent'] = 'Tu mensaje ha sido enviado correctamente.';
 
 $txt['pm_error_user_not_found'] = 'No se pudo encontrar al usuario \'%1$s\'. ';
-$txt['pm_error_ignored_by_user'] = 'El usuario \'%s\' ha bloqueado tu mensaje privado.';
-$txt['pm_error_data_limit_reached'] = 'El mensaje privado no se pudo enviar a \'%s\' debído a que excediste el límite de mensajes privados.';
-$txt['pm_error_user_cannot_read'] = 'El usuario \'%s\' no puede recibir mensajes privados.';
-$txt['pm_successfully_sent'] = 'El mensaje privado se envió satisfactoriamente a \'%s\'.';
+$txt['pm_error_ignored_by_user'] = 'El usuario \'%1$s\' ha bloqueado tu mensaje privado.';
+$txt['pm_error_data_limit_reached'] = 'El mensaje privado no se pudo enviar a \'%1$s\' debido a que excediste el límite de mensajes privados.';
+$txt['pm_error_user_cannot_read'] = 'El usuario \'%1$s\' no puede recibir mensajes privados.';
+$txt['pm_successfully_sent'] = 'El mensaje privado se envió satisfactoriamente a \'%1$s\'.';
 $txt['pm_send_report'] = 'Enviar informe';
 $txt['pm_save_outbox'] = 'Guardar una copia en mi buzón de salida';
 $txt['pm_undisclosed_recipients'] = 'Destinatario(s) sin revelar';
-$txt['pm_too_many_recipients'] = 'No puedes mandar mensajes privados a más de %d persona(s) a la vez.';
+$txt['pm_too_many_recipients'] = 'No puedes mandar mensajes privados a más de %1$d persona(s) a la vez.';
 
 $txt['pm_read'] = 'Leer';
 $txt['pm_replied'] = 'Respondido A';
@@ -98,11 +98,11 @@ $txt['pm_report_reason'] = 'Razón por la que informas sobre este mensaje';
 $txt['pm_report_message'] = 'Mensaje a Informar';
 
 // Important - The following strings should use numeric entities.
-$txt['pm_report_pm_subject'] = '[REPORT] ';
+$txt['pm_report_pm_subject'] = '[INFORMAR] ';
 // In the below string, do not translate "{REPORTER}" or "{SENDER}".
 $txt['pm_report_pm_user_sent'] = '{REPORTER} te informa sobre un mensaje privado, enviado por {SENDER}, por la siguiente razón:';
 $txt['pm_report_pm_other_recipients'] = 'Otros destinatarios del mensaje:';
-$txt['pm_report_pm_hidden'] = '%d destinatario(s) oculto(s)';
+$txt['pm_report_pm_hidden'] = '%1$d destinatario(s) oculto(s)';
 $txt['pm_report_pm_unedited_below'] = 'Debajo está el contenido original del mensaje privado:';
 $txt['pm_report_pm_sent'] = 'Enviado:';
 
@@ -114,14 +114,14 @@ $txt['pm_search_bar_title'] = 'Buscar Mensajes';
 $txt['pm_search_text'] = 'Buscar por:';
 $txt['pm_search_go'] = 'Buscar';
 $txt['pm_search_advanced'] = 'Búsqueda avanzada';
-$txt['pm_search_user'] = 'por usuario';
+$txt['pm_search_user'] = 'Por el usuario';
 $txt['pm_search_match_all'] = 'Coincidir todas las palabras';
 $txt['pm_search_match_any'] = 'Coincidir con cualquier palabra';
 $txt['pm_search_options'] = 'Opciones';
 $txt['pm_search_post_age'] = 'Antigüedad';
 $txt['pm_search_show_complete'] = 'Mostrar los resultados como mensajes.';
 $txt['pm_search_subject_only'] = 'Asuntos y autores solamente.';
-$txt['pm_search_between'] = 'Entre';
+$txt['pm_search_between'] = 'entre';
 $txt['pm_search_between_and'] = 'y';
 $txt['pm_search_between_days'] = 'días';
 $txt['pm_search_order'] = 'Ordenar resultados por';
@@ -181,8 +181,8 @@ $txt['pm_rule_no_name'] = 'Olvidaste introducir el nombre de la regla.';
 $txt['pm_rule_no_criteria'] = 'Una regla debe tener al menos una condición y una acción.';
 $txt['pm_rule_too_complex'] = 'La regla que estás creando es demasiado larga para guardarla en SMF. Intenta trocearla en reglas más pequeñas.';
 
-$txt['pm_readable_and'] = '<i>y</i>';
-$txt['pm_readable_or'] = '<i>o</i>';
+$txt['pm_readable_and'] = '<em>y</em>';
+$txt['pm_readable_or'] = '<em>o</em>';
 $txt['pm_readable_start'] = 'Si ';
 $txt['pm_readable_end'] = '.';
 $txt['pm_readable_member'] = 'el mensaje es de &quot;{MEMBER}&quot;';
@@ -192,6 +192,6 @@ $txt['pm_readable_body'] = 'el cuerpo del mensaje contiene &quot;{BODY}&quot;';
 $txt['pm_readable_buddy'] = 'el remitente es un amigo';
 $txt['pm_readable_label'] = 'aplicar la etiqueta &quot;{LABEL}&quot;';
 $txt['pm_readable_delete'] = 'eliminar el mensaje';
-$txt['pm_readable_then'] = '<b>entonces</b>';
+$txt['pm_readable_then'] = '<strong>entonces</strong>';
 
 ?>

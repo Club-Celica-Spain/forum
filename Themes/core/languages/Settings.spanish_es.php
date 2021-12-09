@@ -5,6 +5,6 @@ global $settings;
 
 // Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['theme_thumbnail_href'] = $settings['images_url'] . '/thumbnail.gif';
-$txt['theme_description'] = 'The default theme of SMF\'s previous incarnation, codenamed Core.<br /><br />Author: The Simple Machines Team';
+$txt['theme_description'] = 'El tema predeterminado de la versión anterior de SMF, cuyo nombre en clave es Core.<br /><br />Autor: El equipo de Simple Machines';
 
 ?>
