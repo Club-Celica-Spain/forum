@@ -216,14 +216,14 @@ function AdminMain()
 						'general' => array($txt['mods_cat_modifications_misc']),
 						'inactivemessage' => array($txt['inactive_message_settings']),
 
-						//NChat by ThisMod.com
-						'nchat' => array($txt['nchat_name']),
 									// Aeva - START
 						'aeva' => array(loadlanguage('Aeva') == false ? 'Aeva' : $txt['aeva']),
 						'aevasites' => array(!isset($txt['aeva_sites']) ? 'Aeva Sites' : $txt['aeva_sites']),
 						// Aeva - END
 						'mentions' => array($txt['mentions']),
-						// Mod Authors for a "ADD AFTER" on this line. Ensure you end your change with a comma. For example:
+						//NChat by ThisMod.com
+						'nchat' => array($txt['nchat_name']),
+									// Mod Authors for a "ADD AFTER" on this line. Ensure you end your change with a comma. For example:
 							'aeiou' => array($txt['aeiou']),
 						// 'shout' => array($txt['shout']),
 						// Note the comma!! The setting with automatically appear with the first mod to be added.
