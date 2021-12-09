@@ -1,91 +1,6 @@
 <?php
 // Version: 2.0; Modifications
 
-/* NChat by ThisMod.com */
-$txt['nchat_name'] = 'NChat Shoutbox';
-$txt['nchat_chatbox'] = 'Chat';
-$txt['nchat_save'] = 'Enviar';
-$txt['nchat_clean'] = 'Limpiar';
-
-$txt['nchat_blod'] = 'b';
-$txt['nchat_italic'] = 'I';
-$txt['nchat_underline'] = 'U';
-
-$txt['nchat_default_color'] = 'Color por defecto';
-$txt['nchat_red'] = 'Rojo';
-$txt['nchat_teal'] = 'Turquesa';
-$txt['nchat_blue'] = 'Azul';
-$txt['nchat_green'] = 'Verde';
-$txt['nchat_brown'] = 'Marrón';
-$txt['nchat_orange'] = 'Naranja';
-
-$txt['nchat_admin_mess'] = 'Mensaje de admin';
-
-$txt['nchat_order'] = 'Ordenar';
-$txt['nchat_order_first'] = 'Primera línea arriba';
-$txt['nchat_order_last'] = 'Última línea arriba';
-
-$txt['nchat_sound'] = 'Activar sonido<br /><span class="smalltext">Solo funciona con `primera línea arriba`.</span>';
-$txt['nchat_disable_sound'] = 'Disable Sound';
-$txt['nchat_enable_sound'] = 'Enable Sound';
-
-$txt['nchat_censor'] = 'Palabras censuradas';
-$txt['nchat_disable_censor'] = 'Disable Censored Words';
-$txt['nchat_enable_censor'] = 'Enable Censored Words';
-
-$txt['nchat_smile'] = 'Opciones de emoticonos';
-$txt['nchat_disable_smileys'] = 'Activar Emoticonos';
-$txt['nchat_smf_smileys'] = 'SMF Smiles';
-$txt['nchat_ym_smileys'] = 'Yahoo Smiles';
-
-$txt['nchat_add_smileys'] = 'Añadir Emoticonos';
-$txt['nchat_more_smileys'] = 'Mostrar más...';
-
-$txt['nchat_auto_link'] = 'Auto-link';
-$txt['nchat_disable_auto_link'] = 'Disable Auto-link';
-$txt['nchat_enable_auto_link'] = 'Enable Auto-link';
-
-$txt['nchat_disable_consensor'] = 'Disable Censored Words';
-$txt['nchat_enable_consensor'] = 'Enable Censored Words';
-
-$txt['nchat_time'] = 'Reload time<br /><span class="smalltext">in miliseconds</span>';
-
-$txt['nchat_line'] = 'Number of message';
-
-$txt['nchat_lenght'] = 'Lenght of Message';
-
-$txt['nchat_text'] = 'Default text color';
-$txt['nchat_background'] = 'Default background color';
-
-$txt['nchat_time_format'] = 'Time format';
-
-$txt['nchat_mute_list'] = 'Lista de usuarios silenciados';
-$txt['nchat_add_mute'] = 'Mute this user (in minutes)';
-$txt['nchat_remove_mute'] = 'Remove';
-$txt['nchat_be_muted'] = '<u>%s</u> - ha sido silenciado por <i>%s</i> de ahora para %s.';
-
-$txt['nchat_so_fast'] = 'No escribas tan rápido!!';
-$txt['nchat_empty_mess'] = 'Mensaje vacio!';
-$txt['nchat_index_unavailable'] = 'El archivo ha fallado! Por favor contacta con el administrador!';
-//nchat permission area
-$txt['permissiongroup_simple_nchat'] = 'NChat PLay around with the chat box.';
-
-$txt['permissionname_nchat_mute'] = 'Silenaciar a un miembro del chat.';
-$txt['permissionhelp_nchat_mute'] = 'Silenciar a un miembro del chat, no puedes silenciar al admin';
-$txt['cannot_nchat_mute'] = 'No puedes silenciar a los usuarios!.';
-
-$txt['permissionname_nchat_delete'] = 'Eliminar mensaje del chat.';
-$txt['permissionhelp_nchat_delete'] = 'Eliminar un mensaje del chat.';
-$txt['cannot_nchat_delete'] = 'Lo siento, no puedes eliminar mensajes.';
-
-$txt['permissionname_nchat_write'] = 'Write something and chat.';
-$txt['permissionhelp_nchat_write'] = 'Join the chat box and talkative.';
-$txt['cannot_nchat_write'] = 'Sorry, but you can\'t write to the chat box.';
-
-$txt['permissionname_nchat_read'] = 'Read the chat content.';
-$txt['permissionhelp_nchat_read'] = 'See waht the other shout in our big chat box.';
-$txt['cannot_nchat_read'] = 'Sorry, but you can\'t read the chat content.';
-/* NChat by ThisMod.com */
         //6 Custom buttons with sub menus. - johncccccc
         //Global settings
 $txt['custombuttons_settings_menu'] = 'Custom buttons settings';
@@ -306,4 +221,104 @@ $txt['oasl_user_may_not_register'] = 'Sorry, but the admistration has disabled t
 $txt['oasl_user_require_activation'] = 'Your account has been created but it needs to be verified. Please check your mailbox and click on the link in the verification email.';
 
 
+// Begin GPDR Helper Text Strings
+$txt['gpdr_title'] = 'GDPR Helper';
+
+$txt['gpdr_privacypolicy'] = 'Privacy Policy';
+$txt['gpdr_text_settings'] = 'Settings';
+$txt['gpdr_txt_exportdata']  = 'Export Data';
+
+$txt['gpdr_txt_privacy_header'] = 'Privacy Policy/Cookies';
+$txt['gpdr_txt_privacy_desc'] = 'We collect personal information when you use our online services. We use cookies to identify you and to personalize your experience. For details, please see our <a href="' . $scripturl . '?action=gpdr;sa=privacypolicy" target="_blank">Privacy Policy</a>';
+$txt['gpdr_txt_privacy_agree'] = 'I agree and consent to the Privacy Policy';
+$txt['gpdr_txt_privacy_fail'] = 'We can not process your registration if do not agree to our Privacy Policy';
+
+
+
+// END GPDR Helper Text Strings
+/* NChat by ThisMod.com */
+$txt['nchat_name'] = 'NChat Shoutbox';
+$txt['nchat_chatbox'] = 'Chat Box';
+$txt['nchat_save'] = 'Save';
+$txt['nchat_clean'] = 'Clean All';
+
+$txt['nchat_blod'] = 'B';
+$txt['nchat_italic'] = 'I';
+$txt['nchat_underline'] = 'U';
+
+$txt['nchat_default_color'] = 'Default color';
+$txt['nchat_red'] = 'Red';
+$txt['nchat_teal'] = 'Teal';
+$txt['nchat_blue'] = 'Blue';
+$txt['nchat_green'] = 'Green';
+$txt['nchat_brown'] = 'Brown';
+$txt['nchat_orange'] = 'Orange';
+
+$txt['nchat_admin_mess'] = 'Admin Message';
+
+$txt['nchat_order'] = 'Order';
+$txt['nchat_order_first'] = 'First line on top';
+$txt['nchat_order_last'] = 'Last line on top';
+
+$txt['nchat_sound'] = 'Enable Sound<br /><span class="smalltext">Work only with `First line n top`.</span>';
+$txt['nchat_disable_sound'] = 'Disable Sound';
+$txt['nchat_enable_sound'] = 'Enable Sound';
+
+$txt['nchat_censor'] = 'Censored Words';
+$txt['nchat_disable_censor'] = 'Disable Censored Words';
+$txt['nchat_enable_censor'] = 'Enable Censored Words';
+
+$txt['nchat_smile'] = 'Smlies Option';
+$txt['nchat_disable_smileys'] = 'Disable Smiles';
+$txt['nchat_smf_smileys'] = 'SMF Smiles';
+$txt['nchat_ym_smileys'] = 'Yahoo Smiles';
+
+$txt['nchat_add_smileys'] = 'Add Smiles';
+$txt['nchat_more_smileys'] = 'More...';
+
+$txt['nchat_auto_link'] = 'Auto-link';
+$txt['nchat_disable_auto_link'] = 'Disable Auto-link';
+$txt['nchat_enable_auto_link'] = 'Enable Auto-link';
+
+$txt['nchat_disable_consensor'] = 'Disable Censored Words';
+$txt['nchat_enable_consensor'] = 'Enable Censored Words';
+
+$txt['nchat_time'] = 'Reload time<br /><span class="smalltext">in miliseconds</span>';
+
+$txt['nchat_line'] = 'Number of message';
+
+$txt['nchat_lenght'] = 'Lenght of Message';
+
+$txt['nchat_text'] = 'Default text color';
+$txt['nchat_background'] = 'Default background color';
+
+$txt['nchat_time_format'] = 'Time format';
+
+$txt['nchat_mute_list'] = 'Mute List Manager';
+$txt['nchat_add_mute'] = 'Mute this user (in minutes)';
+$txt['nchat_remove_mute'] = 'Remove';
+$txt['nchat_be_muted'] = '<u>%s</u> - was muted by <i>%s</i> from now to %s.';
+
+$txt['nchat_so_fast'] = 'Slow down! You type so fast!!';
+$txt['nchat_empty_mess'] = 'Empty message!';
+$txt['nchat_index_unavailable'] = 'The ./nchat/index.php is now unavailable! Please contact admin forum about this issue!';
+//nchat permission area
+$txt['permissiongroup_simple_nchat'] = 'NChat PLay around with the chat box.';
+
+$txt['permissionname_nchat_mute'] = 'Mute a member from chat.';
+$txt['permissionhelp_nchat_mute'] = 'Mute a member fro chat, but you cannot mute the Admin.';
+$txt['cannot_nchat_mute'] = 'Sorry, but you can\'t mute any member!.';
+
+$txt['permissionname_nchat_delete'] = 'Delete a chat message.';
+$txt['permissionhelp_nchat_delete'] = 'Delete the message in the chat box.';
+$txt['cannot_nchat_delete'] = 'Sorry, but you can\'t delete the chat content.';
+
+$txt['permissionname_nchat_write'] = 'Write something and chat.';
+$txt['permissionhelp_nchat_write'] = 'Join the chat box and talkative.';
+$txt['cannot_nchat_write'] = 'Sorry, but you can\'t write to the chat box.';
+
+$txt['permissionname_nchat_read'] = 'Read the chat content.';
+$txt['permissionhelp_nchat_read'] = 'See waht the other shout in our big chat box.';
+$txt['cannot_nchat_read'] = 'Sorry, but you can\'t read the chat content.';
+/* NChat by ThisMod.com */
 ?>

@@ -12,7 +12,6 @@
 
 function template_main()
 {
-	global $boarddir, $boardurl;
 	global $context, $settings, $options, $txt, $scripturl, $modSettings;
 
 
@@ -28,10 +27,7 @@ function template_main()
 			else
 				eval($ads['content']);
 		unset($ads);
-	}
-	//NChat by ThisMod.com
-	require_once($boarddir."/NChat/NChatBoardIndex.php");
-		// Show some statistics if stat info is off.
+	}	// Show some statistics if stat info is off.
 	if (!$settings['show_stats_index'])
 		echo '
 	<div id="index_common_stats">
