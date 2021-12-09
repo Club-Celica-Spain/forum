@@ -181,9 +181,7 @@ function ModifyModSettings()
 
 		'aeva' => 'ModifyAevaSettings',
 		'aevasites' => 'ModifyAevaSettings',
-		'mentions' => 'ModifyMentionsSettings',
-		//NChat by ThisMod.com
-		'nchat' => 'nchatSettings',		// Mod authors, once again, if you have a whole section to add do it AFTER this line, and keep a comma at the end.
+		'mentions' => 'ModifyMentionsSettings',		// Mod authors, once again, if you have a whole section to add do it AFTER this line, and keep a comma at the end.
 
         'custombuttons' => 'ModifycustombuttonsSettings',
 	);
@@ -2264,62 +2262,6 @@ function ModifycustombuttonsSettings($return_config = false)
     
 }
 
-//NChat by ThisMod.com
-function nchatSettings($return_config = false)
-{
-	global $txt, $scripturl, $context, $settings, $sc, $modSettings;
-
-	$config_vars = array(
-		array('text', 'nchat_admin_mess', 'size' => 50),
-	'',
-		array('select', 'nchat_order', array($txt['nchat_order_first'], $txt['nchat_order_last'])),
-		array('select', 'nchat_sound', array($txt['nchat_disable_sound'], $txt['nchat_enable_sound'])),
-		array('select', 'nchat_censor', array($txt['nchat_disable_censor'], $txt['nchat_enable_censor'])),
-		array('select', 'nchat_smile', array($txt['nchat_disable_smileys'], $txt['nchat_ym_smileys'], $txt['nchat_smf_smileys'])),
-		array('select', 'nchat_auto_link', array($txt['nchat_disable_auto_link'], $txt['nchat_enable_auto_link'])),
-	'',
-		array('int', 'nchat_time'),
-		array('int', 'nchat_line'),
-		array('int', 'nchat_lenght'),
-	'',
-		array('text', 'nchat_text'),
-		array('text', 'nchat_background'),
-	'',
-		array('text', 'nchat_time_format'),
-	);
-
-
-	if ($return_config)
-		return $config_vars;
-
-	$context['post_url'] = $scripturl . '?action=admin;area=modsettings;save;sa=nchat';
-	$context['settings_title'] = $txt['mods_cat_modifications_misc'];
-
-
-	if (empty($config_vars))
-	{
-		$context['settings_save_dont_show'] = true;
-		$context['settings_message'] = '<div class="centertext">' . $txt['modification_no_misc_settings'] . '</div>';
-
-		return prepareDBSettingContext($config_vars);
-	}
-
-
-	if (isset($_GET['save']))
-	{
-		checkSession();
-
-		$save_vars = $config_vars;
-
-
-		saveDBSettings($save_vars);
-
-
-		redirectexit('action=admin;area=modsettings;sa=nchat');
-	}
-
-	prepareDBSettingContext($config_vars);
-}
 
 // Aeva - START
 function ModifyAevaSettings($return_config = false)

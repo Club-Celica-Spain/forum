@@ -1129,12 +1129,6 @@ function setPermissionLevel($level, $group, $profile = 'null')
 
 	// Standard - ie. members.  They can do anything Restrictive can.
 	$groupLevels['global']['standard'] = array_merge($groupLevels['global']['restrict'], array(
-		'adk_portal',
-		'adk_downloads_view',
-		'adk_downloads_add',
-		'adk_downloads_autoapprove',
-		'adk_downloads_manage',
-
 		'prefix_manage',
 		'view_mlist',
 		'karma_edit',
@@ -1468,11 +1462,6 @@ function loadAllPermissions($loadType = 'classic')
 	*/
 	$permissionList = array(
 		'membergroup' => array(
-			'adk_portal' => array(false, 'adkportal', 'adkportal'),
-			'adk_downloads_view' => array(false, 'adkportal', 'adkportal'),
-			'adk_downloads_add' => array(false, 'adkportal', 'adkportal'),
-			'adk_downloads_autoapprove' => array(false, 'adkportal', 'adkportal'),
-			'adk_downloads_manage' => array(false, 'adkportal', 'adkportal'),
 			'view_stats' => array(false, 'general', 'view_basic_info'),
 			'view_mlist' => array(false, 'general', 'view_basic_info'),
 			'who_view' => array(false, 'general', 'view_basic_info'),
