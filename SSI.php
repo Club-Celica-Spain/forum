@@ -65,8 +65,6 @@ require_once($sourcedir . '/QueryString.php');
 require_once($sourcedir . '/Subs.php');
 require_once($sourcedir . '/Errors.php');
 require_once($sourcedir . '/Load.php');
-require_once($sourcedir . '/Subs-adkfunction.php');
-
 require_once($sourcedir . '/Security.php');
 
 // Using an pre-PHP 5.1 version?
@@ -83,9 +81,6 @@ loadDatabase();
 reloadSettings();
 // Clean the request variables.
 cleanRequest();
-
-//LoadSettings From Adk Portal
-adkportalSettings();
 
 // Seed the random generator?
 if (empty($modSettings['rand_seed']) || mt_rand(1, 250) == 69)
@@ -147,13 +142,6 @@ loadUserSettings();
 
 // Load the current user's permissions....
 loadPermissions();
-
-//Adk Stand Alone mod??? Yeah nose true
-adk_standAloneMode(true);
-
-//Load your language or English Language
-if(loadLanguage('Adk-Modifications') == false)
-	loadLanguage('Adk-Modifications','english');
 
 // Load the current or SSI theme. (just use $ssi_theme = id_theme;)
 loadTheme(isset($ssi_theme) ? (int) $ssi_theme : 0);

@@ -561,7 +561,6 @@ function loadUserSettings()
 	$user_info += array(
 		'id' => $id_member,
 		'username' => $username,
-		'adk_notes' =>  isset($user_settings['adk_notes']) ? $user_settings['adk_notes'] : '',
 		'name' => isset($user_settings['real_name']) ? $user_settings['real_name'] : '',
 		'email' => isset($user_settings['email_address']) ? $user_settings['email_address'] : '',
 		'passwd' => isset($user_settings['passwd']) ? $user_settings['passwd'] : '',
@@ -826,16 +825,11 @@ function loadBoard()
 		if (count(array_intersect($user_info['groups'], $board_info['groups'])) == 0 && !$user_info['is_admin'])
 			$board_info['error'] = 'access';
 
-		//Adk Portal
-		global $adkportal;
-		$adk_enable = $scripturl . '?action=forum#c' . $board_info['cat']['id'];
-		$adk_disable = $scripturl . '#c' . $board_info['cat']['id'];
-		
 		// Build up the linktree.
 		$context['linktree'] = array_merge(
 			$context['linktree'],
 			array(array(
-				'url' => $adkportal['adk_enable'] == 1 ? $adk_enable : $adk_disable,
+				'url' => $scripturl . '#c' . $board_info['cat']['id'],
 				'name' => $board_info['cat']['name']
 			)),
 			array_reverse($board_info['parent_boards']),
@@ -1719,18 +1713,6 @@ function loadTheme($id_theme = 0, $initialize = true)
 	// Detect the browser. This is separated out because it's also used in attachment downloads
 	detectBrowser();
 
-	//Adk Portal Modifications
-	global $adkportal;
-	if((!empty($_REQUEST['topic']) || !empty($_REQUEST['board'])) && !empty($adkportal['adk_enable'])){
-		
-		$url = $adkportal['adk_enable'] == 1 ? $scripturl.'?action=forum' : $scripturl;
-		array_unshift($context['linktree'], array(
-			'url' => $url,
-			'name' => $txt['foro']
-		));
-	}
-	
-	//Modified by lucas-ruroken
 	// Set the top level linktree up.
 	array_unshift($context['linktree'], array(
 		'url' => $scripturl,

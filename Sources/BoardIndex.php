@@ -42,15 +42,6 @@ function BoardIndex()
 	// Set a canonical URL for this page.
 	$context['canonical_url'] = $scripturl;
 
-	global $adkportal;
-	if(!empty($adkportal['adk_enable'])){
-		$url = $adkportal['adk_enable'] == 2 ? $scripturl : $scripturl.'?action=forum';
-		$context['linktree'][] = array(
-			'url' => $url,
-			'name' => $txt['foro']
-		);
-	}
-
 	// Do not let search engines index anything if there is a random thing in $_GET.
 	if (!empty($_GET))
 		$context['robot_no_index'] = true;

@@ -53,11 +53,6 @@ function createMenu($menuData, $menuOptions = array())
 	// Work out where we should get our images from.
 	$context['menu_image_path'] = file_exists($settings['theme_dir'] . '/images/admin/change_menu.png') ? $settings['images_url'] . '/admin' : $settings['default_images_url'] . '/admin';
 
-	//Well... Theme developers don't use custom images for admin... I never see that... 
-	//So I prefer to load the default images, and Adk portal will not be affected :D
-	//Lucas-ruroken Modifications
-	$context['menu_image_path'] = $settings['default_images_url'].'/admin';
-	
 	/* Note menuData is array of form:
 
 		Possible fields:

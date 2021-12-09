@@ -53,7 +53,6 @@ require_once($sourcedir . '/Subs.php');
 require_once($sourcedir . '/Errors.php');
 require_once($sourcedir . '/Load.php');
 require_once($sourcedir . '/Security.php');
-require_once($sourcedir . '/Subs-adkfunction.php');
 if (file_exists($sourcedir . '/LoadAds.php'))
 	require_once($sourcedir . '/LoadAds.php');
 
@@ -73,9 +72,6 @@ set_error_handler('error_handler');
 
 // Initate the database connection and define some database functions to use.
 loadDatabase();
-
-//LoadSettings From Adk Portal
-adkportalSettings();
 
 // Load the settings from the settings table, and perform operations like optimizing.
 reloadSettings();
@@ -210,10 +206,6 @@ function smf_main()
 	// Load the current user's permissions.
 	loadPermissions();
 
-	//Load your language or English Language
-	if(loadLanguage('Adk-Modifications') == false)
-		loadLanguage('Adk-Modifications','english');
-
 	// Attachments don't require the entire theme to be loaded.
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'dlattach' && (!empty($modSettings['allow_guestAccess']) && $user_info['is_guest']))
 		detectBrowser();
@@ -243,9 +235,6 @@ function smf_main()
 			trackStats(array('hits' => '+'));
 	}
 
-	//Load If we are using Stand Alone :)
-	adk_standAloneMode();
-	
 	// Is the forum in maintenance mode? (doesn't apply to administrators.)
 	if (!empty($maintenance) && !allowedTo('admin_forum'))
 	{
@@ -270,20 +259,8 @@ function smf_main()
 	}
 	elseif (empty($_REQUEST['action']) && empty($_REQUEST['ajax_request']))
 	{
-		//Adk Portal
-		global $adkportal;
 		// Action and board are both empty... BoardIndex!
-		if (empty($board) && empty($topic) && $adkportal['adk_enable'] == 1 && !isset($_REQUEST['page']))
-		{
-			require_once($sourcedir . '/Adkportal.php');
-			return 'Adkportal';
-		}
-		elseif (empty($board) && empty($topic) && isset($_REQUEST['page']))
-		{
-			require_once($sourcedir . '/Adk-echomodules.php');
-			return 'load_pages_adkportal';
-		}
-		elseif (empty($board) && empty($topic))
+		if (empty($board) && empty($topic))
 		{
 			require_once($sourcedir . '/BoardIndex.php');
 			return 'BoardIndex';

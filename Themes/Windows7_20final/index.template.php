@@ -214,14 +214,10 @@ google_ad_type = "text_image";
 ';
 
 		
-	//Adk Portal
-	if(function_exists('loadCTop'))loadCTop();
 }
 
 function template_body_below()
 {
-	//Adk Portal
-	if(function_exists('loadCBottom'))loadCBottom();
 	global $context, $settings, $options, $scripturl, $boarddir, $boardurl, $txt;
 
 	echo'<br />

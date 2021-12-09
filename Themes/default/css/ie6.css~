@@ -206,3 +206,7 @@ h3.titlebg a, h3.titlebg, h4.titlebg, h4.titlebg a
 {
 	word-wrap: break-word;
 }
+.collapse2
+{
+	margin-top: -16px;
+}
