@@ -863,9 +863,6 @@ if(function_exists("show_lastpostAds") && function_exists("show_posts"))
 				<div class="nextlinks_bottom">', $context['previous_next'], '</div>
 			</div>';
 
-	//Load Random news? or not
-	if(function_exists('loadDisplayNews'))loadDisplayNews();
-	
 	// Show the lower breadcrumbs.
 	theme_linktree();
 

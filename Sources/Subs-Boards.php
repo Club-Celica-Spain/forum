@@ -195,13 +195,6 @@ function MarkRead()
 
 	checkSession('get');
 
-	//Adk Portal by Smf Personal
-	global $adkportal;
-	$redirect = '';
-	
-	if($adkportal['adk_enable'] == 1)
-		$redirect = 'action=forum';
-
 	if (isset($_REQUEST['sa']) && $_REQUEST['sa'] == 'all')
 	{
 		// Find all the boards this user can see.
@@ -227,7 +220,7 @@ function MarkRead()
 		if (isset($_SESSION['topicseen_cache']))
 			$_SESSION['topicseen_cache'] = array();
 
-		redirectexit($redirect);
+		redirectexit();
 	}
 	elseif (isset($_REQUEST['sa']) && $_REQUEST['sa'] == 'unreadreplies')
 	{
@@ -382,7 +375,7 @@ function MarkRead()
 		}
 
 		if (empty($clauses))
-			redirectexit($redirect);
+			redirectexit();
 
 		$request = $smcFunc['db_query']('', '
 			SELECT b.id_board
@@ -398,7 +391,7 @@ function MarkRead()
 		$smcFunc['db_free_result']($request);
 
 		if (empty($boards))
-			redirectexit($redirect);
+			redirectexit();
 
 		markBoardsRead($boards, isset($_REQUEST['unread']));
 
@@ -436,14 +429,14 @@ function MarkRead()
 			$smcFunc['db_free_result']($result);
 
 			if (empty($board))
-				redirectexit($redirect);
+				redirectexit();
 			else
 				redirectexit('board=' . $board . '.0');
 		}
 		else
 		{
 			if (empty($board_info['parent']))
-				redirectexit($redirect);
+				redirectexit();
 			else
 				redirectexit('board=' . $board_info['parent'] . '.0');
 		}

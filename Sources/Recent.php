@@ -80,7 +80,6 @@ function getLastPost()
 // Find the ten most recent posts.
 function RecentPosts()
 {
-	global $adkportal;
 	global $txt, $scripturl, $user_info, $context, $modSettings, $sourcedir, $board, $smcFunc;
 
 	loadTemplate('Recent');
@@ -100,9 +99,6 @@ function RecentPosts()
 
 		if (count($_REQUEST['c']) == 1)
 		{
-			$adk_enable = $scripturl . '?action=forum#c' . (int) $_REQUEST['c'];
-			$adk_disable = $scripturl . '#c' . (int) $_REQUEST['c'];
-	
 			$request = $smcFunc['db_query']('', '
 				SELECT name
 				FROM {db_prefix}categories
@@ -119,7 +115,7 @@ function RecentPosts()
 				fatal_lang_error('no_access', false);
 
 			$context['linktree'][] = array(
-				'url' => $adkportal['adk_enable'] == 1 ? $adk_enable : $adk_disable,
+				'url' => $scripturl . '#c' . (int) $_REQUEST['c'],
 				'name' => $name
 			);
 		}
@@ -333,8 +329,8 @@ function RecentPosts()
 			'category' => array(
 				'id' => $row['id_cat'],
 				'name' => $row['cname'],
-				'href' => $adkportal['adk_enable'] == 1 ? $scripturl . '?action=forum#c' . $row['id_cat'] : $scripturl . '#c' . $row['id_cat'],
-				'link' => $adkportal['adk_enable'] == 1 ? '<a href="' . $scripturl . '?action=forum#c' . $row['id_cat'] . '">' . $row['cname'] . '</a>' : '<a href="' . $scripturl . '#c' . $row['id_cat'] . '">' . $row['cname'] . '</a>'
+				'href' => $scripturl . '#c' . $row['id_cat'],
+				'link' => '<a href="' . $scripturl . '#c' . $row['id_cat'] . '">' . $row['cname'] . '</a>'
 			),
 			'board' => array(
 				'id' => $row['id_board'],

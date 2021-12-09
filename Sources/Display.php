@@ -181,7 +181,7 @@ function Display()
 	// Get all the important topic info.
 	$request = $smcFunc['db_query']('', '
 		SELECT
-			t.num_replies, t.num_views, t.locked, ms.subject, t.is_sticky, t.id_poll,t.id_new,
+			t.num_replies, t.num_views, t.locked, ms.subject, t.is_sticky, t.id_poll,
 			t.id_member_started, t.id_first_msg, t.id_last_msg, t.approved, t.unapproved_posts,
 			' . ($user_info['is_guest'] ? 't.id_last_msg + 1' : 'IFNULL(lt.id_msg, IFNULL(lmr.id_msg, -1)) + 1') . ' AS new_from
 			' . (!empty($modSettings['recycle_board']) && $modSettings['recycle_board'] == $board ? ', id_previous_board, id_previous_topic' : '') . '
@@ -202,11 +202,6 @@ function Display()
 	$topicinfo = $smcFunc['db_fetch_assoc']($request);
 	$smcFunc['db_free_result']($request);
 
-	global $adkportal;
-	if($adkportal['enable_related_topics'] == 1)
-		loadRandom5News();
-	
-	$context['adk_id_new'] = $topicinfo['id_new'];
 	$context['real_num_replies'] = $context['num_replies'] = $topicinfo['num_replies'];
 	$context['topic_first_message'] = $topicinfo['id_first_msg'];
 	$context['topic_last_message'] = $topicinfo['id_last_msg'];
