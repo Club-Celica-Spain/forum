@@ -12,7 +12,7 @@
 
 function template_main()
 {
-	
+	global $boarddir, $boardurl;
 	global $context, $settings, $options, $txt, $scripturl, $modSettings;
 
 
@@ -29,7 +29,9 @@ function template_main()
 				eval($ads['content']);
 		unset($ads);
 	}
-	// Show some statistics if stat info is off.
+	//NChat by ThisMod.com
+	require_once($boarddir."/NChat/NChatBoardIndex.php");
+		// Show some statistics if stat info is off.
 	if (!$settings['show_stats_index'])
 		echo '
 	<div id="index_common_stats">
@@ -474,9 +476,6 @@ function template_info_center()
 				', $txt['most_online_ever'], ': ', comma_format($modSettings['mostOnline']), ' (', timeformat($modSettings['mostDate']), ')
 			</p>
 			</td></tr></table>';
-//NChat by ThisMod.com
-	global $boarddir, $boardurl;
-	require_once($boarddir."/NChat/NChatBoardIndex.php");
 	// If they are logged in, but statistical information is off... show a personal message bar.
 	if ($context['user']['is_logged'] && !$settings['show_stats_index'])
 	{

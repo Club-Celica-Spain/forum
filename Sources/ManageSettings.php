@@ -179,13 +179,11 @@ function ModifyModSettings()
 'general' => 'ModifyGeneralModSettings',
 		                  'inactivemessage' => 'ModifyInactiveMessageSettings',
 
-		//NChat by ThisMod.com
-		'nchat' => 'nchatSettings',		
-		
 		'aeva' => 'ModifyAevaSettings',
 		'aevasites' => 'ModifyAevaSettings',
 		'mentions' => 'ModifyMentionsSettings',
-		// Mod authors, once again, if you have a whole section to add do it AFTER this line, and keep a comma at the end.
+		//NChat by ThisMod.com
+		'nchat' => 'nchatSettings',		// Mod authors, once again, if you have a whole section to add do it AFTER this line, and keep a comma at the end.
 
         'custombuttons' => 'ModifycustombuttonsSettings',
 	);
