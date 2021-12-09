@@ -14,7 +14,8 @@ html>body {
 body
 {
 	color: #3a3a3a;
-	font: 80% arial;
+	font-size: small;
+	font-family: verdana, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -23,9 +24,9 @@ body
 
 
 .bcleft {
-font-family: arial;
+font-family: verdana, sans-serif;
 font-size: 14px;
-color: #036C9B;
+color: #FF6600;
 height: 30px;
 line-height: 30px;
 padding-left: 41px;
@@ -35,9 +36,9 @@ padding-left: 41px;
 }
 
 .bcleft a:link, .bcleft a:hover, .bcleft a:active, .bcleft a:visited {
-font-family: arial;
-font-size: 11px;
-color: #036C9B;
+font-family: verdana, sans-serif;
+font-size: 14px;
+color: #FF6600;
 text-decoration: none;
 }
 
@@ -83,7 +84,7 @@ height: 32px;
 line-height: 32px;
 padding-left: 19px;
 font-size: 14px;
-font-family: arial;
+font-family: verdana, sans-serif;
 font-weight: bold;
 }
 
@@ -109,14 +110,14 @@ white-space: nowrap;
 
 .navitem a:link, .navitem a:active, .navitem a:visited {
 color: #ffffff;
-font-family: arial;
-font-size: 12px;
+font-family: verdana, sans-serif;
+font-size: 14px;
 font-weight: bold;
 text-decoration: none;
 }
 
 .navitem a:hover {
-color: #FFE58B;
+color: #FF6600;
 }
 
 .navleft {
@@ -194,6 +195,7 @@ textarea
 	border: 1px solid #aaa;
 	cursor: pointer;
 	font-weight: normal;
+	padding: 5px;
 }
 input:hover, textarea:hover, button:hover, select:hover
 {
@@ -201,7 +203,7 @@ input:hover, textarea:hover, button:hover, select:hover
 }
 .button_submit:hover, .button_reset:hover
 {
-	border: 1px solid #aaa;
+	border: 2px solid #aaa;
 	background: url(../images/theme/submit_bg.png) no-repeat 0 -140px #cde7ff;
 }
 input:focus, textarea:focus, button:focus, select:focus
@@ -313,7 +315,7 @@ em
 /* Default font sizes: small (8pt), normal (10pt), and large (14pt). */
 .smalltext, tr.smalltext th
 {
-	font-size: 11px;
+	font-size: 12px;
 	font-family: tahoma, sans-serif;
 }
 .middletext
@@ -377,10 +379,13 @@ ul.reset, ul.reset li
 blockquote.bbc_standard_quote, blockquote.bbc_alternate_quote
 {
 	font-size: x-small;
-	color: #4a4a4a;
+	color: #000000;
 	line-height: 1.4em;
 	background: url(../images/theme/quote.png) 0.1em 0.1em no-repeat;
 	border-top: 2px solid #c2c2c2;
+	border-bottom: 2px solid #c2c2c2;
+	border-left: 2px solid #c2c2c2;
+	border-right: 2px solid #c2c2c2;
 	padding: 1.1em 1.4em;
 	margin: 0.1em 0 0.3em 0;
 	overflow: auto;
@@ -389,7 +394,7 @@ blockquote.bbc_standard_quote, blockquote.bbc_alternate_quote
 /* Alterate blockquote stylings */
 blockquote.bbc_standard_quote
 {
-	background-color: #efefef;
+	background-color: #eef;
 }
 blockquote.bbc_alternate_quote
 {
@@ -431,7 +436,7 @@ code.bbc_code
 /* Styling for BBC tags */
 .bbc_link:link, .bbc_link:visited
 {
-	color: #778899;
+	color: #4895E1;
 }
 .bbc_size
 {
@@ -449,12 +454,17 @@ code.bbc_code
 {
 	font: inherit;
 	color: inherit;
+	border-spacing: 2px; 
+	background: #88A6C0
+	
 }
 .bbc_table td
 {
 	font: inherit;
 	color: inherit;
 	vertical-align: top;
+	padding: 5px; 
+	background: #E9F0F6
 }
 .bbc_u
 {
@@ -519,6 +529,7 @@ tr.titlebg td, tr.titlebg2 td
 }
 tr.catbg td, tr.catbg2 td, td.catbg, td.catbg2, tr.catbg th, tr.catbg2 th, th.catbg, th.catbg2
 {
+
 	padding: 6px;
 }
 tr.titlebg td a, tr.titlebg2 td a
@@ -571,6 +582,7 @@ div.pagesection div.floatright input
 .pagelinks
 {
 	padding: 0.6em 0 0.4em 0;
+	color: #B45F04;
 }
 
 /* GenericList */
@@ -610,22 +622,22 @@ table.table_grid thead tr.catbg th.smalltext
 /* Sticky topics get a different background */
 .stickybg
 {
-	background:#ffdcdc url(../images/custom/windowbg.png) repeat-x scroll 0 0;
+	background:#FDDAAC url(../images/custom/windowbg.png) repeat-x scroll 0 0;
 }
 .stickybg2
 {
-	background: #ffdcdc;
+	background: #FDDAAC;
 }
 
 /* Locked posts get a different shade, too! */
 .lockedbg
 {
-	background:#FFFFFF url(../images/custom/windowbg.png) repeat-x scroll 0 0;
+	background:#F8E3E3 url(../images/custom/windowbg.png) repeat-x scroll 0 0;
 	font-style: italic;
 }
 .lockedbg2
 {
-	background: #f1f1f1;
+	background: #F8E3E3;
 	font-style: italic;
 }
 
@@ -1661,7 +1673,16 @@ p.moderators
 {
 	text-align: right;
 	margin-top: -1px;
+	
 }
+
+.whois
+{
+	font-size: 12px;
+	font-family: tahoma, sans-serif;
+	color: #fffff;
+	}
+
 .nextlinks_bottom
 {
 	clear: right;
@@ -1921,6 +1942,7 @@ div#pollmoderation
 #forumposts h3 span#author, #forumposts h3 span#top_subject
 {
 	float: left;
+	
 }
 #forumposts h3 span#top_subject
 {
@@ -1939,6 +1961,7 @@ p#whoisviewing
 {
 	margin: 0;
 	padding: 0.5em;
+	background: #fcfcfc;
 }
 /* poster and postarea + moderation area underneath */
 .poster
@@ -2717,6 +2740,7 @@ tr.windowbg td, tr.windowbg2 td, tr.approvebg td, tr.highlight2 td
 .topic_table td
 {
 	font-size: 1em;
+	
 }
 .topic_table td.subject p, .topic_table td.stats
 {
@@ -3702,4 +3726,10 @@ ul.basic_helplist
 .navigate_section ul li a
 {
 	white-space: pre;
+}
+
+/* Make the reCAPTCHA dialog centered to match the positioning of the built-in verification */
+.centertext #recaptcha_table
+{
+	margin: 0 auto !important;
 }

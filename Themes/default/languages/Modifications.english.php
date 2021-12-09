@@ -143,21 +143,6 @@ $txt['url_subcustombuttons6_4'] = 'Insert 4th menu item\'s URL address for this 
 
 //End of Custom buttons mod - johncccccc
 
-//reCAPTCHA for SMF
-$txt['recaptcha_configure'] = 'reCAPTCHA Verification System';
-$txt['recaptcha_configure_desc'] = 'Use the reCAPTCHA Verification System. Don\'t have a key for reCAPTCHA? <a href="http://recaptcha.net/api/getkey?app=recaptcha_for_smf"> Get your reCAPTCHA key here</a>.';
-$txt['recaptcha_enabled'] = 'Use reCAPTCHA Verification System';
-$txt['recaptcha_enable_desc'] = '(This replaces the built-in visual verification with reCAPTCHA)';
-$txt['recaptcha_theme'] = 'reCAPTCHA Theme';
-$txt['recaptcha_theme_clean'] = 'Clean';
-$txt['recaptcha_theme_blackglass'] = 'Black Glass';
-$txt['recaptcha_theme_red'] = 'Red';
-$txt['recaptcha_theme_white'] = 'White';
-$txt['recaptcha_public_key'] = 'reCAPTCHA Public Key';
-$txt['recaptcha_private_key'] = 'reCAPTCHA Private Key';
-$txt['recaptcha_no_key_question'] = 'Don\'t have a key for reCAPTCHA?';
-$txt['recaptcha_get_key'] = 'Get your reCAPTCHA key here.';
-
 // Topic Prefix Mod
 $txt['prefix_admin'] = 'Prefix Admin Panel';
 $txt['prefix_add'] = 'Add Prefix';

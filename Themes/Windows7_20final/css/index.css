@@ -3727,9 +3727,3 @@ ul.basic_helplist
 {
 	white-space: pre;
 }
-
-/* Make the reCAPTCHA dialog centered to match the positioning of the built-in verification */
-.centertext #recaptcha_table
-{
-	margin: 0 auto !important;
-}
