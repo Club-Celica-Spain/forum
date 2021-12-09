@@ -40,7 +40,7 @@ $txt['membergroups_edit_desc'] = 'Descripción del Grupo';
 $txt['membergroups_edit_group_type'] = 'Tipo de Grupo';
 $txt['membergroups_edit_select_group_type'] = 'Selecciona el Tipo de Grupo';
 $txt['membergroups_group_type_private'] = 'Privado <span class="smalltext">(Debe asignarse una pertenencia)</span>';
-$txt['membergroups_group_type_protected'] = 'Protected <span class="smalltext">(Only administrators can manage and assign)</span>';
+$txt['membergroups_group_type_protected'] = 'Protegido <span class="smalltext">(Sólo los administradores lo pueden gestionar y asignar)</span> ';
 $txt['membergroups_group_type_request'] = 'Solicitable <span class="smalltext">(El usuario puede solicitar una pertenencia)</span>';
 $txt['membergroups_group_type_free'] = 'Libre <span class="smalltext">(El usuario puede ingresar o salir de un grupo según desee)</span>';
 $txt['membergroups_group_type_post'] = 'Basado en mensajes <span class="smalltext">(La pertenencia está basada en el número de mensajes)</span>';
@@ -57,7 +57,7 @@ $txt['membergroups_confirm_delete'] = '¡¿Estás seguro que deseas borrar este gru
 
 $txt['membergroups_members_title'] = 'Mostrando todos los usuarios del grupo';
 $txt['membergroups_members_group_members'] = 'Usuarios del Grupo';
-$txt['membergroups_members_no_members'] = 'Este grupo se encuantra actualmente vacío';
+$txt['membergroups_members_no_members'] = 'Este grupo se encuentra actualmente vacío';
 $txt['membergroups_members_add_title'] = 'Agregar un usuario a este grupo';
 $txt['membergroups_members_add_desc'] = 'Lista de Usuarios a Agregar';
 $txt['membergroups_members_add'] = 'Agregar Usuarios';

@@ -58,7 +58,7 @@ $txt['smiley_set_modify_existing'] = 'Modificar el juego existente de emoticonos
 $txt['smiley_set_modify'] = 'Modificar';
 $txt['smiley_set_import_directory'] = 'Importar los smileys que ya se encuentran en este directorio';
 $txt['smiley_set_import_single'] = 'Hay un smiley en esta colección que todavía no ha sido importado. Haz <i>clic</i>';
-$txt['smiley_set_import_multiple'] = 'Hay %d smileys en este directorio que aún no han sido importados. Haz <i>clic</i>';
+$txt['smiley_set_import_multiple'] = 'Hay %1$d smileys en este directorio que aún no han sido importados. Haz clic';
 $txt['smiley_set_to_import_single'] = 'para importarlo ahora.';
 $txt['smiley_set_to_import_multiple'] = 'para importarlos ahora.';
 

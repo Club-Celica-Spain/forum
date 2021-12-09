@@ -34,10 +34,10 @@ $txt['mq_day'] = '%1.1f Día';
 $txt['mq_days'] = '%1.1f Días';
 $txt['mq_hour'] = '%1.1f Hora';
 $txt['mq_hours'] = '%1.1f Horas';
-$txt['mq_minute'] = '%d Minuto';
-$txt['mq_minutes'] = '%d Minutos';
-$txt['mq_second'] = '%d Segundo';
-$txt['mq_seconds'] = '%d Segundos';
+$txt['mq_minute'] = '%1$d Minuto';
+$txt['mq_minutes'] = '%1$d Minutos';
+$txt['mq_second'] = '%1$d Segundo';
+$txt['mq_seconds'] = '%1$d Segundos';
 
 $txt['mq_mpriority_5'] = 'Muy Baja';
 $txt['mq_mpriority_4'] = 'Baja';

@@ -98,9 +98,7 @@ $txt['execute_database_changes'] = 'Adaptar Base de datos';
 
 $txt['package_install_actions'] = 'Acciones de Instalaciones para';
 $txt['package_will_fail_title'] = 'Error en la Instalación del Paquete';
-$txt['package_will_fail_warning'] = 'Se ha encontrado algún error durante la prueba de la instalación de este paquete.
-	Es <b>altamente</b> recomendado que no continúes la instalación a menos que sepas lo que estás haciendo, y hayas realizado una copia de seguridad muy recientemente.
-	Este error puede haber sido causado por un conflicto entre el paquete que estás intentando instalar y otro paquete que ya has instalado, un error en el paquete, un paquete que requiere otro paquete que no has instalado a&ucute;n, o un paquete diseñado para otra versión de SMF.';
+$txt['package_will_fail_warning'] = 'Se ha encontrado algún error durante la prueba de la instalación de este paquete.	Es <strong>altamente</strong> recomendable que no continúes la instalación a menos que sepas lo que estás haciendo, y hayas realizado una copia de seguridad muy recientemente. Este error puede haber sido causado por un conflicto entre el paquete que estás intentando instalar y otro paquete que ya has instalado, un error en el propio paquete, un paquete que requiere otro paquete que no has instalado aún, o un paquete diseñado para otra versión de SMF.';
 // Don't use entities in the below string.
 $txt['package_will_fail_popup'] = '¿Estás seguro de que quieres continuar instalando esta modificación, aunque no se instalará correctamente?';
 $txt['package_will_fail_popup_uninstall'] = '¿Estás seguro de que quieres continuar desinstalando esta modificación, a pesar de que no será desinstalada correctamente?';
@@ -114,11 +112,11 @@ $txt['package_theme_failure_warning'] = 'Se encontró al menos un error durante l
 
 $txt['package_bytes'] = 'bytes';
 
-$txt['package_action_missing'] = '<b class="error">Archivo no encontrado</b>';
-$txt['package_action_error'] = '<b class="error">Error al parsear la modificación</b>';
-$txt['package_action_failure'] = '<b class="error">Prueba fallida</b>';
-$txt['package_action_success'] = '<b>éxito</b>';
-$txt['package_action_skipping'] = '<b>Saltar archivo</b>';
+$txt['package_action_missing'] = '<strong class="error">Archivo no encontrado</strong>';
+$txt['package_action_error'] = '<strong class="error">Error al parsear la modificación</strong>';
+$txt['package_action_failure'] = '<strong class="error">Prueba fallida</strong>';
+$txt['package_action_success'] = '<strong>Prueba completada con éxito</strong>';
+$txt['package_action_skipping'] = '<strong>Saltar archivo</strong>';
 
 $txt['package_uninstall_actions'] = 'Desinstalar Acciones';
 $txt['package_uninstall_done'] = 'El paquete ha sido desinstalado, no debe afectar más tu foro.';
@@ -159,7 +157,7 @@ $txt['package_uploaded_successfully'] = 'El paquete ha sido subido satisfactoria
 
 $txt['package_modification_malformed'] = 'Archivo de modificación corrupto o formado incorrectamente.';
 $txt['package_modification_missing'] = 'No se encontró el archivo.';
-$txt['package_no_zlib'] = 'Lo sentimos, tu configuración PHP no tiene soporte para <b>zlib</b>.  Sin esto, el gestor de paquetes no puede funcionar.  Por favor, contacta a tu provedor de alojamiento para mayor información.';
+$txt['package_no_zlib'] = 'Lo sentimos, tu configuración PHP no tiene soporte para <strong>zlib</strong>.  Sin esto, el gestor de paquetes no puede funcionar.  Por favor, contacta a tu proveedor de alojamiento para más información.';
 
 $txt['package_cleanperms_title'] = 'Restaurar Permisos';
 $txt['package_cleanperms_desc'] = 'Este interfaz te permite restaurar los permisos para los archivos de tu instalación, para incrementar la seguridad o solventar cualquier problema de permisos que puedas encontrar al instalar paquetes.';
@@ -246,12 +244,7 @@ $txt['package_restore_permissions_action_failure'] = '<span style="color: red;">
 $txt['package_restore_permissions_action_done'] = 'SMF ha intentado restaurar los archivos seleccionados a sus permisos originales; se pueden ver los resultados a continuación. Si el cambio falló, o para una vista más detallada de los permisos de archivo, por favor vea la sección <a href="%1$s">Permisos de archivo</a>.';
 
 $txt['package_file_perms_warning'] = 'Por favor ten en cuenta lo siguiente';
-$txt['package_file_perms_warning_desc'] = '
-	<li>Ten cuidado cuando cambies los permisos de archivo de esta sección - permisos incorrectos pueden afectar negativamente el funcionamiento de tu foro</li>
-	<li>En las configuraciones de algunos servidores seleccionar los permisos incorrectos puede hacer que SMF deje de funcionar.</li>
-	<li>Ciertos directorios como el de <i>adjuntos</i> necesitan ser escribibles para poder usar esa funcionalidad.</li>
-	<li>Esta funcionalidad es principalmente aplicable en servidores basados en sistemas operativos distintos a Windows - no funcionará como se espera en Windows debido a las banderas de permisos.</li>
-	<li>Antes de proceder asegúrate de que tienes un cliente FTP instalado por si cometes un error y necesitas acceder al servidor por FTP para remediarlo.</li>';
+$txt['package_file_perms_warning_desc'] = '<li>Ten cuidado cuando cambies los permisos de archivo de esta sección - permisos incorrectos pueden afectar negativamente al funcionamiento de tu foro</li><li>En las configuraciones de algunos servidores, seleccionar los permisos incorrectos puede hacer que SMF deje de funcionar.</li><li>Ciertos directorios como el de <em>adjuntos</em> necesitan ser escribibles para poder usar esa funcionalidad.</li><li>Esta funcionalidad es principalmente aplicable en servidores basados en sistemas operativos distintos a Windows - no funcionará como se espera en Windows debido a las banderas de permisos.</li><li>Antes de proceder asegúrate de que tienes un cliente FTP instalado por si cometes un error y necesitas acceder al servidor por FTP para remediarlo.</li>';
 
 $txt['package_confirm_view_package_content'] = '¿Estás seguro de que quieres ver los contenidos del paquete de esta localización:<br /><br />%1$s';
 $txt['package_confirm_proceed'] = 'Proceder';

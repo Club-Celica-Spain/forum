@@ -33,7 +33,7 @@ $txt['scheduled_task_desc_weekly_maintenance'] = 'Lleva a cabo un mantenimiento 
 $txt['scheduled_task_paid_subscriptions'] = 'Comprobaciones de suscripciones de pago';
 $txt['scheduled_task_desc_paid_subscriptions'] = 'Envía los recordatorios de suscripciones de pago necesarios y elimina las suscripciones caducadas de los usuarios.';
 
-$txt['scheduled_task_reg_starting'] = 'Iniciada a las %s';
+$txt['scheduled_task_reg_starting'] = 'Iniciada a las %1$s';
 $txt['scheduled_task_reg_repeating'] = 'repetida cada %1$d %2$s';
 $txt['scheduled_task_reg_unit_m'] = 'minuto(s)';
 $txt['scheduled_task_reg_unit_h'] = 'hora(s)';
@@ -49,7 +49,7 @@ $txt['scheduled_task_edit_start_time_desc'] = 'Hora a la que la primera instanci
 $txt['scheduled_task_time_offset'] = 'Tenga en cuenta que la hora de inicio debería ser el offset respecto al tiempo de servidor actual, que es: %1$s';
 
 $txt['scheduled_view_log'] = 'Ver Log';
-$txt['scheduled_log_empty'] = 'Actualmente no hay registros en el log.';
+$txt['scheduled_log_empty'] = 'Actualmente no hay registros en el log de tareas.';
 $txt['scheduled_log_time_run'] = 'Hora de ejecución';
 $txt['scheduled_log_time_taken'] = 'Tiempo empleado';
 $txt['scheduled_log_time_taken_seconds'] = '%1$d segundos';

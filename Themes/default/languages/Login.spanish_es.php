@@ -1,14 +1,17 @@
 <?php
-// Version: 2.0; Login
+// Version: 2.0.16; Login
 
 global $context;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 // Registration agreement page.
 $txt['registration_agreement'] = 'Acuerdo de Registro';
 $txt['agreement_agree'] = 'Acepto los términos del acuerdo.';
 $txt['agreement_agree_coppa_above'] = 'Acepto los términos del acuerdo y soy mayor de %1$d años.';
 $txt['agreement_agree_coppa_below'] = 'Acepto los términos del acuerdo y soy menor de %1$d años.';
+$txt['privacy_policy'] = 'Política de Privacidad';
+$txt['agreement_policy_agree'] = 'Acepto los términos del acuerdo y política de privacidad.';
+$txt['agreement_policy_agree_coppa_above'] = 'Acepto los términos del acuerdo y política de privacidad, y tengo al menos %1$d años de edad.';
+$txt['agreement_policy_agree_coppa_below'] = 'Acepto los términos del acuerdo y política de privacidad, y tengo menos de %1$d años de edad.';
 
 // Registration form.
 $txt['registration_form'] = 'Formulario de Registro';
@@ -96,6 +99,8 @@ $txt['setting_coppaPost_desc'] = 'Sólo se aplica si se lleva a cabo la restricci
 $txt['setting_coppaFax'] = 'Número de fax al que enviar los formularios de aprobación';
 $txt['setting_coppaPhone'] = 'Número de contacto en el que los padres podrán realizar consultas de restricción de edad';
 
+$txt['setting_announcements_default'] = 'Activar "' . $txt['notify_announcements'] . '" por defecto.' ;
+
 $txt['admin_register'] = 'Registro de un nuevo usuario';
 $txt['admin_register_desc'] = 'Desde aquí puedes registrar en el foro nuevos usuarios y, de así desearlo, enviarles sus detalles por email.';
 $txt['admin_register_username'] = 'Nuevo Nombre de usuario';
@@ -111,6 +116,8 @@ $txt['admin_register_group'] = 'Grupo primario';
 $txt['admin_register_group_desc'] = 'Grupo de usuario primario al que el nuevo usuario pertenecerá';
 $txt['admin_register_group_none'] = '(sin grupo primario)';
 $txt['admin_register_done'] = '¡El usuario %1$s se ha registrado correctamente!';
+$txt['admin_register_require_agreement'] = 'Requerir que el usuario acepte el acuerdo de registro';
+$txt['admin_register_require_policy'] = 'Requerir que el usuario acepte la política de privacidad';
 
 $txt['coppa_title'] = 'Foro con restricción de edad';
 $txt['coppa_after_registration'] = 'Gracias por registrarte en ' . $context['forum_name_html_safe'] . '.<br /><br />Debido a que estás por debajo de la edad de {MINIMUM_AGE}, hay un requerimiento legal

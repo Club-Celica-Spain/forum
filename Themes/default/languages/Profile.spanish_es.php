@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Profile
+// Version: 2.0.18; Profile
 
 global $scripturl, $context;
 
@@ -13,7 +13,7 @@ $txt['delete_user'] = 'Borrar usuario';
 $txt['current_status'] = 'Estado actual:';
 $txt['personal_text'] = 'Texto personal';
 $txt['personal_picture'] = 'Imagen personalizada';
-$txt['no_avatar'] = 'No avatar';
+$txt['no_avatar'] = 'Sin Avatar';
 $txt['choose_avatar_gallery'] = 'Escoger un avatar de la galería';
 $txt['picture_text'] = 'Imagen/Texto';
 $txt['reset_form'] = 'Reinicializar formulario';
@@ -128,8 +128,8 @@ $txt['statPanel_total_topics'] = 'Total de Temas creados';
 $txt['statPanel_votes'] = 'votos';
 $txt['statPanel_polls'] = 'encuestas';
 $txt['statPanel_topBoards'] = 'Foros más populares por Mensajes';
-$txt['statPanel_topBoards_posts'] = '%1$d posts of the board\'s %2$d posts (%3$01.2f%%)';
-$txt['statPanel_topBoards_memberposts'] = '%1$d posts of the member\'s %2$d posts (%3$01.2f%%)';
+$txt['statPanel_topBoards_posts'] = '%1$d mensajes de los %2$d mensajes del foro (%3$01.2f%%) ';
+$txt['statPanel_topBoards_memberposts'] = '%1$d mensajes de los %2$d mensajes del miembro (%3$01.2f%%) ';
 $txt['statPanel_topBoardsActivity'] = 'Foros más populares por Actividad';
 $txt['statPanel_activityTime'] = 'Actividad de publicaciones por Hora';
 $txt['statPanel_activityTime_posts'] = '%1$d mensajes (%2$d%%)';
@@ -166,15 +166,15 @@ $txt['change_authentication'] = 'Desde esta sección puede cambiar la forma en la
 $txt['profileEdit'] = 'Editar Perfil';
 $txt['account_info'] = 'Ésta es la configuración de tu cuenta. Esta página contiene toda la información critica que te identifica en el foro. Por razones de seguridad, debes introducir tu contraseña (actual) para poder modificar esta información.';
 $txt['forumProfile_info'] = 'Puedes cambiar tu información personal en esta página. Esta información será mostrada a través de ' . $context['forum_name_html_safe'] . '. Si no quieres compartir esta información , simplemente déjalo en blanco - nada aquí es obligatorio.';
-$txt['theme'] = 'Configuración de Apariencia y Diseño';
+$txt['theme'] = 'Apariencia y Diseño';
 $txt['theme_info'] = 'Esta sección te permite personalizar la apariencia y el diseño del foro.';
-$txt['notification'] = 'Notificaciones y email';
+$txt['notification'] = 'Notificaciones';
 $txt['notification_info'] = 'SMF permite que se te envíen notificaciones cuando haya respuestas a los mensajes, nuevos temas, y anuncios del foro. Puedes cambiar estos valores aquí, o revisar los temas y foros de los que actualmente estás recibiendo notificaciones.';
 $txt['groupmembership'] = 'Membresía de grupos';
 $txt['groupMembership_info'] = 'En esta sección de tu perfil puedes cambiar los grupos a los que perteneces.';
 $txt['ignoreboards'] = 'Ignorar Opciones de Foros';
 $txt['ignoreboards_info'] = 'Esta página te permite ignorar foros específicos. Cuando se ignora un foro, no se mostrará el indicador de nuevos mensajes en el índice del foro. Los nuevos mensajes no se mostrarán utilizando el vínculo de búsqueda "mensajes no leídos" (al buscar no mirará en esos foros), sin embargo, los foros ignorados seguirán apareciendo en el índice del foro y al entrar en ellos se mostrarán los temas que tienen nuevos mensajes. Al utilizar el vínculo "respuestas no leídas", los mensajes de foros ignorados se seguirán mostrando.';
-$txt['pmprefs'] = 'Mensajería personal';
+$txt['pmprefs'] = 'Mensajería Personal';
 
 $txt['profileAction'] = 'Acciones';
 $txt['deleteAccount'] = 'Borrar esta cuenta';
@@ -191,7 +191,7 @@ $txt['errors_from_ip'] = 'Mensajes de error desde el IP (rango)';
 $txt['errors_from_ip_desc'] = 'Debajo está la lista de todos los mensajes de error generados desde esta IP (rango)';
 $txt['ip_address'] = 'Dirección IP';
 $txt['ips_in_errors'] = 'IPs usadas en los mensajes de error';
-$txt['ips_in_messages'] = 'IPs usadas en los mensajes';
+$txt['ips_in_messages'] = 'IPs usadas en mensajes recientes';
 $txt['members_from_ip'] = 'Usuarios desde el IP (rango)';
 $txt['members_in_range'] = 'Usuarios probablemente en el mismo rango';
 $txt['messages_from_ip'] = 'Mensajes enviados desde el IP (rango)';
@@ -208,8 +208,8 @@ $txt['view_ips_by'] = 'Ver IPs usadas por';
 
 $txt['avatar_will_upload'] = 'Subiré mi propia imagen';
 
-$txt['activate_changed_email_title'] = 'Email Address Changed';
-$txt['activate_changed_email_desc'] = 'You\'ve changed your email address. In order to validate this address you will receive an email. Click the link in that email to reactivate your account.';
+$txt['activate_changed_email_title'] = 'Dirección de email cambiada';
+$txt['activate_changed_email_desc'] = 'Has cambiado tu dirección de email. Para validar dicha dirección recibirás un correo. Haz clic en el link que te llegará en ese correo para reactivar tu cuenta.';
 
 // Use numeric entities in the below three strings.
 $txt['no_reminder_email'] = 'No se pudo enviar el email de recordatorio.';
@@ -236,7 +236,7 @@ $txt['additional_membergroups_show'] = '[ mostrar grupos adicionales ]';
 $txt['no_primary_membergroup'] = '(sin grupo primario)';
 $txt['deadmin_confirm'] = '¿Estás seguro que deseas eliminar irrevocablemente tu estado de administrador?';
 
-$txt['account_activate_method_2'] = 'La cuenta requiere reactivación despues de un cambio de email';
+$txt['account_activate_method_2'] = 'La cuenta requiere reactivación después de un cambio de email';
 $txt['account_activate_method_3'] = 'La cuenta no está aprobada';
 $txt['account_activate_method_4'] = 'La cuenta está esperando aprobación para su eliminación';
 $txt['account_activate_method_5'] = 'La cuenta es una cuenta &quot;por debajo de la edad&quot; esperando aprobación';
@@ -254,7 +254,7 @@ $txt['ban_type_access'] = 'acceder al foro';
 
 $txt['show_online'] = '¿Mostrar a otros usuarios que estás conectado?';
 
-$txt['return_to_post'] = 'Regresar, por defecto, a los temas despues de publicar un mensaje.';
+$txt['return_to_post'] = 'Regresar, por defecto, a los temas después de publicar un mensaje.';
 $txt['no_new_reply_warning'] = 'No advertir de nuevas respuestas mientras se está publicando un mensaje.';
 $txt['posts_apply_ignore_list'] = 'Ocultar mensajes publicados por miembros en mi lista de ignorados';
 $txt['recent_posts_at_top'] = 'Mostrar los mensajes más recientes en la parte superior';
@@ -290,7 +290,6 @@ $txt['display_quick_mod_check'] = 'checkboxes.';
 $txt['display_quick_mod_image'] = 'iconos.';
 
 $txt['whois_title'] = 'Buscar IP en un servidor regional de whois';
-$txt['whois_afrinic'] = 'AfriNIC (áfrica)';
 $txt['whois_apnic'] = 'APNIC (Región Asia Pacifico)';
 $txt['whois_arin'] = 'ARIN (Norteamérica, una porción del Caribe, y áfrica de sub-Sahara)';
 $txt['whois_lacnic'] = 'LACNIC (América Latina y región del Caribe)';
@@ -311,8 +310,8 @@ $txt['show_attach_downloads'] = 'Descargas';
 $txt['show_attach_posted'] = 'Publicado';
 
 $txt['showPermissions'] = 'Mostrar Permisos';
-$txt['showPermissions_status'] = 'Permission status';
-$txt['showPermissions_help'] = 'This section allows you to view all permissions for this member (denied permissions are <del>struck out</del>).';
+$txt['showPermissions_status'] = 'Estado de los permisos';
+$txt['showPermissions_help'] = 'Esta sección te permite ver todos los permisos de este usuario (los permisos denegados están <del>tachados</del> ).';
 $txt['showPermissions_given'] = 'Otorgados por';
 $txt['showPermissions_denied'] = 'Denegados por';
 $txt['showPermissions_permission'] = 'Permisos (los permisos denegados están <del>tachados</del>)';
@@ -367,8 +366,8 @@ $txt['profile_error_signature_max_image_width'] = 'Las imágenes de tu firma no p
 $txt['profile_error_signature_max_image_height'] = 'Las imágenes de tu firma no pueden superar el alto de %1$d pixels';
 $txt['profile_error_signature_max_image_count'] = 'No puedes tener más de %1$d imágenes en tu firma';
 $txt['profile_error_signature_max_font_size'] = 'El texto de tu firma no puede superar %1$s de tamaño';
-$txt['profile_error_signature_allow_smileys'] = 'You are not allowed to use any smileys within your signature';
-$txt['profile_error_signature_max_smileys'] = 'No puedes tener más de %1$d emoticonos en tu firma';
+$txt['profile_error_signature_allow_smileys'] = 'No tienes permisos para usar smileys en tu firma';
+$txt['profile_error_signature_max_smileys'] = 'No estás autorizado a usar más de %1$d emoticonos en tu firma';
 $txt['profile_error_signature_disabled_bbc'] = 'No se permiten en tu firma los siguientes códigos BBC: %1$s';
 
 $txt['profile_view_warnings'] = 'Ver advertencias';
@@ -440,7 +439,7 @@ $txt['pm_receive_from_ignore'] = 'Todos los miembros, excepto los que están en m
 $txt['pm_receive_from_admins'] = 'Administradores solamente';
 $txt['pm_receive_from_buddies'] = 'Amigos y Administradores solamente';
 
-$txt['copy_to_outbox'] = 'Guardar una copia de cada mensaje privado en mi bandeja de salida por defecto.';
+$txt['copy_to_outbox'] = 'Guardar por defecto una copia de cada mensaje privado en mis mensajes enviados.';
 $txt['popup_messages'] = '¿Mostrar una ventana emergente cuando reciba nuevos mensajes?';
 $txt['pm_remove_inbox_label'] = 'Eliminar la etiqueta bandeja de entrada cuando aplique otra etiqueta';
 $txt['pm_display_mode'] = 'Mostrar mensajes privados';
@@ -448,7 +447,7 @@ $txt['pm_display_mode_all'] = 'Todos de una vez';
 $txt['pm_display_mode_one'] = 'Uno cada vez';
 $txt['pm_display_mode_linked'] = 'Como una conversación';
 // Use entities in the below string.
-$txt['pm_recommend_enable_outbox'] = 'Para sacar el máximo partido al sistema de mensajería privada le recomendamos queque habilite &quot;Salvar una copia de cada mensaje privado en mi bandeja de salida por defecto&quot;\\n\\nEsto le ayudará a seguir mejor las conversaciones, ya que podrá leer los mensajes de ida y los de vuelta.';
+$txt['pm_recommend_enable_outbox'] = 'Para sacar el máximo partido al sistema de mensajería privada le recomendamos queque habilite &quot;Salvar por defecto una copia de cada mensaje privado en mi bandeja de salida&quot;\\n\\nEsto le ayudará a seguir mejor las conversaciones, ya que podrá leer los mensajes de ida y los de vuelta.';
 
 $txt['tracking'] = 'Seguimiento';
 $txt['tracking_description'] = 'Esta sección le permite revisar ciertas acciones del perfil llevadas a cabo sobre el perfil de este usuario, así como a seguir sus direcciones IPs.';
@@ -465,7 +464,13 @@ $txt['trackEdit_action_real_name'] = 'Nombre del usuario';
 $txt['trackEdit_action_usertitle'] = 'Título personalizado';
 $txt['trackEdit_action_member_name'] = 'Nombre de usuario';
 $txt['trackEdit_action_email_address'] = 'Dirección de Email';
-$txt['trackEdit_action_id_group'] = 'Primary Membergroup';
-$txt['trackEdit_action_additional_groups'] = 'Additional Membergroups';
+$txt['trackEdit_action_id_group'] = 'Grupo Primario';
+$txt['trackEdit_action_additional_groups'] = 'Grupos Adicionales ';
+
+// Registration Agreement
+$txt['trackEdit_action_agreement_accepted'] = 'Aceptó el acuerdo de registro';
+$txt['trackEdit_action_policy_accepted'] = 'Aceptó la política de privacidad';
+
+$txt['export_profile_data'] = 'Descargar datos del perfil';
 
 ?>

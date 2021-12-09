@@ -6,7 +6,7 @@ $txt['boards_and_cats'] = 'Manejar Foros y Categorías';
 $txt['order'] = 'Orden';
 $txt['full_name'] = 'Nombre completo';
 $txt['name_on_display'] = 'Este es el nombre que será mostrado.';
-$txt['boards_and_cats_desc'] = 'Edita tus categorías y foros aquí. Lista múltiples moderadores como <i>&quot;nombredeusuario&quot;, &quot;nombredeusuario&quot;</i>. (éstos deben ser nombres de usuarios, no los nombres que se muestran)<br />Para crear un nuevo foro, haz <i>clic</i> en el boton Nuevo Foro. Para hacer al nuevo foro un subforo del foro actual, selecciona "Subforo de..." en el menu del combo de Orden cuando estés creando el foro.';
+$txt['boards_and_cats_desc'] = 'Edita tus categorías y foros aquí. Lista múltiples moderadores como <em>"nombredeusuario", "nombredeusuario"</em>. (Éstos deben ser nombres de usuarios, no los nombres que se muestran)<br />Para crear un nuevo foro, haz clic en el botón Nuevo Foro. Para hacer al nuevo foro un subforo del foro actual, selecciona "Subforo de..." en el menú desplegable Orden cuando estés creando el foro.';
 $txt['parent_members_only'] = 'Usuarios no agrupados';
 $txt['parent_guests_only'] = 'Visitantes';
 $txt['catConfirm'] = '¿Realmente deseas borrar esta categoría?';
@@ -14,7 +14,7 @@ $txt['boardConfirm'] = '¿Realmente deseas borrar este foro?';
 
 $txt['catEdit'] = 'Editar Categoría';
 $txt['collapse_enable'] = 'Colapsable';
-$txt['collapse_desc'] = '¿Permitir a los usuarios colapsar esta categoría?';
+$txt['collapse_desc'] = 'Permitir a los usuarios colapsar esta categoría';
 $txt['catModify'] = '(modificar)';
 
 $txt['mboards_order_after'] = 'Después ';
@@ -77,12 +77,12 @@ $txt['mboards_order_before'] = 'Antes';
 $txt['mboards_order_child_of'] = 'Subforo de';
 $txt['mboards_order_in_category'] = 'En categoria';
 $txt['mboards_current_position'] = 'Posición actual';
-$txt['no_valid_parent'] = 'El foro %s no tiene un padre válido. Por favor usa la función \'buscar y reparar errores\' para solucionar este problema.';
+$txt['no_valid_parent'] = 'El foro %1$s no tiene un padre válido. Por favor usa la función \'buscar y reparar errores\' para solucionar este problema.';
 
-$txt['mboards_recycle_disabled_delete'] = 'Note: You must select an alternative recycle bin board or disable recycling before you can delete this board.';
+$txt['mboards_recycle_disabled_delete'] = 'Nota: debes seleccionar un foro "papelera de reciclaje" alternativo o desactivar el reciclaje antes de que puedas borrar este foro.';
 
-$txt['mboards_settings_desc'] = 'Editar configuración general de foros y categorís.';
-$txt['groups_manage_boards'] = 'Miembros permitodos para modificar foros y categorís';
+$txt['mboards_settings_desc'] = 'Editar configuración general de foros y categorías.';
+$txt['groups_manage_boards'] = 'Miembros permitidos para modificar foros y categorías';
 $txt['mboards_settings_submit'] = 'Guardar';
 $txt['recycle_enable'] = 'Activar el reciclado de temas borrados';
 $txt['recycle_board'] = 'Foro para guardar los temas reciclados';
@@ -90,7 +90,7 @@ $txt['recycle_board_unselected_notice'] = 'Has habilitado el reciclaje de temas 
 $txt['countChildPosts'] = 'Contar mensajes hijos en totales de padres';
 $txt['allow_ignore_boards'] = 'Permitir ignorar foros';
 
-$txt['mboards_select_destination'] = 'Seleccione foro de destino \'<b>%1$s</b>\'';
+$txt['mboards_select_destination'] = 'Seleccione foro de destino \'<strong>%1$s</strong>\'';
 $txt['mboards_cancel_moving'] = 'Cancelar traslado';
 $txt['mboards_move'] = 'mover';
 
