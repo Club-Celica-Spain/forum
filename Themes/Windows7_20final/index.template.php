@@ -191,13 +191,6 @@ echo '
 </table>
 <div class="page" align="center"><br>
 <div id="test"> 
-<script type="text/javascript"> 
-google_ad_client = "ca-pub-3127001584654799"; 
-google_ad_width = 728; 
-google_ad_height = 90; 
-google_ad_slot = "9891236645";
-google_ad_type = "text_image"; 
-</script><script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script> 
 
 </div>
 	
@@ -225,18 +218,7 @@ function template_body_below()
 		';
 	if ($context['show_load_time'])
 		echo'
-			<span class="smalltext">', $txt['page_created'], $context['load_time'], $txt['seconds_with'], $context['load_queries'], $txt['queries'], '</span><br>
-					<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3127001584654799";
-/* 404 */
-google_ad_slot = "9891236645";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>';
+			<span class="smalltext">', $txt['page_created'], $context['load_time'], $txt['seconds_with'], $context['load_queries'], $txt['queries'], '</span><br>';
 	
 	echo'
 	<div class="navigation" style="padding-left: 5px; padding-right: 5px; padding-top: 9px; font-size: 11px; font-family: tahoma; color: white; font-weight: bold;">
