@@ -7,7 +7,7 @@
  * @copyright 2011 Simple Machines
  * @license https://www.simplemachines.org/about/smf/license.php BSD
  *
- * @version 2.0
+ * @version 2.0.14
  */
 
 /*	This template is, perhaps, the most important template in the theme. It
