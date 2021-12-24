@@ -492,26 +492,6 @@ function ob_sessrewrite($buffer)
 	if ($scripturl == '' || !defined('SID'))
 		return $buffer;
 
-	/*Adk Portal Start*/
-	global $adkportal, $boardurl;
-	
-	$scripturl1= $boardurl;
-	
-	if(!empty($adkportal['enable_pages_seo']))
-	{
-		$buffer = preg_replace('/"' . preg_quote($scripturl, '/') . '\?page=([^#"]+?)?"/e', "'\"' . \$scripturl1 . '/' . changeurlpagesAdkportal('\$1'). '\"'", $buffer);
-	}
-		$buffer = changeAdkBuffer($buffer);
-
-	if(!empty($adkportal['enable_download_seo']))
-	{
-		$buffer = preg_replace('/"' . preg_quote($scripturl, '/') . '\?action=downloads;cat=([^#"]+?);([^#"]+?)?"/e', "'\"' . \$scripturl1 . '/index.php?action=downloads;cat=\$1;\$2\"'", $buffer);
-		$buffer = preg_replace('/"' . preg_quote($scripturl, '/') . '\?action=downloads;cat=([^#"]+?)?"/e', "'\"' . \$scripturl1 . '/' . changeCatUrl('\$1'). '\"'", $buffer);
-		$buffer = preg_replace('/"' . preg_quote($scripturl, '/') . '\?action=downloads;sa=view;down=([^#"]+?)?"/e', "'\"' . \$scripturl1 . '/' . changeDownloadUrl('\$1'). '\"'", $buffer);
-	}
-	
-	/*Adk Portal End*/
-
 	// Do nothing if the session is cookied, or they are a crawler - guests are caught by redirectexit().  This doesn't work below PHP 4.3.0, because it makes the output buffer bigger.
 	// !!! smflib
 	if (empty($_COOKIE) && SID != '' && empty($context['browser']['possibly_robot']) && @version_compare(PHP_VERSION, '4.3.0') != -1)
