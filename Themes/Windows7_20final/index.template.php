@@ -171,7 +171,7 @@ $i=0;
 echo '
 <div class="headerimg" align="center">
 	<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%"><a href="'.$scripturl.'">
-		<img src="/img/header_background.jpg" style="width:100%;height:auto" alt="'.$context['forum_name'].'" /></img></table>
+		<img src="/img/header_background.webp" style="width:100%;height:auto" alt="'.$context['forum_name'].'" /></img></table>
 	</a>
 </div>
 <table cellpadding="0" cellspacing="0" border="0" align="center" class="navigation" width="100%">
@@ -190,7 +190,7 @@ echo '
 	
 
 	<div class="page" style="width:100%; text-align:left">
-	<center><a href="./index.php?topic=18599.0.html" target="_parent"><img src="/img/banner_socios.jpg"></a></center>
+	<center><a href="./index.php?topic=18599.0.html" target="_parent"><img src="/img/banner_socios.webp"></a></center>
 
 		<div style="padding:0px 50px 0px 50px" align="left">
 <br />',theme_linktree(),'
