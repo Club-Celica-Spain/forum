@@ -190,7 +190,7 @@ function template_main_above()
 /*Crear una arreglo con las imagenes aleatorias con su ubicación*/
 
 $imagenes[0]='./images/logo.png';
-$imagenes[1]='./images/logo_2.jpg';
+$imagenes[1]='./images/logo_2.webp';
 
 /*Definir numero maximo*/
 $i=rand(0,1);

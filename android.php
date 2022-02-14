@@ -12,7 +12,7 @@
 
 <body><?
 $imagenes[0]='./Themes/MegaPolis/images/logo.png';
-$imagenes[1]='./Themes/MegaPolis/images/logo_2.jpg';
+$imagenes[1]='./Themes/MegaPolis/images/logo_2.webp';
 
 /*Definir numero maximo*/
 $i=rand(0,1);
