@@ -15,7 +15,7 @@ header ('Content-type: text/html; charset=iso-8859-1');
 
 <body><?php
 $imagenes[0]='./Themes/MegaPolis/images/logo.png';
-$imagenes[1]='./Themes/MegaPolis/images/logo_2.jpg';
+$imagenes[1]='./Themes/MegaPolis/images/logo_2.webp';
 
 /*Definir numero maximo*/
 $i=rand(0,1);
