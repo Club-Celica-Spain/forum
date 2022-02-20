@@ -51,8 +51,7 @@ function AdminMain()
 	global $txt, $context, $scripturl, $sc, $modSettings, $user_info, $settings, $sourcedir, $options, $smcFunc, $boarddir;
 
 	// Load the language and templates....
-	loadLanguage('Admin');	
-	loadLanguage('Ads');
+	loadLanguage('Admin');
 	loadTemplate('Admin', 'admin');
 
 	// No indexing evil stuff.
@@ -190,23 +189,6 @@ function AdminMain()
 						'edit' => array($txt['themeadmin_edit_title']),
 					),
 				),
-				'ads' => array(
-					'label' => $txt['ad_management'],
-					'file' => 'Ads.php',
-					'function' => 'Ads',
-					'custom_url' => $scripturl . '?action=admin;area=ads;sa=main',
-					'icon' => 'themes.gif',
-					'subsections' => array(
-						'main' => array($txt['ad_management_main']),
-						'add' => array($txt['ad_management_add']),
-						'reports' => array($txt['ad_management_reports']),
-						'settings' => array($txt['ad_management_settings']),
-						'copyright' => array($txt['ads_txt_copyrightremoval']),
-						'credits' => array($txt['ad_management_credits']),
-					),
-				),
-
-
 				'modsettings' => array(
 					'label' => $txt['admin_modifications'],
 					'file' => 'ManageSettings.php',

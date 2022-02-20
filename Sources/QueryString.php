@@ -461,21 +461,6 @@ function ob_sessrewrite($buffer)
 {
 	global $scripturl, $modSettings, $user_info, $context;
 
-	
-			
-	// Start Ad Mod
-		// You can order copyright removal! From the mod settings cheap and helps support the mod author!
-		$showInfo = AdsCheckInfo();
-		    
-	    	if ($showInfo == true && !isset($adCopyright))
-	    	{
-			$buffer = preg_replace('~(, Simple Machines LLC</a>)~', ', Simple Machines LLC</a><br /><span class="smalltext"><a href="http://www.smfads.com" target="_blank">SMFAds</a> for <a href="http://www.createaforum.com" title="Forum Hosting">Free Forums</a></span>', $buffer);
-			$buffer = preg_replace('~(class="new_win">Simple Machines</a>)~', 'class="new_win">Simple Machines</a><br /><span class="smalltext"><a href="http://www.smfads.com" target="_blank">SMFAds</a> for <a href="http://www.createaforum.com" title="Forum Hosting">Free Forums</a></span>', $buffer);
-			$adCopyright = 1;
-		}
-	// End Ad Mod
-			
-	
 // Start GPDR Helper
 
 		if (!empty($modSettings['gpdr_enable_privacy_policy']))
@@ -528,29 +513,6 @@ function ob_sessrewrite($buffer)
 	// Return the changed buffer.
 	return $buffer;
 }
-
-
-function AdsCheckInfo()
-{
-    global $modSettings, $boardurl;
-    
-    if (isset($modSettings['ads_copyrightkey']))
-    {
-        $m = 35;
-        if (!empty($modSettings['ads_copyrightkey']))
-        {
-            if ($modSettings['ads_copyrightkey'] == sha1($m . '-' . $boardurl))
-            {
-                return false;
-            }
-            else
-                return true;
-        }
-    }
-    
-    return true;
-}
-		
 
 
 function sid_insert__preg_callback($matches)

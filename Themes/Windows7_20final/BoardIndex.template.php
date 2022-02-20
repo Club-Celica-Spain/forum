@@ -16,18 +16,7 @@ function template_main()
 
 
 	
-	
-	//Display ads on the board index
-	if (function_exists("show_boardAds"))
-	{
-		$ads = show_boardAds();
-		if(!empty($ads))
-			if($ads['type']==0)
-				echo $ads['content'];
-			else
-				eval($ads['content']);
-		unset($ads);
-	}	// Show some statistics if stat info is off.
+		// Show some statistics if stat info is off.
 	if (!$settings['show_stats_index'])
 		echo '
 	<div id="index_common_stats">
