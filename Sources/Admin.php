@@ -220,8 +220,8 @@ function AdminMain()
 						'aeva' => array(loadlanguage('Aeva') == false ? 'Aeva' : $txt['aeva']),
 						'aevasites' => array(!isset($txt['aeva_sites']) ? 'Aeva Sites' : $txt['aeva_sites']),
 						// Aeva - END
-						'mentions' => array($txt['mentions']),						// Mod Authors for a "ADD AFTER" on this line. Ensure you end your change with a comma. For example:
-							'aeiou' => array($txt['aeiou']),
+						'mentions' => array($txt['mentions']),
+						// Mod Authors for a "ADD AFTER" on this line. Ensure you end your change with a comma. For example:
 						// 'shout' => array($txt['shout']),
 						// Note the comma!! The setting with automatically appear with the first mod to be added.
 
@@ -843,7 +843,6 @@ function AdminSearchInternal()
 		array('ModifyModerationSettings', 'area=securitysettings;sa=moderation'),
 		array('ModifyGeneralModSettings', 'area=modsettings;sa=general'),
 		// Mod authors if you want to be "real freaking good" then add any setting pages for your mod BELOW this line!
-		array('ModifyAeiouModSettings', 'area=modsettings;sa=aeiou'),
 		array('ModifyAevaSettings', 'area=modsettings;sa=aeva'),
 
         array('ModifycustombuttonsSettings', 'area=modsettings;sa=custombuttons'),
