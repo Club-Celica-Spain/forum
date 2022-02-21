@@ -490,14 +490,6 @@ function ModifyProfile($post_errors = array())
 
 	// All the subactions that require a user password in order to validate.
 	$check_password = $context['user']['is_owner'] && in_array($profile_include_data['current_area'], $context['password_areas']);
-			
-	// OneAll Social Login : The user has no password to login, so disable it.
-	$request = $smcFunc['db_query']('', 'SELECT user_token FROM {db_prefix}oasl_users WHERE id_member = {int:id_member} LIMIT 1', array ('id_member' => $memID));
-	$userRow = $smcFunc['db_fetch_assoc']($request);		
-	$smcFunc['db_free_result']($request);		
-	if (!empty($userRow['user_token']))	
-		$check_password =  false;	
-	
 	$context['require_password'] = $check_password && empty($user_settings['openid_uri']);
 
 	// If we're in wireless then we have a cut down template...

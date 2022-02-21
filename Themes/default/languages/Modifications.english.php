@@ -166,15 +166,6 @@ $txt['footer_message_body'] = 'Footer Message Body';
 	$txt['scheduled_task_removeMentions'] = 'Remove seen mentions';
 	$txt['scheduled_task_desc_removeMentions'] = 'Automatically removes seen mentions older than the specified days';
 	
-// OneAll Social Login (https://docs.oneall.com/plugins/)
-$txt['oasl_title'] = 'OneAll Social Login';
-$txt['oasl_config'] = 'Configuration';
-$txt['oasl_settings_descr'] = 'OneAll Social Login Settings';
-$txt['oasl_user_does_not_exist'] = "<strong>This social network has not yet been linked to an account.</strong><br /><br />Please use the registration form to create a new account. If you already have an account, open your profile settings to connect the social network to it.";
-$txt['oasl_user_may_not_register'] = 'Sorry, but the admistration has disabled the registration for new users.';
-$txt['oasl_user_require_activation'] = 'Your account has been created but it needs to be verified. Please check your mailbox and click on the link in the verification email.';
-
-
 // Begin GPDR Helper Text Strings
 $txt['gpdr_title'] = 'GDPR Helper';
 

@@ -53,8 +53,6 @@ require_once($sourcedir . '/Subs.php');
 require_once($sourcedir . '/Errors.php');
 require_once($sourcedir . '/Load.php');
 require_once($sourcedir . '/Security.php');
-if (file_exists($sourcedir . '/LoadAds.php'))
-	require_once($sourcedir . '/LoadAds.php');
 
 // Using an pre-PHP 5.1 version?
 if (@version_compare(PHP_VERSION, '5.1') == -1)
@@ -214,10 +212,6 @@ function smf_main()
 		loadTheme();
 
 	// Check if the user should be disallowed access.
-
-	// Load all the ads up
-	if (function_exists("loadAds"))
-		loadAds();
 	is_not_banned();
 
 	// If we are in a topic and don't have permission to approve it then duck out now.
@@ -293,7 +287,6 @@ function smf_main()
 		'acceptagreement' => array('Agreement.php', 'AcceptAgreement'),
 		'activate' => array('Register.php', 'Activate'),
 		'admin' => array('Admin.php', 'AdminMain'),
-		'ads' => array('Ads.php', 'Ads'),
 		'announce' => array('Post.php', 'AnnounceTopic'),
 		'attachapprove' => array('ManageAttachments.php', 'ApproveAttach'),
 		'buddy' => array('Subs-Members.php', 'BuddyListToggle'),
