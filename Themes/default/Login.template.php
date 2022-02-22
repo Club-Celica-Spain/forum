@@ -71,10 +71,7 @@ function template_login()
 				<p><input type="submit" value="', $txt['login'], '" class="button_submit" /></p>
 				<p class="smalltext"><a href="', $scripturl, '?action=reminder">', $txt['forgot_your_password'], '</a></p><input type="hidden" name="', $context['session_var'], '" value="', $context['session_id'], '" />
 				<input type="hidden" name="hash_passwrd" value="" />';
-							
-	// OneAll Social Login (https://docs.oneall.com/plugins/)
-	template_oneall_social_login();
-			
+
 	echo '
 			</div>
 			<span class="lowerframe"><span></span></span>
@@ -142,10 +139,7 @@ function template_kick_guest()
 				</dl>
 				<p class="centertext"><input type="submit" value="', $txt['login'], '" class="button_submit" /></p>
 				<p class="centertext smalltext"><a href="', $scripturl, '?action=reminder">', $txt['forgot_your_password'], '</a></p><input type="hidden" name="', $context['session_var'], '" value="', $context['session_id'], '" />';
-							
-	// OneAll Social Login (https://docs.oneall.com/plugins/)
-	template_oneall_social_login();
-			
+
 	echo '
 			</div>
 			<span class="lowerframe"><span></span></span>
