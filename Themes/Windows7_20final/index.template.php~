@@ -196,7 +196,7 @@ echo '
 	
 
 	<div class="page" style="width:100%; text-align:left">
-	<center><a href="./index.php?topic=18599.0.html" target="_parent"><img src="/img/banner_socios.webp"></a></center>
+	<center><a href="./index.php?topic=24152.0" target="_parent"><img src="/img/banner_socios.webp"></a></center>
 
 		<div style="padding:0px 50px 0px 50px" align="left">
 <br />',theme_linktree(),'
