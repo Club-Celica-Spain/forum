@@ -1561,7 +1561,7 @@ function Post2()
 		preparsecode($_POST['message']);
 
 		// Let's see if there's still some content left without the tags.
-		if ($smcFunc['htmltrim'](strip_tags(parse_bbc($_POST['message'], false), '<img><iframe><object><embed>')) === '' && (!allowedTo('admin_forum') || strpos($_POST['message'], '[html]') === false))
+		if ($smcFunc['htmltrim'](strip_tags(parse_bbc($_POST['message'], false), '<img><iframe><video><div>')) === '' && (!allowedTo('admin_forum') || strpos($_POST['message'], '[html]') === false))
 			$post_errors[] = 'no_message';
 	}
 	if (isset($_POST['calendar']) && !isset($_REQUEST['deleteevent']) && $smcFunc['htmltrim']($_POST['evtitle']) === '')
@@ -2823,7 +2823,7 @@ function JavaScriptModify()
 
 			preparsecode($_POST['message']);
 
-			if ($smcFunc['htmltrim'](strip_tags(parse_bbc($_POST['message'], false), '<img><iframe><object><embed>')) === '')
+			if ($smcFunc['htmltrim'](strip_tags(parse_bbc($_POST['message'], false), '<img><iframe><video><div>')) === '')
 			{
 				$post_errors[] = 'no_message';
 				unset($_POST['message']);
