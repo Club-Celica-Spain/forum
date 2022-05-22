@@ -2084,8 +2084,7 @@ function ModifyGeneralModSettings($return_config = false)
 	global $txt, $scripturl, $context, $settings, $sc, $modSettings;
 
 	$config_vars = array(
-		// Mod authors, add any settings UNDER this line. Include a comma at the end of the line and don't remove this statement!!
-		'aeiou' => 'ModifyAeiouModSettings',
+		// Mod authors, once again, if you have a whole section to add do it AFTER this line, and keep a comma at the end.
 	);
 
 	// Make it even easier to add new settings.
@@ -2294,103 +2293,5 @@ function ModifyInactiveMessageSettings($return_config = false) {
 	prepareDBSettingContext($config_vars);
 }
 
-	
-function ModifyAeiouModSettings($return_config = false)
-{
-	global $txt, $scripturl, $context, $settings, $sc, $modSettings, $smcFunc;
 
-	$request = $smcFunc['db_query']('', '
-		SELECT disabled
-		FROM {db_prefix}scheduled_tasks
-		WHERE task = {string:task}',
-		array(
-			'task' => 'email_inactive'
-		)
-	);	
-	list($disabled) = $smcFunc['db_fetch_row']($request);
-	$smcFunc['db_free_result']($request);
-
-	$top = str_replace(array('{STATUS}', '{PAGE}'), array(
-			'<span style="color: ' . ($disabled ? 'red' : 'green') . ';">' . $txt['aeiou_' . ($disabled ? 'disabled' : 'enabled')] . '</span>',
-			'<a href="' . $scripturl . '?action=admin;area=maintain;sa=tasks">' . $txt['maintain_tasks'] . '</a>'),
-			$txt['aeiou_status']) . '<br /><br />';
-
-	if (empty($modSettings['mail_queue']))
-		$top .= str_replace(array('{STATUS}', '{PAGE}'), array(
-			'<span style="color: red;">' . $txt['aeiou_disabled'] . '</span>',
-			'<a href="' . $scripturl . '?action=admin;area=mailqueue;sa=settings">' . $txt['mailqueue_settings'] . '</a>')
-			, $txt['aeiou_mail_status']) . '<br />';
-
-	// Now for the last 10 people emailed
-	$request = $smcFunc['db_query']('', '
-		SELECT id_member, member_name, aeiou_email, aeiou_count
-		FROM {db_prefix}members
-		WHERE aeiou_email > {int:aeiou_email}
-		ORDER BY aeiou_email DESC
-		LIMIT 10',
-		array(
-			'aeiou_email' => 0
-		)
-	);
-		
-	$bottom = '
-	<table cellpadding="1" cellspacing="0" border="0" width="100%">';
-	
-	if($smcFunc['db_num_rows']($request) == 0)
-		$bottom .= '
-		<tr><td colspan="3">'.$txt['aeiou_never'].'</td></tr>';
-	else
-		while($row = $smcFunc['db_fetch_assoc']($request))
-			$bottom .= '
-		<tr>
-			<td width="40%"><a href="'.$scripturl.'?action=profile;u='.$row['id_member'].'">'.$row['member_name'].'</a></td>
-			<td width="40%" style="font-weight:normal;">'.timeformat($row['aeiou_email'], true).'</td>
-			<td width="20%" style="font-weight:normal;">'. $txt['aeiou_'.( ($row['aeiou_count'] == 1) ? 'initial' : 'final' )].'</td>
-		</tr>';
-
-	$bottom .= '
-	</table><br />';
-
-	$smcFunc['db_free_result']($request);
-
-	// Compile/Build some language strings/add to
-	$replace = array('initial_subject' => 'subject', 'initial_message' => 'message', 'final_subject' => 'subject', 'final_message' => 'message');
-	$add = '<div class="smalltext">'.$txt['aeiou_email_desc1'].'<br />'.$txt['aeiou_email_desc2'].'<br />'.$txt['aeiou_email_desc3'].'</div>';
-	foreach($replace as $custom => $default)
-	{
-		// Add the descriptions to the txt string
-		$txt['aeiou_'.$custom] = '<b>' . $txt['aeiou_'.$custom] . '</b>' . $add;
-		// Use the default message if we don't have a custom one saved
-		if(empty($modSettings['aeiou_'.$custom]))
-			$modSettings['aeiou_'.$custom] = $txt['aeiou_default_'.$default];
-	}
-
-	$config_vars = array(
-		$top,
-		array('title', 'aeiou_settings'),
-		array('text', 'aeiou_initial_subject', '30" style="width:95%'),
-		array('large_text', 'aeiou_initial_message', '5" style="width:95%'),
-		array('text', 'aeiou_final_subject', '30" style="width:95%'),
-		array('large_text', 'aeiou_final_message', '5" style="width:95%'),
-		'<br />',
-		array('title', 'aeiou_last_emailed'),
-		$bottom
-	);
-
-	if ($return_config)
-		return $config_vars;
-
-	$context['post_url'] = $scripturl . '?action=admin;area=modsettings;save;sa=aeiou';
-	$context['settings_title'] = $txt['aeiou_title'];
-
-	// Saving?
-	if (isset($_GET['save']))
-	{
-		checkSession();
-		saveDBSettings($config_vars);
-		redirectexit('action=admin;area=modsettings;sa=aeiou');
-	}
-
-	prepareDBSettingContext($config_vars);
-}
 ?>

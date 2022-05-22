@@ -894,8 +894,6 @@ function parse_bbc($message, $smileys = true, $cache_id = '')
 	static $disabled;
 
 	// Don't waste cycles
-
-	global $adkportal,$boardurl;
 	if ($message === '')
 		return '';
 
@@ -1265,23 +1263,25 @@ function parse_bbc($message, $smileys = true, $cache_id = '')
 					'width' => array('optional' => true, 'value' => ' width="$1"', 'match' => '(\d+)'),
 					'height' => array('optional' => true, 'value' => ' height="$1"', 'match' => '(\d+)'),
 				),
-				'content' => !empty($adkportal['enable_watermark']) ? '<img src="'.$boardurl.'/adkportal/sw.php?sw=$1" alt="{alt}"{width}{height} class="bbc_img resized" />' : '<img src="$1" alt="{alt}"{width}{height} class="bbc_img resized" />',
-				'validate' => create_function('&$tag, &$data, $disabled', '
-					$data = strtr($data, array(\'<br />\' => \'\'));
-					if (strpos($data, \'http://\') !== 0 && strpos($data, \'https://\') !== 0)
-						$data = \'http://\' . $data;
-				'),
+				'content' => '<img src="$1" alt="{alt}"{width}{height} class="bbc_img resized" />',
+				'validate' => function(&$tag, &$data, $disabled)
+				{
+					$data = strtr($data, array('<br />' => ''));
+					if (strpos($data, 'http://') !== 0 && strpos($data, 'https://') !== 0)
+						$data = 'http://' . $data;
+				},
 				'disabled_content' => '($1)',
 			),
 			array(
 				'tag' => 'img',
 				'type' => 'unparsed_content',
-				'content' => !empty($adkportal['enable_watermark']) ? '<img src="'.$boardurl.'/adkportal/sw.php?sw=$1" alt="" class="bbc_img" />' : '<img src="$1" alt="" class="bbc_img" />',
-				'validate' => create_function('&$tag, &$data, $disabled', '
-					$data = strtr($data, array(\'<br />\' => \'\'));
-					if (strpos($data, \'http://\') !== 0 && strpos($data, \'https://\') !== 0)
-						$data = \'http://\' . $data;
-				'),
+				'content' => '<img src="$1" alt="" class="bbc_img" />',
+				'validate' => function(&$tag, &$data, $disabled)
+				{
+					$data = strtr($data, array('<br />' => ''));
+					if (strpos($data, 'http://') !== 0 && strpos($data, 'https://') !== 0)
+						$data = 'http://' . $data;
+				},
 				'disabled_content' => '($1)',
 			),
 			array(
@@ -3408,9 +3408,6 @@ function template_header()
 
 	$checked_securityFiles = false;
 	$showed_banned = false;
-	
-	//Adkportal
-	$context['html_headers'] .= rewrite_context_html_headers();
 	foreach ($context['template_layers'] as $layer)
 	{
 		loadSubTemplate($layer . '_above', true);
@@ -3951,7 +3948,7 @@ function setupMenuContext()
 
 	// Set up the menu privileges.
 	$context['allow_search'] = allowedTo('search_posts');
-	$context['allow_admin'] = allowedTo(array('adk_portal','admin_forum', 'manage_boards', 'manage_permissions', 'moderate_forum', 'manage_membergroups', 'manage_bans', 'send_mail', 'edit_news', 'manage_attachments', 'manage_smileys'));
+	$context['allow_admin'] = allowedTo(array('admin_forum', 'manage_boards', 'manage_permissions', 'moderate_forum', 'manage_membergroups', 'manage_bans', 'send_mail', 'edit_news', 'manage_attachments', 'manage_smileys'));
 	$context['allow_edit_profile'] = !$user_info['is_guest'] && allowedTo(array('profile_view_own', 'profile_view_any', 'profile_identity_own', 'profile_identity_any', 'profile_extra_own', 'profile_extra_any', 'profile_remove_own', 'profile_remove_any', 'moderate_forum', 'manage_membergroups', 'profile_title_own', 'profile_title_any'));
 	$context['allow_memberlist'] = allowedTo('view_mlist');
 	$context['allow_calendar'] = allowedTo('calendar_view') && !empty($modSettings['cal_enabled']);
@@ -4369,17 +4366,12 @@ function setupMenuContext()
 	// Default to home.
 	$current_action = 'home';
 
-	global $adkportal;
-	$current_action = $adkportal['adk_enable'] == 2 && empty($context['adk_stand_alone']) ? 'forum' : 'home';
-
 	if (isset($context['menu_buttons'][$context['current_action']]))
 		$current_action = $context['current_action'];
 	elseif ($context['current_action'] == 'search2')
 		$current_action = 'search';
 	elseif ($context['current_action'] == 'theme')
 		$current_action = isset($_REQUEST['sa']) && $_REQUEST['sa'] == 'pick' ? 'profile' : 'admin';
-	elseif($adkportal['adk_enable'] == 1 && (isset($_REQUEST['board']) || isset($_REQUEST['topic']) || isset($_REQUEST['page']) || isset($_REQUEST['blog'])))
-		$current_action = 'forum';
 	elseif ($context['current_action'] == 'register2')
 		$current_action = 'register';
 	elseif ($context['current_action'] == 'login2' || ($user_info['is_guest'] && $context['current_action'] == 'reminder'))

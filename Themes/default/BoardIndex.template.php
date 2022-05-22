@@ -14,18 +14,7 @@ function template_main()
 {
 	global $context, $settings, $options, $txt, $scripturl, $modSettings;
 
-
-	//Display ads on the board index
-	if (function_exists("show_boardAds"))
-	{
-		$ads = show_boardAds();
-		if(!empty($ads))
-			if($ads['type']==0)
-				echo $ads['content'];
-			else
-				eval($ads['content']);
-		unset($ads);
-	}	// Show some statistics if stat info is off.
+	// Show some statistics if stat info is off.
 	if (!$settings['show_stats_index'])
 		echo '
 	<div id="index_common_stats">
@@ -242,20 +231,6 @@ function template_main()
 					<td colspan="4"></td>
 				</tr>
 			</tbody>';
-	echo '<tbody><tr><td colspan="4">';
-	//Display ads Between cats
-	if (function_exists("show_category"))
-	{
-		$ads = show_category($category['id']);
-		if(!empty($ads))
-			if($ads['type']==0)
-				echo $ads['content'];
-			else
-				eval($ads['content']);
-		unset($ads);
-	}
-	echo '			</td></tr></tbody>';
-
 	}
 	echo '
 		</table>

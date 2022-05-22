@@ -377,38 +377,6 @@ GPDR_CleanMemberInfo($users);
 		)
 	);
 
-	// OneAll Social Login : Remove linked social network accounts.		
-	$request = $smcFunc['db_query']('', '
-		SELECT id_oasl_user 
-		FROM {db_prefix}oasl_users 
-		WHERE id_member IN ({array_int:users})', 
-		array(
-			'users' => $users,
-		)
-	);
-	
-	while ($row = $smcFunc['db_fetch_assoc']($request))
-	{
-		// Remove user_token.
-		$smcFunc['db_query']('', '
-			DELETE FROM {db_prefix}oasl_users	
-			WHERE id_oasl_user = {int:id_oasl_user}', 
-			array(
-				'id_oasl_user' => $row['id_oasl_user'],
-			)
-		);
-		
-		// Remove identity_token.		
-		$smcFunc['db_query']('', '
-			DELETE FROM {db_prefix}oasl_identities 
-			WHERE id_oasl_user = {int:id_oasl_user}', 
-			array(
-				'id_oasl_user' => $row['id_oasl_user'],
-			)
-		);
-	}
-	$smcFunc['db_free_result']($request);
-
 	// Delete personal messages.
 	require_once($sourcedir . '/PersonalMessage.php');
 	deleteMessages(null, null, $users);

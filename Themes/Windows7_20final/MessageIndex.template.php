@@ -13,18 +13,6 @@
 function template_main()
 {
 	global $context, $settings, $options, $scripturl, $modSettings, $txt;
-	//Display Ads on the Message index
-	if (function_exists("show_threadindexAds"))
-	{
-		$ads = show_threadindexAds();
-		if(!empty($ads))
-			if($ads['type']==0)
-				echo $ads['content'];
-			else
-				eval($ads['content']);
-		unset($ads);
-	}
-
 
 	echo '
 		<a id="top"></a>';

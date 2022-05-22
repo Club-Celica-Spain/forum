@@ -922,6 +922,9 @@ function parse_bbc($message, $smileys = true, $cache_id = '')
 		$bbc_codes = array();
 	}
 
+	// Ohara youtube embed
+	$message = OYTE_Preparse($message);
+
 	// Sift out the bbc for a performance improvement.
 	if (empty($bbc_codes) || $message === false || !empty($parse_tags))
 	{

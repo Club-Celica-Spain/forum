@@ -1536,13 +1536,7 @@ function loadAllPermissions($loadType = 'classic')
 		),
 	);
 
-
-	//NChat by ThisMod.com
-	$permissionList['membergroup']['nchat_mute'] = array(false, 'general', 'nchat');
-	$permissionList['membergroup']['nchat_delete'] = array(false, 'general', 'nchat');
-	$permissionList['membergroup']['nchat_write'] = array(false, 'general', 'nchat');
-	$permissionList['membergroup']['nchat_read'] = array(false, 'general', 'nchat');
-				// All permission groups that will be shown in the left column on classic view.
+	// All permission groups that will be shown in the left column on classic view.
 	$leftPermissionGroups = array(
 		'general',
 		'calendar',

@@ -51,8 +51,7 @@ function AdminMain()
 	global $txt, $context, $scripturl, $sc, $modSettings, $user_info, $settings, $sourcedir, $options, $smcFunc, $boarddir;
 
 	// Load the language and templates....
-	loadLanguage('Admin');	
-	loadLanguage('Ads');
+	loadLanguage('Admin');
 	loadTemplate('Admin', 'admin');
 
 	// No indexing evil stuff.
@@ -190,23 +189,6 @@ function AdminMain()
 						'edit' => array($txt['themeadmin_edit_title']),
 					),
 				),
-				'ads' => array(
-					'label' => $txt['ad_management'],
-					'file' => 'Ads.php',
-					'function' => 'Ads',
-					'custom_url' => $scripturl . '?action=admin;area=ads;sa=main',
-					'icon' => 'themes.gif',
-					'subsections' => array(
-						'main' => array($txt['ad_management_main']),
-						'add' => array($txt['ad_management_add']),
-						'reports' => array($txt['ad_management_reports']),
-						'settings' => array($txt['ad_management_settings']),
-						'copyright' => array($txt['ads_txt_copyrightremoval']),
-						'credits' => array($txt['ad_management_credits']),
-					),
-				),
-
-
 				'modsettings' => array(
 					'label' => $txt['admin_modifications'],
 					'file' => 'ManageSettings.php',
@@ -220,8 +202,8 @@ function AdminMain()
 						'aeva' => array(loadlanguage('Aeva') == false ? 'Aeva' : $txt['aeva']),
 						'aevasites' => array(!isset($txt['aeva_sites']) ? 'Aeva Sites' : $txt['aeva_sites']),
 						// Aeva - END
-						'mentions' => array($txt['mentions']),						// Mod Authors for a "ADD AFTER" on this line. Ensure you end your change with a comma. For example:
-							'aeiou' => array($txt['aeiou']),
+						'mentions' => array($txt['mentions']),
+						// Mod Authors for a "ADD AFTER" on this line. Ensure you end your change with a comma. For example:
 						// 'shout' => array($txt['shout']),
 						// Note the comma!! The setting with automatically appear with the first mod to be added.
 
@@ -843,7 +825,6 @@ function AdminSearchInternal()
 		array('ModifyModerationSettings', 'area=securitysettings;sa=moderation'),
 		array('ModifyGeneralModSettings', 'area=modsettings;sa=general'),
 		// Mod authors if you want to be "real freaking good" then add any setting pages for your mod BELOW this line!
-		array('ModifyAeiouModSettings', 'area=modsettings;sa=aeiou'),
 		array('ModifyAevaSettings', 'area=modsettings;sa=aeva'),
 
         array('ModifycustombuttonsSettings', 'area=modsettings;sa=custombuttons'),

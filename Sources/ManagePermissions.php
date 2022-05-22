@@ -1492,7 +1492,6 @@ function loadAllPermissions($loadType = 'classic')
 			'profile_server_avatar' => array(false, 'profile', 'use_avatar'),
 			'profile_upload_avatar' => array(false, 'profile', 'use_avatar'),
 			'profile_remote_avatar' => array(false, 'profile', 'use_avatar'),
-			'ad_manageperm' => array(false, 'ad_manage', 'administrate'),
 
             'custombuttons_showbutton1' => array(false, 'custombuttons_showbuttons', 'custombuttons_showbuttons'),
             'custombuttons_showbutton2' => array(false, 'custombuttons_showbuttons', 'custombuttons_showbuttons'),

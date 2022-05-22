@@ -24,20 +24,6 @@ function template_main()
 	}
 
 	// Show the anchor for the top and for the first message. If the first message is new, say so.
-	//Display ads on the thread page
-	if (function_exists("show_threadAds"))
-	{
-		$ads = show_threadAds();	
-		if(!empty($ads))
-			if($ads['type']==0)
-				echo $ads['content'];
-			else
-				eval($ads['content']);
-		unset($ads);
-		
-		$messageStorage = '';
-	}
-
 	echo '
 			<a id="top"></a>
 			<a id="msg', $context['first_message'], '"></a>', $context['first_new_message'] ? '<a id="new"></a>' : '';
@@ -226,12 +212,9 @@ function template_main()
 	$removableMessageIDs = array();
 	$alternate = false;
 
-	//Ad Counter
-	$adcounter =0;
 	// Get all the messages...
 	while ($message = $context['get_message']())
 	{
-		$adcounter++;
 		$ignoring = false;
 		$alternate = !$alternate;
 		if ($message['can_remove'])
@@ -645,215 +628,12 @@ function template_main()
 					<span class="botslice"><span></span></span>
 				</div>
 				<hr class="post_separator" />';
-
-if (function_exists("show_posts"))
-{
-	$messageStorage = $message;
-	if ($adpost = show_posts($adcounter))
-	{
-		if($modSettings['ads_lookLikePosts'])
-		{
-			echo '
-				<div class="windowbg">
-					<span class="topslice"><span></span></span>
-							<div class="poster">
-								<h4>', $context['forum_name'], '</h4>
-							</div>
-							<div class="postarea">
-								<div class="flow_hidden">
-									<div class="keyinfo">
-										<div class="messageicon">
-											<img src="', $message['icon_url'] . '" alt="" border="0" />
-										</div>
-										<h5 id="subject_', $message['id'], '">
-											<a href="', $message['href'], '" rel="nofollow">', $message['subject'], '</a>
-										</h5>
-										<div class="smalltext">&#171; <strong>', !empty($message['counter']) ? $txt['reply_noun'] . ' #' . $message['counter'] : '', ' ', $txt['on'], ':</strong> ', $message['time'], ' &#187;</div>
-										<div id="msg_', $message['id'], '_quick_mod"></div>
-									</div>';
-	
-			// If this is the first post, (#0) just say when it was posted - otherwise give the reply #.
-			if ($message['can_approve'] || $context['can_reply'] || $message['can_modify'] || $message['can_remove'] || $context['can_split'] || $context['can_restore_msg'])
-				echo '
-									<ul class="reset smalltext quickbuttons">';
-	
-			// Can they reply? Have they turned on quick reply?
-			if ($context['can_reply'] && !empty($options['display_quick_reply']))
-				echo '
-										<li class="quote_button"><a>', $txt['quote'], '</a></li>';
-	
-			// So... quick reply is off, but they *can* reply?
-			elseif ($context['can_reply'])
-				echo '
-										<li class="quote_button"><a>', $txt['quote'], '</a></li>';
-	
-			// Can the user modify the contents of this post?
-			if ($message['can_modify'])
-				echo '
-										<li class="modify_button"><a>', $txt['modify'], '</a></li>';
-	
-			// How about... even... remove it entirely?!
-			if ($message['can_remove'])
-				echo '
-										<li class="remove_button"><a>', $txt['remove'], '</a></li>';
-	
-			// What about splitting it off the rest of the topic?
-			if ($context['can_split'] && !empty($context['num_replies']))
-				echo '
-										<li class="split_button"><a>', $txt['split'], '</a></li>';
-	
-			// Can we restore topics?
-			if ($context['can_restore_msg'])
-				echo '
-										<li class="restore_button"><a>', $txt['restore_message'], '</a></li>';
-	
-			if ($message['can_approve'] || $context['can_reply'] || $message['can_modify'] || $message['can_remove'] || $context['can_split'] || $context['can_restore_msg'])
-				echo '
-									</ul>';
-	
-			echo '
-								</div>';
-	
-	
-			// Show the post itself, finally!
-			echo '
-								<div class="post">';
-	
-			echo '
-									<div class="inner" id="msg_', $message['id'], '"', '>', $adpost['type'] == 0 ? $adpost['content'] : eval($adpost['content']) ,'</div>
-								</div>';
-	
-	
-			echo '
-							</div>
-	
-	
-					<span class="botslice"><span></span></span>
-				</div>
-				<hr class="post_separator" />
-				';
-		}
-		else
-			echo '
-				<div class="windowbg">
-					<span class="topslice"><span></span></span>
-	
-					<div align="center">', $adpost['type'] == 0 ? $adpost['content'] : eval($adpost['content']) ,'</div>
-	
-					<span class="botslice"><span></span></span>
-				</div>
-				<hr class="post_separator" />
-			';
 	}
-}
-	}
-	
-if(function_exists("show_lastpostAds") && function_exists("show_posts"))
-{
-	$message = $messageStorage;
-	if(($adpost = show_lastpostAds()) && !show_posts($adcounter))
-	{
-		if($modSettings['ads_lookLikePosts'])
-		{
-			echo '
-				<div class="windowbg">
-					<span class="topslice"><span></span></span>
-							<div class="poster">
-								<h4>', $context['forum_name'], '</h4>
-							</div>
-							<div class="postarea">
-								<div class="flow_hidden">
-									<div class="keyinfo">
-										<div class="messageicon">
-											<img src="', $message['icon_url'] . '" alt="" border="0" />
-										</div>
-										<h5 id="subject_', $message['id'], '">
-											<a href="', $message['href'], '" rel="nofollow">', $message['subject'], '</a>
-										</h5>
-										<div class="smalltext">&#171; <strong>', !empty($message['counter']) ? $txt['reply_noun'] . ' #' . $message['counter'] : '', ' ', $txt['on'], ':</strong> ', $message['time'], ' &#187;</div>
-										<div id="msg_', $message['id'], '_quick_mod"></div>
-									</div>';
-	
-			// If this is the first post, (#0) just say when it was posted - otherwise give the reply #.
-			if ($message['can_approve'] || $context['can_reply'] || $message['can_modify'] || $message['can_remove'] || $context['can_split'] || $context['can_restore_msg'])
-				echo '
-									<ul class="reset smalltext quickbuttons">';
-	
-			// Can they reply? Have they turned on quick reply?
-			if ($context['can_reply'] && !empty($options['display_quick_reply']))
-				echo '
-										<li class="quote_button"><a>', $txt['quote'], '</a></li>';
-	
-			// So... quick reply is off, but they *can* reply?
-			elseif ($context['can_reply'])
-				echo '
-										<li class="quote_button"><a>', $txt['quote'], '</a></li>';
-	
-			// Can the user modify the contents of this post?
-			if ($message['can_modify'])
-				echo '
-										<li class="modify_button"><a>', $txt['modify'], '</a></li>';
-	
-			// How about... even... remove it entirely?!
-			if ($message['can_remove'])
-				echo '
-										<li class="remove_button"><a>', $txt['remove'], '</a></li>';
-	
-			// What about splitting it off the rest of the topic?
-			if ($context['can_split'] && !empty($context['num_replies']))
-				echo '
-										<li class="split_button"><a>', $txt['split'], '</a></li>';
-	
-			// Can we restore topics?
-			if ($context['can_restore_msg'])
-				echo '
-										<li class="restore_button"><a>', $txt['restore_message'], '</a></li>';
-	
-			if ($message['can_approve'] || $context['can_reply'] || $message['can_modify'] || $message['can_remove'] || $context['can_split'] || $context['can_restore_msg'])
-				echo '
-									</ul>';
-	
-			echo '
-								</div>';
-	
-	
-			// Show the post itself, finally!
-			echo '
-								<div class="post">';
-	
-			echo '
-									<div class="inner" id="msg_', $message['id'], '"', '>', $adpost['type'] == 0 ? $adpost['content'] : eval($adpost['content']) ,'</div>
-								</div>';
-	
-	
-			echo '
-							</div>
-	
-	
-					<span class="botslice"><span></span></span>
-				</div>
-				<hr class="post_separator" />
-				';
-		}
-		else
-			echo '
-				<div class="windowbg">
-					<span class="topslice"><span></span></span>
-	
-					<div align="center">', $adpost['type'] == 0 ? $adpost['content'] : eval($adpost['content']) ,'</div>
-	
-					<span class="botslice"><span></span></span>
-				</div>
-				<hr class="post_separator" />
-			';
-	}
-}
 
 	echo '
 				</form>
 			</div>
 			<a id="lastPost"></a>';
-
 
 	// Show the page index... "Pages: [1]".
 	echo '

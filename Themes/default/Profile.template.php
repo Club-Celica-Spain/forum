@@ -1291,47 +1291,6 @@ function template_edit_options()
 
 	}
 
-		// OneAll Social Login (https://docs.oneall.com/plugins/)
-	if (!empty ($modSettings['oasl_api_key']) && !empty ($modSettings['oasl_enabled_providers']))
-	{
-		if ( ! empty ($context['user']['is_owner']) && ! empty ($context['user']['id']))
-		{		
-			global $boardurl, $sourcedir;
-			
-			// Include the OneAll Toolbox.
-			require_once($sourcedir . '/OneallSocialLogin.sdk.php');
-				
-			//Extract providers
-			$oasl_enabled_providers = explode (',', trim ($modSettings['oasl_enabled_providers']));
-			
-			//User Token
-			$oasl_user_token = oneall_social_login_get_user_token_for_id_member($context['user']['id']);
-			
-			//Random integer
-			$rand = mt_rand (99999, 9999999);
-			
-			echo '
-				<hr width="100%" size="1" class="hrcolor clear" />
-				<dl id="oasl_social_link">
-					<dt>
-						<strong>'.$modSettings['oasl_settings_profile_caption'].'</strong><br />
-						<span class="smalltext">'.$modSettings['oasl_settings_profile_desc'].'</span>
-					</dt>
-					<dd>
-						<div class="oneall_social_login_providers" id="oneall_social_login_providers_'.$rand.'"></div>
-							<script type="text/javascript">
-								oneall.api.plugins.social_link.build("oneall_social_login_providers_'.$rand.'", {
-									"providers": [\''.implode ("', '", $oasl_enabled_providers).'\'], 
-									"user_token": \''.$oasl_user_token.'\',
-									"callback_uri": \''.$boardurl.'/index.php?action=oasl_callback;oasl_source=profile;oasl_uid='.$context['user']['id'].'\'
-								});
-							</script>
-							<!-- OneAll.com / Social Login for SMF -->
-					</dd>
-				</dl>';		
-		}
-	 }
-	 
 	// Any closing HTML?
 	if (!empty($context['profile_posthtml']))
 		echo '
